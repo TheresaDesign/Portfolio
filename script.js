@@ -14,18 +14,33 @@ function calculatePosition(index, total, radius, offsetY = 0) {
     };
 }
 
+// Berechne die maximale sichere Distanz basierend auf der Bildschirmbreite
+function calculateSafeRadius(sectionWidth) {
+    // Auf mobilen Geräten kleinerer Radius
+    if (window.innerWidth < 768) {
+        return sectionWidth * 0.1; // Reduzierter Radius für mobile Geräte
+    }
+    // Auf Desktop-Geräten größerer Radius
+    return sectionWidth * 0.15; // Reduzierter Radius für Desktop
+}
+
 // Initial positions
 function setInitialPositions() {
     const sectionRect = designSection.getBoundingClientRect();
     const centerX = sectionRect.width / 2;
     const centerY = sectionRect.height / 2;
+    const safeRadius = calculateSafeRadius(sectionRect.width);
     
     floatingWords.forEach((word, index) => {
-        const verticalOffset = index % 2 === 0 ? -50 : 50;
-        const initialRadius = sectionRect.width * 0.1; // 10% der Sectionbreite
+        // Berechne den vertikalen Offset basierend auf der Bildschirmbreite
+        const verticalOffset = window.innerWidth < 768 
+            ? (index % 2 === 0 ? -20 : 20)  // Noch kleinere Abstände auf mobil
+            : (index % 2 === 0 ? -30 : 30);  // Kleinere Abstände auf Desktop
         
-        const pos = calculatePosition(index, floatingWords.length, initialRadius, verticalOffset);
+        // Berechne die Position
+        const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.3, verticalOffset);
         
+        // Setze die Position
         word.style.left = `${centerX + pos.x - word.offsetWidth/2}px`;
         word.style.top = `${centerY + pos.y - word.offsetHeight/2}px`;
     });
@@ -36,7 +51,6 @@ const designSectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         isDesignSectionVisible = entry.isIntersecting;
         if (!isDesignSectionVisible) {
-            // Behalte die letzte Position bei, wenn die Section nicht mehr sichtbar ist
             lastScrollFactor = entry.boundingClientRect.top < 0 ? 1 : 0;
         }
     });
@@ -58,7 +72,7 @@ window.addEventListener('scroll', () => {
     const sectionTop = sectionRect.top;
     const sectionHeight = sectionRect.height;
     
-    // Berechne den Scroll-Fortschritt basierend auf der Position der Section
+    // Berechne den Scroll-Fortschritt
     let scrollProgress = (window.innerHeight - sectionTop) / (window.innerHeight + sectionHeight);
     scrollProgress = Math.max(0, Math.min(1, scrollProgress));
     
@@ -71,21 +85,35 @@ window.addEventListener('scroll', () => {
     
     const centerX = sectionRect.width / 2;
     const centerY = sectionRect.height / 2;
+    const safeRadius = calculateSafeRadius(sectionRect.width);
     
     floatingWords.forEach((word, index) => {
-        const verticalOffset = index % 2 === 0 ? -50 : 50;
-        const minRadius = sectionRect.width * 0.1; // 10% der Sectionbreite
-        const maxRadius = sectionRect.width * 0.15; // 15% der Sectionbreite
+        // Berechne den vertikalen Offset basierend auf der Bildschirmbreite
+        const verticalOffset = window.innerWidth < 768 
+            ? (index % 2 === 0 ? -20 : 20)
+            : (index % 2 === 0 ? -30 : 30);
+        
+        // Berechne die Radien für die Animation
+        const minRadius = safeRadius * 0.3; // Start näher an der Mitte
+        const maxRadius = safeRadius;
         const radius = minRadius + (lastScrollFactor * (maxRadius - minRadius));
         
+        // Berechne und wende die Position an
         const pos = calculatePosition(index, floatingWords.length, radius, verticalOffset);
         word.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
     });
 });
 
-// Initial setup
+// Initial setup und Resize Handler
 setInitialPositions();
-window.addEventListener('resize', setInitialPositions);
+window.addEventListener('resize', () => {
+    setInitialPositions();
+    if (!isDesignSectionVisible) {
+        floatingWords.forEach(word => {
+            word.style.transform = 'translate(0, 0)';
+        });
+    }
+});
 
 // Project Cards Animation
 const cards = document.querySelectorAll('.card');

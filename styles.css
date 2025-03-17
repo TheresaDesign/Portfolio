@@ -115,12 +115,12 @@ p {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 80vh;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
-    padding: 0 10%;
+    align-items: flex-end;
+    padding: 0 10% 10% 10%;
 }
 
 .hero h3 {
@@ -132,23 +132,23 @@ p {
 
 /* Navigation */
 .main-nav {
-    background: rgba(241, 242, 238, 0.15); /* Hintergrundfarbe mit 15% Deckkraft */
-    backdrop-filter: blur(8px); /* Blur-Effekt für den Hintergrund */
-    -webkit-backdrop-filter: blur(8px); /* Für Safari-Unterstützung */
+    background: rgba(241, 242, 238, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 1rem 3rem;
     position: sticky;
     top: 48px;
     z-index: 100;
     border: 2px solid var(--primary-color);
     border-radius: 50px;
-    width: fit-content; /* Breite an den Inhalt anpassen */
-    margin: 0 auto; /* Zentrieren */
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 3rem; /* Gleichmäßiger Abstand zwischen den Menüpunkten */
+    gap: 3rem;
     margin: 0;
     padding: 0;
 }
@@ -182,7 +182,7 @@ p {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(circle at center, #6b46c1 0%, var(--background-color) 70%);
+    background: radial-gradient(circle at center, #6b46c1 0%, var(--background-color) 50%);
     padding: 2rem;
 }
 
@@ -212,6 +212,7 @@ p {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.5s ease-out;
+    white-space: nowrap;
 }
 
 .floating-words .button span {
@@ -319,10 +320,45 @@ p {
     width: 32px;
     height: 32px;
 }
+
+
+/* Placeholder Section */
+.placeholder {
+    padding: 4rem 10%;
+    text-align: center;
+    height: 100vh;
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 3rem;
+    h1 {
+        font-size: 3.813rem;
+    }
+    h2 {
+        font-size: 2.625rem;
+        margin: 1.5rem 0;
+    }
+    h3 {
+        font-size: 1.688rem;
+    }
+    
+    p {
+        font-size: 1.125rem;
+    }
+    .button-font {
+        font-size: 1.125rem;
+    }
+    .link {
+        font-size: 1.125rem;
+    }
+    .caption{
+        font-size: 1.125rem;
+    }
+    .emphazised{
+        font-size: 1.125rem;
     }
 
     .project-cards {
@@ -346,10 +382,33 @@ p {
     }
 }
 
-/* Placeholder Section */
-.placeholder {
-    padding: 4rem 10%;
-    text-align: center;
-    height: 100vh;
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    .button-font {
+        font-size: 1rem;
+    }
+    .link {
+        font-size: 1rem;
+    }
+    .caption{
+        font-size: 1rem;
+    }
+    .emphazised{
+        font-size: 1rem;
+    }
 }
+
 
