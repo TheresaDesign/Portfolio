@@ -121,7 +121,7 @@ if (designSection) {
 const projectCardsContainer = document.querySelector('.project-cards');
 if (projectCardsContainer) {
     const cards = document.querySelectorAll('.card');
-    const projectsSection = document.querySelector('.contents');
+    const projectsSection = document.querySelector('.projects');
 
     let lastProjectScrollY = window.pageYOffset;
     let isScrolling = false;
