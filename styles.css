@@ -57,6 +57,7 @@ h2 {
     font-weight: 700;
     line-height: 1.5;
     margin: 2rem 0;
+    color: var(--primary-color);
 }
 h3 {
     font-family: 'Poppins', sans-serif;
@@ -448,7 +449,7 @@ a {
 .intro {
     padding: 4rem 10%;
     text-align: center;
-    height: 40vh;
+    /*height: 40vh;*/
     display: flex;
     align-items: center;
     justify-content: center;
