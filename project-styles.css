@@ -172,10 +172,17 @@
 }
 .halb{
     flex-basis: 50%;
+    margin: auto 0;
 }
 .halb img{
     width:100%;
 }
+
+.halb video{
+    width:100%;
+    scale: 0.8
+}
+
 .row-halbhalb .halb .emphazised{
     color: var(--primary-color)
 }
@@ -283,20 +290,25 @@
     height:150px;
 }
 
+.halb iframe{
+    width:100%;
+    display: none;
+}
+
 /* Prototype Section */
 .prototype-section {
     background-color: var(--background-color);
 }
 
 .prototype-container {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
 .prototype-description {
-    margin-bottom: 2rem;
-    font-size: 1.2rem;
-    line-height: 1.6;
+    flex-basis: 50%;
+    margin: auto;
 }
 
 .figma-embed {
@@ -306,6 +318,7 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-basis: 50%;
 }
 
 .figma-embed iframe {

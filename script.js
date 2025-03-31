@@ -211,3 +211,19 @@ if (filterButtons.length > 0) {
         });
     });
 }
+
+//ladezeit Videos
+document.addEventListener("DOMContentLoaded", function () {
+    let videos = document.querySelectorAll("video");
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let video = entry.target;
+                video.load();
+                observer.unobserve(video);
+            }
+        });
+    });
+
+    videos.forEach(video => observer.observe(video));
+});

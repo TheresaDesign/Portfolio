@@ -1,1 +1,55 @@
 - p evt. nur 1rem
+
+https://youtube.com/embed/cmTUMjAAvn8?feature=share
+https://youtube.com/shorts/NiNvP9Ae8uU?feature=share
+<h3>Homescreen</h3>
+            <div class="row-halbhalb img-first">
+                <div class="halb">
+                    <iframe width="315" height="560"
+                    src="https://youtube.com/embed/HkzwIoeJboM?feature=share"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                    </iframe>
+                    
+                </div>
+                <div class="halb">
+                    <p>Auf dem Homescreen haben Nutzer*innen die Möglichkeit, durch die verschiedenen Bereiche zu navigieren. Zusätzlich erhalten sie personalisierte Vorschläge basierend auf ihrem Profil – etwa zu Events oder Artikeln, die für sie interessant sein könnten. Außerdem gibt es hier die Möglichkeit, mehr über den Verein Bloom zu erfahren.</p>
+                    <br>
+                    <p>Zur besseren Übersichtlichkeit sind die einzelnen Bereiche farblich abwechselnd gestaltet. Die Charaktere tauchen dabei immer wieder auf – oben als Navigationselement und weiter unten als reines Stilelement.</p>
+                </div>
+            </div>
+<h3>Eventscreen</h3>
+            <div class="row-halbhalb img-first">
+                <div class="halb">
+                    <iframe width="315" height="560"
+                    src="https://youtube.com/embed/xVv9wbWGnkk?feature=share"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="halb">
+                    <p>Kernelement von Bloom ist der persönliche Austausch. Deshalb bietet Bloom eine Vielzahl an Events, bei denen sich Nutzer*innen anmelden können. Der Eventbereich ist in zwei Ansichten unterteilt: die standardmäßige Feedansicht und die Kartenansicht. Im Feed können Veranstaltungen nach Themen und Interessen gefiltert werden, während die Kartenansicht anzeigt, was in der Nähe des Nutzers oder der Nutzerin stattfindet.</p>
+                    <br>
+                    <p>Wird ein Event ausgewählt, erhält die Nutzerin alle relevanten Informationen. Neben den üblichen Eventdetails gibt es auch Angaben zur Barrierefreiheit sowie die Möglichkeit, den oder die Veranstaltenden bei offenen Fragen zu kontaktieren. Abschließend muss sich die Nutzer*in nur noch anmelden. Der Anmeldebutton ist jedoch nur bei Events sichtbar, bei denen eine Anmeldung zwingend erforderlich ist. Es gibt bewusst auch Veranstaltungen ohne Anmeldepflicht, um die Einstiegshürde möglichst niedrig zu halten.</p>
+                </div>
+            </div>
+
+            <h3>Proil</h3>
+            <div class="row-halbhalb ">
+                <div class="halb">
+                    <iframe width="315" height="560"
+                    src="https://youtube.com/embed/NiNvP9Ae8uU?feature=share"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="halb">
+                    <p>Das Profil ist der einzige Ort, an dem Fotos angezeigt werden. Wir haben uns bewusst gegen die Lösung von individuellen Avataren entschieden, um die Profile und den Austausch persönlicher zu gestalten. Im Profil finden sich die Interessen sowie persönliche Anmerkungen. Wenn eine Nutzer*in auf rollstuhlgerechte Events angewiesen ist, kann diese Information hier hinterlegt werden, um entsprechend passende Vorschläge zu erhalten.</p>
+                </div>
+            </div>
