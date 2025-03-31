@@ -73,45 +73,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Method Cards Animation
-const methodCards = document.querySelectorAll('.method-card');
-methodCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-    });
-});
-
-// Idea Images Hover Effect
-const ideaImages = document.querySelectorAll('.idea-image');
-ideaImages.forEach(image => {
-    image.addEventListener('mouseenter', () => {
-        image.querySelector('.image-overlay').style.transform = 'translateY(0)';
-    });
-    
-    image.addEventListener('mouseleave', () => {
-        image.querySelector('.image-overlay').style.transform = 'translateY(100%)';
-    });
-});
-
-// Add Loading Animation
-document.addEventListener('DOMContentLoaded', () => {
-    document.body.classList.add('loaded');
-});
-
-// Figma Embed Responsive
-const figmaEmbed = document.querySelector('.figma-embed iframe');
-if (figmaEmbed) {
-    window.addEventListener('resize', () => {
-        const width = figmaEmbed.parentElement.offsetWidth;
-        const height = width * 0.5625; // 16:9 aspect ratio
-        figmaEmbed.style.height = `${height}px`;
-    });
-}
-
 // Image Gallery Navigation
 const mainImage = document.getElementById('mainImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
@@ -221,4 +182,3 @@ document.addEventListener('keydown', (e) => {
         window.addEventListener("scroll", updateImageVisibility);
         updateImageVisibility(); // Initial aufrufen
     });
-    
