@@ -199,3 +199,26 @@ document.addEventListener('keydown', (e) => {
         closeLightbox();
     }
 }); 
+
+
+//Bloom
+    //einfliegen der Bilder 
+    document.addEventListener("DOMContentLoaded", () => {
+        const images = document.querySelectorAll(".recherche-images img");
+        const section = document.querySelector(".fullscreen");
+    
+        function updateImageVisibility() {
+            const rect = section.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const visibleRatio = Math.max(0, Math.min(1, 1 - rect.top / viewportHeight));
+    
+            images.forEach((img, index) => {
+                const threshold = (index + 1) / images.length;
+                img.style.opacity = visibleRatio >= threshold ? "1" : "0";
+            });
+        }
+    
+        window.addEventListener("scroll", updateImageVisibility);
+        updateImageVisibility(); // Initial aufrufen
+    });
+    
