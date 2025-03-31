@@ -196,6 +196,12 @@ a{
     transform: translateX(-5px);
 }
 
+
+/*Images*/
+.image-ganz{
+    width: 100%;
+    margin: 3rem 0;
+}
 /* Hero Section */
 .hero {
     height: 80vh;
