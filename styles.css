@@ -482,6 +482,24 @@ a{
     align-items: center;
 }
 
+.row-halbhalb {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+.halb{
+    flex-basis: 50%;
+    margin: auto 0;
+}
+.halb img{
+    width:100%;
+}
+
+.halb video{
+    width:60%;
+    margin: 0 25%;
+}
 /* Placeholder Section */
 .placeholder {
     padding: 4rem 10%;

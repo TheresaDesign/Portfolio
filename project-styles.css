@@ -8,6 +8,14 @@
     z-index: 1000;
 }
 
+
+h3{
+    color: var(--primary-color);
+}
+
+.bereich{
+    margin: 3rem 0;
+}
 /* Hero Section */
 .project-hero {
     height: 100vh;
@@ -224,24 +232,7 @@
    transform: rotate(333deg);
    background-color: #f8f9fa;
 }
-.row-halbhalb {
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    margin: 4rem 0;
-}
-.halb{
-    flex-basis: 50%;
-    margin: auto 0;
-}
-.halb img{
-    width:100%;
-}
 
-.halb video{
-    width:60%;
-    margin: 0 25%;
-}
 
 .row-halbhalb .halb .emphazised{
     color: var(--primary-color)
@@ -335,6 +326,34 @@
     width:100%;
 }
 
+.marquee {
+    width: 100vw; 
+    white-space: nowrap;
+    position: relative;
+    margin: 3rem 0;
+  }
+  
+  .marquee-content {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Bildern */
+    animation: marquee 25s linear infinite;
+    width: max-content;
+  }
+  
+  .marquee-content img {
+    width: 300px; /* Größe der Bilder anpassen */
+    height: auto;
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
 .styleguide{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -381,13 +400,13 @@
     height:150px;
 }
 
+.img2{
+    width:100%
+}
 .halb iframe{
     width:100%;
 }
 
-.halb h3{
-    color: var(--primary-color);
-}
 /* Prototype Section */
 .prototype-section {
     background-color: var(--background-color);

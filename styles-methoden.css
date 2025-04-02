@@ -11,7 +11,7 @@ body {
 }
 
 .spacer {
-    height: 150vh; /* Platz vor und nach dem Effekt */
+    height: 150vh; /* Platz zum Scrollen */
 }
 
 .scroll-container {
@@ -42,4 +42,151 @@ video {
     transition: opacity 0.5s ease-in-out;
     z-index: 1;
     pointer-events: none;
+}
+
+#scroll {
+    position: relative;
+  }
+  
+  .scroll__graphic .chart {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+.scroll__graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .scroll__graphic.is-fixed {
+    position: fixed;
+  }
+  
+  .scroll__graphic.is-bottom {
+    bottom: 0;
+    top: auto;
+  }
+
+  .scroll__text {
+    padding: 0 1rem;
+    max-width: 30rem;
+  }
+  
+  .step {
+    opacity: 0;
+    padding: 1rem;
+  }
+  
+  .step.is-active {
+    opacity: 1;
+  }
+
+.eyetracking-section{
+    background-color: var(--text-color);
+}
+.eyeTracking-content{
+    padding: 2rem 10%;
+}
+
+.eyeTracking-content h2{
+    color: var(--background-color);
+}
+
+.banner{
+    width: 100vw;
+    padding: 1rem 10%;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.idea-gallery {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-shrink: 1;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-speed) ease;
+}
+
+.thumbnail-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+    overflow: hidden;
+    padding: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbnail {
+    flex: 1 1 calc(25% - 1rem);
+    max-width: calc(25% - 1rem);
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all var(--transition-speed) ease;
+    object-fit: cover;
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border: 2px solid var(--primary-color);
+}
+
+.nav-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all var(--transition-speed) ease;
+    flex-shrink: 0;
+}
+
+.nav-button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
 }
