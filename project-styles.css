@@ -175,6 +175,7 @@
     font-family: Arial, sans-serif;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
+    max-width: 800px;
 }
 
 .blase-rechts::after{
@@ -198,7 +199,7 @@
 }
 
 .blase-links{
-    margin-left:10%;
+    margin-left:22%;
     width: 50%;
     padding: 20px;
     border-radius: 20px;
@@ -207,6 +208,7 @@
     font-family: Arial, sans-serif;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
+    max-width: 800px;
 }
 
 .blase-links::after{
@@ -427,9 +429,8 @@
 
 .learnings-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -475,6 +476,11 @@
     }
 }
 
+@media (max-width: 1400px){
+    .learning-big{
+        grid-column: span 2;
+    }
+}
 @media (max-width: 768px) {
     .idea-content {
         gap: 1.5rem;
