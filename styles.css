@@ -538,20 +538,25 @@ a{
 }
 
 .tag.ui {
-    background: #600DB4;
+    background: var(--primary-color);
 }
 
 .tag.ux {
-    background: #B128C3;
+    background: var(--secondary-color);
 }
 
 .tag.vr {
-    background: #C8FF00;
+    background: var(--accent-color);
     color: var(--text-color);
 }
 
 .tag.three-d {
-    background: #535353;
+    background: var(--grey2);
+}
+
+.tags .andere {
+    background-color: var(--grey1);
+    color: var(--text-color);
 }
 
 /* Responsive Design */

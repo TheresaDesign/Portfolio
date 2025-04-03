@@ -1,50 +1,3 @@
-// Scrollama-Instanz erstellen
-const scroller = scrollama();
-
-const content = document.getElementById("content");
-const video = document.getElementById("scrollVideo");
-
-let lastScrollY = window.scrollY;
-let isVideoVisible = false;
-
-// Scrollama konfigurieren
-scroller
-    .setup({
-        step: ".scroll-container", // Wann soll es aktiv werden?
-        offset: 0.5, // Sobald 50% des Containers sichtbar sind
-        debug: false,
-    })
-    .onStepEnter(() => {
-        content.style.opacity = "0"; // Text & Bilder ausblenden
-        video.style.opacity = "1"; // Video sichtbar machen
-        isVideoVisible = true;
-    })
-    .onStepExit(() => {
-        content.style.opacity = "1"; // Text & Bilder wieder einblenden
-        video.style.opacity = "0"; // Video ausblenden
-        isVideoVisible = false;
-    });
-
-// Scroll-Event für Video
-window.addEventListener("scroll", () => {
-    if (isVideoVisible) {
-        let scrollY = window.scrollY;
-        let scrollDirection = scrollY > lastScrollY ? "down" : "up";
-        lastScrollY = scrollY;
-        let scrollSpeed = Math.abs(scrollY - lastScrollY) / 30;
-
-        if (scrollDirection === "down") {
-            video.currentTime = Math.min(video.duration, video.currentTime + scrollSpeed);
-        } else {
-            video.currentTime = Math.max(0, video.currentTime - scrollSpeed);
-        }
-    }
-});
-
-
-
-
-
 // Image Gallery Navigation
 const mainImage = document.getElementById('mainImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
@@ -88,5 +41,44 @@ document.addEventListener('keydown', (e) => {
         prevButton.click();
     } else if (e.key === 'ArrowRight') {
         nextButton.click();
+    }
+});
+const video = document.getElementById("scrollVideo");
+const content = document.querySelector(".eyeTracking-content");
+
+let lastScrollY = window.scrollY;
+let isInView = false;
+
+// Intersection Observer zum Erkennen, ob die Section im Viewport ist
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            isInView = true;
+            content.style.opacity = "0"; // Text ausblenden
+            video.style.opacity = "1"; // Video einblenden
+        } else {
+            isInView = false;
+            content.style.opacity = "1"; // Text wieder einblenden
+            video.style.opacity = "0"; // Video ausblenden
+        }
+    });
+}, { threshold: 0.5 });
+
+observer.observe(document.querySelector(".eyetracking-section"));
+
+// Scroll-Event, um das Video mit der Scroll-Geschwindigkeit abzuspielen
+window.addEventListener("scroll", () => {
+    if (!isInView) return;
+
+    let scrollSpeed = Math.abs(window.scrollY - lastScrollY) / 20;
+    let scrollDirection = window.scrollY > lastScrollY ? "down" : "up";
+    lastScrollY = window.scrollY;
+
+    if (video.style.opacity === "1") {
+        if (scrollDirection === "down") {
+            video.currentTime = Math.min(video.duration, video.currentTime + scrollSpeed);
+        } else {
+            video.currentTime = Math.max(0, video.currentTime - scrollSpeed);
+        }
     }
 });
