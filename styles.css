@@ -704,7 +704,6 @@ a{
         transition: transform 0.3s ease;
     }
 
-
     /* Responsive Design für Project Detail */
     @media (max-width: 768px) {
         .project-meta {
