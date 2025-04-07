@@ -166,12 +166,13 @@ to {
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
     gap: 2rem;
+    padding: 2rem;
 }
 
 .fhp-spalte h2{
     color: var(--accent-color);
     rotate: -90deg;
-    top: 84.5%;
+    top: 80%;
   position: absolute;
   margin:0;
 }
@@ -205,7 +206,7 @@ to {
 .image-fan {
   position: relative;
   width: 50%;
-  margin: 0 auto;
+  margin-left: 15%;
   padding:2rem;
 }
 
@@ -229,9 +230,43 @@ to {
 
 .img3 {
   z-index: 3;
-  transform: rotate(10deg) translateX(35%);
+  transform: rotate(5deg) translateX(35%);
 }
 
 .fan-img:hover {
   z-index: 10;
 }
+
+
+.tools-banner {
+  width: 100vw; 
+  white-space: nowrap;
+  position: relative;
+  margin: 3rem 0;
+  height:100vh;
+  width: 10%
+  }
+  
+  .tools-content {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
+  animation: marquee 25s linear infinite;
+  width: max-content;
+  flex-direction: column;
+  }
+  
+  .tools-content img {
+      width: 100%;
+      border-radius: 10px;
+      rotate: 90deg;
+  }
+  
+  @keyframes marquee {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateY(-50%);
+  }
+  }
