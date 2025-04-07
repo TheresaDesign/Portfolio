@@ -11,15 +11,13 @@ background-color: var(--background-color);
 display: flex;
 height: 100%;
 width: 450vw; /* 4 Sektionen à 100vw */
-gap:5%
+gap:3%
 }
 
 .panel {
 flex: 0 0 100vw;
 height: 100vh;
 display: flex;
-align-items: center;
-justify-content: center;
 }
 .panel-Haelfte {
     flex: 0 0 50vw;
@@ -31,7 +29,7 @@ justify-content: center;
     margin-top: auto;
 }
 .panel-intro{
-flex: 0 0 75vw;
+flex: 0 0 100vw;
 height: 100vh;
 display: flex;
 align-items: center;
@@ -56,7 +54,7 @@ padding: 2rem;
 }
 .welcome{
 background-color: var(--primary-color);
-flex-basis: 50%;
+flex-basis: 33%;
 height: 100vh;
 align-items: center;
 justify-content: center;
@@ -70,12 +68,21 @@ text-align: center;
 color: var(--background-color);
 }
 
+.panel-intro-content{
+  flex: 0 0 33%;
+  padding: 2rem;
+  }
+
+.panel-intro-content img{
+  width: 100%;
+  }
 .grid-luettfeld{
 display: grid;
 grid-template-rows: 2fr 1fr ;
 grid-template-columns: 1fr 1fr;
 height: 100vh;
-gap: 1rem
+gap: 1rem;
+padding: 2rem;
 }
 
 .luettfeld-klein{
@@ -185,4 +192,46 @@ to {
     grid-row: span 3;
     background-color: var(--primary-color);
     border-radius: 10px;
+}
+
+.privat{
+  flex-direction: column;
+}
+.privat-content{
+  width: 75%;
+  padding: 2rem;
+}
+
+.image-fan {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  padding:2rem;
+}
+
+.fan-img {
+  position: absolute;
+  width: 75%;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.img1 {
+  z-index: 1;
+  transform: rotate(-10deg) translateX(-35%);
+}
+
+.img2 {
+  z-index: 2;
+  transform: rotate(0deg);
+}
+
+.img3 {
+  z-index: 3;
+  transform: rotate(10deg) translateX(35%);
+}
+
+.fan-img:hover {
+  z-index: 10;
 }
