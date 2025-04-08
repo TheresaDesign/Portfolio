@@ -1,1 +1,3 @@
 - p evt. nur 1rem
+- bilder aus WA gruppe einfügen Bloom
+- horizontales swipen bei bloom fixen
