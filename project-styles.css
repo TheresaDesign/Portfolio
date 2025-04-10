@@ -46,6 +46,12 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.project-hero.hero-mapping{
+    background-image: url(img/Mapping/cover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Project Sections */
 .project-section {
     padding: 32px 10%;
@@ -549,6 +555,10 @@ h3{
 @media (max-width: 576px) {
     .project-hero.hero-bloom{
         background-image: url(img/Bloom/cover-Image-small.png);
+    }
+
+    .project-hero.hero-mapping{
+        background-image: url(img/Mapping/cover-klein);
     }
 
     .hero-content{
