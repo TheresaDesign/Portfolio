@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Exhibition - Portfolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../project-styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+</head>
+<body>
+    <a href="projects.html" class="back-button">
+        <svg width="16" height="25" viewBox="0 0 16 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6065 1.99997L2.99993 12.6066L13.6065 23.2132" stroke="var(--primary-color)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <div class="button-font">Back to Projects</div>
+    </a>
+    <!-- Sticky Navigation -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projekte</a></li>
+            <li><a href="methodes.html">Methoden</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Hero Section -->
+    <section class="project-hero hero-bloom">
+        <div class="hero-content">
+            <h1>Space Exhibition</h1>
+            <p class="subtitle">Dieses Projekt zeigt die Entwicklung einer Ausstellung in VR. </p>
+            <div class="tags">
+                <p class="tag ui">UI Design</p>
+                <p class="tag vr">Virtual Reality</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideenfindung & Zielsetzung -->
+    <section class="project-section idea-section">
+       
+        <!-- Hardfacts -->
+        <div class="hardfacts">
+            <h3>Hardfacts</h3>
+            <p><span class="emphazised">Zeitraum: </span>Oktober 2023 - Februar 2024</p>
+            <p><span class="emphazised">Kontext: </span>Kursprojekt an der Fachhochschule Potsdam</p>
+            <p><span class="emphazised">Software: </span>Unity</p>
+        </div>
+
+        <div class="container">
+            <h2>Projektentwicklung</h2>
+            <h3>Planung</h3>
+            <div class="idea-content">
+                <div class="idea-text">
+                    <p>Wir haben damit angefangen, erste Räume physisch aus Leichtschaumplatten zu bauen. So konnte man zunächst ein Gefühl für Größen entwickeln. Durch das Einschneiden von Fenstern, war es zudem möglich, die Lichtsituation im Raum etwas einzuschätzen.</p>
+                    <br>
+                    <p>Wie man später aber noch sehen wird, habe ich mich überhaupt nicht an das Model gehalten. Da die Ausstellung in VR entsteht, aht man unendliche Möglichkeiten und muss sich nicht an die Grenzen normaler Achitektur halten. Da es in dem Kurs viel um das Experimentieren und die erste Erfahrung mit VR ging, habe ich meiner Fanasie einfach mal freien Lauf gelassen und bin dort gelandet wo ich niemals sein werde - im Weltall! </p>
+                </div>
+                <div class="idea-gallery">
+                    <div class="main-image">
+                        <img src="../img/Bloom/ideenfindung/IMG_3586.png" alt="Hauptbild" id="mainImage">
+                    </div>
+                    <div class="thumbnail-container">
+                        <button class="nav-button prev" aria-label="Vorheriges Bild">←</button>
+                        <div class="thumbnails">
+                            <img src="../img/Bloom/ideenfindung/IMG_3593.png" alt="Idee 1" class="thumbnail active" data-full="../img/Bloom/ideenfindung/IMG_3593.png">
+                            <img src="../img/Bloom/ideenfindung/IMG_3594.png" alt="Idee 2" class="thumbnail" data-full="../img/Bloom/ideenfindung/IMG_3594.png">
+                            <img src="../img/Bloom/ideenfindung/IMG_3589.png" alt="Idee 3" class="thumbnail" data-full="../img/Bloom/ideenfindung/IMG_3589.png">
+                            <img src="../img/Bloom/ideenfindung/IMG_3595.png" alt="Idee 4" class="thumbnail" data-full="../img/Bloom/ideenfindung/IMG_3595.png">
+                            
+                        </div>
+                        <button class="nav-button next" aria-label="Nächstes Bild">→</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row-halbhalb img-first">
+                <div class="halb">
+                    <img src="../img/Bloom/ziele_bloom.png" alt="Hauptbild" id="mainImage" class="bild">
+                </div>
+                <div class="halb">
+                    <h3>Konzept</h3>
+                    <p>Das Grundthema meiner Ausstellung ist Weltall. Der Zuschauer befindet sich in einem Turm und kann sich nach oben hin durch die Arbeiten und Projekte durcharbeiten bis er oben in der Kuppel ankommt. Die Kuppel ist aus Glas und man kann ewig weit schauen.</p> 
+                    <br>
+                    <p class="emphazised">Warum Weltall?</p>
+                    <p>Ich habe mich einfach aus der Faszination fürs All dafür entschieden. Ich finde die Vorstellung der Unendlichkeit als solche super krass und dachte mir deshalb, dass ich meine Interessen in dieser Form einfach in das Projekt mit einbringe. Die Arbeiten selbst haben gar nichts damit zu tun.</p>
+                    <br>
+                    <p class="emphazised">Warum Turm? </p>
+                    <p>Die Idee des Turm ist am Anfang aus der Einfachheit her entstanden. Da ich mit dem Programm am Anfang echt große Probleme hatte, fand ich es logisch, einfach einen Zylinder aufzuziehen und mir so einiges an Arbeit zu ersparen. Mein Anspruch war aber schon, dass im Verlauf dem Projekts komplexer zu gestalten.</p>
+                    <br>
+                    <p> Die ausgestellten Projekte folgen keinem Thema und auch nur bedingt einem roten Faden. es werden alles mögliche an Dingen ausgestellt, egal ob Fotografien, Plakate, Videos, Interfaces oder Produkte. Die Objekte werden nach Medium sortiert, mehr aber auch nicht.</p>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recherche & Methodiken -->
+    <section class="project-section research-section">
+        <div class="container">
+            <h2>Projektverlauf</h2>
+            <div class="row-halbhalb fullscreen">
+                <div class="halb">
+                    <p class="emphazised">Schritt 1</p>
+                    <h3>Recherche</h3>
+                    <p>Ausgangspunkt unserer Recherche war das <a href="https://berliner-register.de/?page=1">Berliner Register</a> – eine Webseite, die Vorfälle von Diskriminierung und rechten Aktivitäten in Berlin dokumentiert. Wir analysierten ihren Webauftritt und analysierten zudem weitere Antidiskriminierungs- und Community-Plattformen (u.a. <a href="https://lesmigras.de/de/" target="_blank" rel="noopener noreferrer">LesMigras,</a> <a href="https://zebrayouth.org/">ZebraYouth, </a><a href="https://hateaid.org/" target="_blank" rel="noopener noreferrer">HateAid</a> und die <a href="https://antidiskriminierungsberatung-brandenburg.de/homeseite/" target="_blank" rel="noopener noreferrer">Antidiskriminierungsberatung-Brandenburg,</a> sowie die <a href="https://play.google.com/store/apps/details?id=de.berlin.andi&amp;hl=gsw" target="_blank" rel="noopener noreferrer">AnDi</a>). </p>
+                    <p>Die Auswertung unserer Recherche zeigte vielschichtige Problemstellungen und Verbesserungsmöglichkeiten in der Unterstützung von Menschen, die von Diskriminierung betroffen sind. Der Plattform mangelt es nicht nur an Sichtbarkeit und Etablierung, sondern auch an einer klaren Struktur und einem direkten Nutzen für Betroffene.</p>
+                    <p>Dadurch sind wir zu der Erkenntnis gekommen, dass es zwar bereits zahlreiche Möglichkeiten gibt, Vorfälle zu melden, diese jedoch wenig bekannt sind. Zudem ist der Prozess oft bürokratisch und dient hauptsächlich statistischen Zwecken, ohne Betroffenen direkt helfen zu können. Ein weiterer Aspekt ist die fehlende Zwischenmenschlichkeit (Stichwort Empathie). Selbst wenn Kontaktpersonen angegeben sind, entsteht nicht das Gefühl, direkte Ansprechpartner*innen zu haben. Ein persönlicher Austausch und/oder gemeinsame Aktivitäten stehen selten im Fokus.  </p>
+                </div>
+                <div class="halb recherche-images">
+                    <img src="img/Bloom/recherche/recherche1.png" alt="Mindmap der recherche">
+                    <img src="img/Bloom/recherche/recherche2.png" alt="Mindmap der recherche">
+                    <img src="img/Bloom/recherche/recherche3.png" alt="Mindmap der recherche">
+                </div>
+            </div>
+        </div>
+
+        <div class="row-halbhalb img-first">
+            <div class="halb IIIcollage">
+                <!--<img src="img/Bloom/umfrage/umfrage1.png" alt="Umfrage Ergebnis" class="collagelong">-->
+                <img src="img/Bloom/umfrage/umfrage2.png" alt="Umfrage Ergebnis">
+                <img src="img/Bloom/umfrage/umfrage3.png" alt="Umfrage Ergebnis">
+            </div>
+            <div class="halb">
+                <p class="emphazised">Schritt 2</p>
+                <h3>Umfrage</h3>
+                <p>Um die Bedürfnisse und Wünsche von Betroffenen analysieren und konkrete Hilfe anbieten zu können, erstellten wir eine Online-Umfrage zum Thema Diskriminierung und Ausgrenzung – anonym und freiwillig. Insgesamt nahmen 14 Personen teil.</p>
+                <p>Das Melden von Vorfällen steht demnach nicht im Mittelpunkt und der direkte Austausch darüber wird teilweise abgelehnt. Jedoch wünschen sich viele mehr Austausch untereinander.</p>
+            </div>
+            
+        </div>
+
+        <div class="row-halbhalb">
+            <div class="halb">
+                <p class="emphazised">Schritt 3</p>
+                <h3>Ideengenerierung</h3>
+                <p>Wir werteten die Online-Umfrage aus, nutzten Miro-Methodiken wie die Mehrwert-Aufwand-Matrix, führten Feedbackrunden im Kurs durch und erstellten Archetypen. Unser Ziel war es dabei eine realistisch umsetzbare Projektidee zu entwickeln, die Betroffenen echten Mehrwert bietet.</p>
+                <button class="button-font primary-btn" href="methoden.html">Weitere Methodiken</button>
+            </div>
+            <div class="halb IVcollage">
+                <img src="img/Bloom/ideenfindung miro/idee1.png" alt="Mindmap der recherche">
+                <img src="img/Bloom/ideenfindung miro/idee2.png" alt="Mindmap der recherche">
+                <img src="img/Bloom/ideenfindung miro/idee3.png" alt="Mindmap der recherche">
+                <img src="img/Bloom/ideenfindung miro/idee4.png" alt="Mindmap der recherche" class="collageBig">
+                <p class="caption collageBig">Die oberen Bilder zeigen die Methode : „Wie können wir...“ und das untere Bild Zeigt die Methode: „Sturm der Ideen"</p>
+            </div>
+        </div>
+
+        
+
+        
+    </section>
+
+    <!-- Designentwicklung-->
+    <section class="design-section">
+        <div class="container">
+            <div class="bereich">
+                <h2>Bloom Berlin</h2>
+                <div class="bubbles">
+                    <div class="blase-rechts">
+                    <p class="emphazised">Was ist Bloom?</p>
+                    <br>
+                    <p>Bloom ist ein Verein, für alle und jede*n. Es gibt Veranstaltungen und Communities, denen man sich anschließen kann. Unser Ziel ist es, dass jede*r sich gesehen und gehört fühlt. Wir wollen ein Berlin ohne Diskriminierung, Vorurteile und Angst!
+                    </p>
+                </div>
+                <img src="img/Bloom/figur/huggings.svg" alt="" class="img1">
+                <div class="blase-links">
+                    <p class="emphazised">Warum braucht es einen Verein?</p>
+                    <br>
+                    <p>Ein Verein bietet den Vorteil, näher mit Menschen in Kontakt zu kommen. Durch Veranstaltungen und persönlichen Zugang kann genau dort angefasst werden, wo es gebraucht wird! Zudem kann ein Verein vielseitiger arbeiten und ist darauf angelegt, sich mit den Mitgliedern zu entwickeln.
+                    </p>
+                </div>
+            </div>
+            
+            
+
+            <h3>Target Audience</h3>
+            <div class="bereich">
+                <ul>
+                    <li><p><span class="emphazised">Ort:</span> Berlin und Umkreis</p></li>
+                    <li><p><span class="emphazised">Betroffene:</span> Menschen die aus verschiedenen Gründen von Diskrimminierung betroffen sind, und sich darüber austauschen wollen</p></li>
+                    <li><p><span class="emphazised">Eigenschaften:</span> Offene Menschen, die den Austausch und Kontakt zu anderen suchen</p></li>
+                </ul>
+    
+                <div class="archetyp">
+                    <div class="block block1">
+                        <img src="img/Bloom/figur/figur1.png" alt="Figur">
+                        <p class="emphazised">Malik</p>
+                        <p>»Ich bin auf der Suche nach einer Community in meiner Stadt, wo ich mich willkommen und akzeptiert fühle.«</p>
+                        <br>
+                        <p><span class="emphazised">Was ist mein Wesenstyp?</span><br>aufgeschlossen, freundlich, kreativ</p>
+                        <br>
+                        <p><span class="emphazised">Was ist mein Geschlecht?</span><br>männlich</p>
+                        <br>
+                        <p><span class="emphazised">Wie alt bin ich?</span><br>26</p>
+                    </div>
+                    <div class="block block2">
+                        <p class="emphazised" style="color: var(--primary-color);">Mein Beruf</p>
+                        <br>
+                        <p><span class="emphazised">Was habe ich gelernt?</span><br>Ausbildung als KFZ-Mechatroniker</p>
+                        <br>
+                        <p><span class="emphazised">Wo arbeite ich?</span><br>In einer mittelständischen Werkstatt in Neukölln</p>
+                        <br>
+                        <p><span class="emphazised">Was ist mein Aufgabenbereich in der Organisation?</span><br>Fahrzeugreparatur</p>
+                    </div>
+                    <div class="block block3">
+                        <p class="emphazised" style="color: var(--primary-color);">Persönliches</p>
+                        <br>
+                        <p><span class="emphazised">Woher komme ich?</span><br>Eritrea. Er kam vor einigen Jahren als Flüchtling nach Berlin.</p>
+                        <br>
+                        <p><span class="emphazised">Was ist meine Mini-Lebensgeschichte?</span><br>Aufgrund der politischen Lage in seinem Heimatland entschloss sich Malik vor einigen Jahren, seine Familie und sein Land zu verlassen, um in Sicherheit leben und eine bessere Zukunft aufbauen zu können.
+                            Die ersten Monate in Deutschland waren für Malik eine enorme Herausforderung. Die neue Sprache, die fremde Kultur und das Leben in einem neuen Land waren anfangs überwältigend. Aber er gab nicht auf und kämpfte hart, um sich zu integrieren. In der Ausbildung zum KFZ-Mechatroniker fand er nicht nur eine berufliche Perspektive, sondern auch eine Möglichkeit, neue Freunde zu finden und selbstbewusster zu werden.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <h3>User Journey</h3>
+            <div class="bereich">
+                <p>Die User Journey bassiert auf unserem Archetyp Malik und zeigt einen bestimmten Usecase unseres finalen Produkts. Diese UserJourney mit dazugehörigem Archetyp ist eine von drei die wir im Prozess erstellt haben. Durch diese verschiedene Usecases, konnten wir uns besser auf die unteschiedlichen Bedürfnisse konzentrieren, um so die gesammte Plattform so Nutzerfreundlich wie möglich zu gestalten</p>
+                <img src="img/Bloom/projekt/user-Journey-malik.png" alt="User Journey Malik" class="image-ganz">
+            </div>
+            
+
+            <div class="marquee">
+                <div class="marquee-content">
+                  <img src="img/Bloom/mockups/Mockup_00_Profile.png" alt="Bild 1">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_01.png" alt="Bild 2">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_03.png" alt="Bild 3">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_05.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_07.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_02_Home.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_02_Home_unten.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_03_Community.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_04_MyCommunity.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_05_Events_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_05_Events_03.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_06_Chat_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_07_Register_Event_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_07_Register_Event_02.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_00_Profile.png" alt="Bild 1">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_01.png" alt="Bild 2">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_03.png" alt="Bild 3">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_05.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_01_Install_07.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_02_Home.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_02_Home_unten.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_03_Community.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_04_MyCommunity.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_05_Events_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_05_Events_03.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_06_Chat_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_07_Register_Event_01.png" alt="Bild 4">
+                  <img src="img/Bloom/mockups/Mockup_07_Register_Event_02.png" alt="Bild 4">
+                </div>
+              </div>
+
+            <div class="styleguide bereich">
+                <h3 class="headline full-width">Styleguide</h3>
+                
+                <div class="headline full-width"><p class="emphazised">Schriften</p></div>
+
+                <div class="block-wide-center">
+                    <img src="img/Bloom/projekt/kumbh.png" alt="">
+                    <p class="emphazised"> Font-Family: Kumbh Sans</p>
+                </div>
+                <div class="block-wide">
+                    <p>Die Kumbh Sans ist eine moderne, geometrische Sans-Serif-Schrift, die sich durch ihre klaren Linien und ausgewogene Proportionen auszeichnet. Sie hat eine hohe Lesbarkeit und lässt sich durch ihre schlichte Ästhetikgut mit unserer Schmuckschrift kombinieren. Mit dieser Font haben wir eine professionelle und zugleich aber auch eine einladende Font gefunden. </p>
+                </div>
+
+                <div class="block-wide">
+                    <p>Unsere Schmuckschrift ist die Fredoka One. Sie wid für das Logo und die wichtigsten Überschriften verwendet. Sie ist eine Mischung aus sehr geometrischen Elementen, jedoch durch die abgerundeten Ecken freundich und etwas verspielt. </p>
+                </div>
+                <div class="block-wide-center">
+                    <img src="img/Bloom/projekt/fredoka.png" alt="">
+                    <p class="emphazised"> Font-Family: Fredoka One</p>
+                </div>
+
+                
+                <div class="headline full-width"><p class="emphazised">Farben</p></div>
+                
+                <div class="color-block primary-bloom">
+                    <p class="emphazised primary-bloom">primary color</p>
+                    <p class="primary-bloom">#3600C0</p>
+                </div>
+                <div class="color-block secondary-bloom1">
+                    <p class="emphazised">secondary color</p>
+                    <p>#d924ac</p>
+                </div>
+                <div class="color-block secondary-bloom2">
+                    <p class="emphazised">secondary color</p>
+                    <p>#f9811f</p>
+                </div>
+                <div class="color-block secondary-bloom3">
+                    <p class="emphazised">secondary color</p>
+                    <p>#1cb2d4</p>
+                </div>
+                
+                <div class="block-wide color-block white-bloom">
+                    <p class="emphazised">background color</p>
+                    <p>#ecebe9</p>
+                </div>
+                <div class="block-wide color-block black-bloom">
+                    <p class="emphazised black-bloom">of-set black</p>
+                    <p class="black-bloom">#333639</p>
+                </div>
+                
+                <div class="headline full-width"><p class="emphazised">Bildsprache</p></div>
+                
+                <div class="block-wide">
+                    <p>Unsere Bildsprache basiert auf einer bewussten Entscheidung: Statt Menschen darzustellen, setzen wir auf eigens entwickelte Figuren und Charaktere. Dieser Ansatz hilft, Stereotypen zu vermeiden und sicherzustellen, dass keine bestimmten Menschengruppen unzureichend repräsentiert werden. Fotografien könnten dieser Vielfalt nicht immer gerecht werden – abstrakte Figuren bieten hier eine inklusive Alternative. Gleichzeitig dienen sie als intuitive Bedienelemente und verleihen der Plattform eine einladende, zugängliche Atmosphäre.</p>
+                </div>
+                <div class="block-wide">
+                    <img src="img/Bloom/figur/hugging1.png" alt="two characters hugging">
+                </div>
+            </div>
+
+            <div class="bereich">
+                <h3>App Strukture</h3>
+                <img src="img/Bloom/projekt/app-structure.png" alt="" class="img2">
+            </div>
+            
+            <div class="bereich">
+                <div class="row-halbhalb img-first">
+                    <div class="halb">
+                        <video autoplay muted loop>
+                            <source src="img/Bloom/projekt/homescreen.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="halb">
+                        <h3>Homescreen</h3>
+                        <p>Auf dem Homescreen haben Nutzer*innen die Möglichkeit, durch die verschiedenen Bereiche zu navigieren. Zusätzlich erhalten sie personalisierte Vorschläge basierend auf ihrem Profil – etwa zu Events oder Artikeln, die für sie interessant sein könnten. Außerdem gibt es hier die Möglichkeit, mehr über den Verein Bloom zu erfahren.</p>
+                        <br>
+                        <p>Zur besseren Übersichtlichkeit sind die einzelnen Bereiche farblich abwechselnd gestaltet. Die Charaktere tauchen dabei immer wieder auf – oben als Navigationselement und weiter unten als reines Stilelement.</p>
+                    </div>
+                </div>
+    
+                <div class="row-halbhalb">
+                    
+                    <div class="halb">
+                        <h3>Community-Bereich</h3>
+                        <p>Im Community-Bereich haben Nutzer*innen die Möglichkeit, sich zu vernetzen. Sie können Gruppen beitreten und Buddies finden, die sie in bestimmten Situationen unterstützen – sei es bei Fragen, wenn sie Hilfe benötigen oder einfach zum Austausch.</p>
+                        <br>
+                        <p>Der Bereich gliedert sich in zwei Teile: den allgemeinen <span class="emphazised">Community-Bereich</span> und <span class="emphazised">„My Community“.</span> In der eigenen Community finden Nutzerinnen die Gruppen, denen sie bereits beigetreten sind, sowie ihre Freundinnen und Buddies.</p>
+                            
+                    </div>
+    
+                    <div class="halb">
+                        <video autoplay muted loop>
+                            <source src="img/Bloom/projekt/community.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                    </div>
+    
+                </div>
+    
+                <div class="row-halbhalb img-first">
+                    <div class="halb">
+                        <video autoplay muted loop>
+                            <source src="img/Bloom/projekt/events.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="halb">
+                        <h3>Eventscreen</h3>
+                        <p>Kernelement von Bloom ist der persönliche Austausch. Deshalb bietet Bloom eine Vielzahl an Events, bei denen sich Nutzer*innen anmelden können. Der Eventbereich ist in zwei Ansichten unterteilt: die standardmäßige Feedansicht und die Kartenansicht. Im Feed können Veranstaltungen nach Themen und Interessen gefiltert werden, während die Kartenansicht anzeigt, was in der Nähe des Nutzers oder der Nutzerin stattfindet.</p>
+                        <br>
+                        <p>Wird ein Event ausgewählt, erhält die Nutzerin alle relevanten Informationen. Neben den üblichen Eventdetails gibt es auch Angaben zur Barrierefreiheit sowie die Möglichkeit, den oder die Veranstaltenden bei offenen Fragen zu kontaktieren. Abschließend muss sich die Nutzer*in nur noch anmelden. Der Anmeldebutton ist jedoch nur bei Events sichtbar, bei denen eine Anmeldung zwingend erforderlich ist. Es gibt bewusst auch Veranstaltungen ohne Anmeldepflicht, um die Einstiegshürde möglichst niedrig zu halten.</p>
+                    </div>
+                </div>
+               
+                <div class="row-halbhalb ">
+                    <div class="halb">
+                        <h3>Proil</h3>
+                        <p>Das Profil ist der einzige Ort, an dem Fotos angezeigt werden. Wir haben uns bewusst gegen die Lösung von individuellen Avataren entschieden, um die Profile und den Austausch persönlicher zu gestalten. Im Profil finden sich die Interessen sowie persönliche Anmerkungen. Wenn eine Nutzer*in auf rollstuhlgerechte Events angewiesen ist, kann diese Information hier hinterlegt werden, um entsprechend passende Vorschläge zu erhalten.</p>
+                    </div>
+    
+                    <div class="halb">
+                        <video autoplay muted loop>
+                            <source src="img/Bloom/projekt/profil.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+    
+                <div class="row-halbhalb ">
+                    <div class="halb">
+                        <video autoplay muted loop>
+                            <source src="img/Bloom/projekt/onboarding.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="halb">
+                        <h3>Onboarding</h3>
+                        <p>Bloom ist nur mit Anmeldung nutzbar, um einen Safe Space zu gewährleisten. Beim Onboarding können Nutzerinnen ihre persönlichen Präferenzen angeben, sodass die App optimal auf ihre Bedürfnisse zugeschnitten ist. Zudem werden Fragen zur Barrierefreiheit gestellt, um sicherzustellen, dass jeder den Zugang erhält, der individuell benötigt wird</p>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </section>
+    
+
+    <!-- Prototyp -->
+    <section class="project-section prototype-section">
+        <div class="container">
+            <h2>Prototype</h2>
+            <div class="prototype-container">
+                <div class="prototype-description">
+                    <p>Schau doch gerne in unseren Figma-Prototypen! Da es sich hier um ein Uniprojekt handelt und wir uns mehr uaf die Recherche konzentriert haben, sind nicht alle Funktionen ausgearbeitet.</p>
+                </div>
+                <div class="figma-embed">
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/cprNbSJDdqaNv7I53E3Bb7/User-Ex-perimental?page-id=611%3A1237&node-id=914-3611&p=f&viewport=515%2C608%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=914%3A3611&show-proto-sidebar=1&embed-host=share" allowfullscreen allow-same-origin allow-scripts></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learnings & Fazit -->
+    <section class="project-section learnings-section">
+        <div class="container">
+            <h2>Learnings & Fazit</h2>
+            <div class="learnings-grid">
+                <div class="learning-card">
+                    <h3>Key Learnings</h3>
+                    <br>
+                    <ul>
+                        <li><p>Grundlagen des UX Designs</p></li>
+                        <li><p>Diverse Methoden in den Bereichen Recherche und Ideengenerierung</p></li>
+                        <li><p>Grundlagen im Bereich Accessibility und Barrierefreiheit</p></li>
+                    </ul>
+                </div>
+                <div class="learning-card">
+                    <h3>Herausforderungen</h3>
+                    <br>
+                    <ul>
+                        <li><p>Kleines Zeitfenster für das gesammte Projekt</p></li>
+                        <li><p>Balancieren von Ästhetik und Funktionalität</p></li>
+                        <li><p>Die Erwartungen und Bedürfnisse der Nutzer richtig zu verstehen und umzusetzen</p></li>
+                    </ul>
+                </div>
+                <div class="learning-card learning-big">
+                    <h3>Fazit</h3>
+                    <p>Dies war mein erstes Projekt, mit dem Fokus auf UX Design. Ich konnte eine Menge neuer Methodiken erlernen und fand es gut, sich mehr auf die Recherche konzentrieren zu können. Die Analyse von Nutzerbedürfnissen und -verhalten war besonders aufschlussreich und hat meine Herangehensweise an UX-Design geprägt. Eine größere Herausforderung war es, aus den gewonnenen Erkenntnissen klare Prioritäten abzuleiten und diese effizient ins Design zu übersetzen. Rückblickend würde ich den Research-Prozess noch strukturierter gestalten, um noch präzisere Insights zu gewinnen. Dieses Projekt hat meine methodischen Fähigkeiten gestärkt und mein Verständnis für nutzerzentriertes Design vertieft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Theresa Brand</p>
+            <p>Reiherweg 4a</p>
+            <p>14469 Potsdam</p>
+            <br>
+            <p>0176 45456868</p>
+            <a class="link" href="mailto:theresa.brand@freenet.de">theresa.brand@freenet.de</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/IHR_PROFIL" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/IHR_PROFIL" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://www.xing.com/profile/IHR_PROFIL" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18.188 2.196l-4.788 8.354 7.304 12.25h-4.906l-7.304-12.25 4.788-8.354h4.906zM8.12 6.246l3.876 6.486L7.83 18.804H4.95l4.166-6.072-3.876-6.486H8.12z"></path></svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img src="" alt="" class="lightbox-image">
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../project-script.js"></script>
+</body>
+</html> 
