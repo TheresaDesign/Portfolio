@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 867 525.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_94);
+      }
+
+      .cls-2 {
+        fill: url(#_56);
+      }
+
+      .cls-3 {
+        fill: url(#_31);
+      }
+
+      .cls-4 {
+        fill: url(#_30);
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        mask: url(#mask);
+      }
+
+      .cls-7 {
+        fill: url(#_119);
+      }
+
+      .cls-8 {
+        fill: url(#_173);
+      }
+
+      .cls-9 {
+        fill: url(#_172);
+      }
+
+      .cls-10 {
+        fill: url(#_757);
+      }
+
+      .cls-11 {
+        fill: url(#_713);
+      }
+
+      .cls-12 {
+        fill: url(#_729);
+      }
+
+      .cls-13 {
+        fill: url(#_728);
+      }
+
+      .cls-14 {
+        fill: url(#_748-2);
+      }
+
+      .cls-14, .cls-15, .cls-16 {
+        mix-blend-mode: multiply;
+      }
+
+      .cls-17 {
+        fill: gray;
+      }
+
+      .cls-18 {
+        fill: #4d4d4d;
+      }
+
+      .cls-19 {
+        isolation: isolate;
+      }
+
+      .cls-20 {
+        fill: url(#_757-2);
+      }
+
+      .cls-21 {
+        fill: url(#_729-2);
+      }
+
+      .cls-22 {
+        fill: url(#_728-2);
+      }
+
+      .cls-23 {
+        fill: url(#_172-2);
+      }
+
+      .cls-24 {
+        fill: url(#_119-2);
+      }
+
+      .cls-25 {
+        mask: url(#mask-2);
+      }
+
+      .cls-26 {
+        mask: url(#mask-3);
+      }
+
+      .cls-27 {
+        mask: url(#mask-4);
+      }
+
+      .cls-28 {
+        mask: url(#mask-5);
+      }
+
+      .cls-29 {
+        mask: url(#mask-7);
+      }
+
+      .cls-30 {
+        mask: url(#mask-6);
+      }
+
+      .cls-31 {
+        mask: url(#mask-1);
+      }
+
+      .cls-32 {
+        fill: #a9ebe6;
+        opacity: .2;
+      }
+
+      .cls-33 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-34 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-35 {
+        opacity: .8;
+      }
+
+      .cls-36 {
+        opacity: .3;
+      }
+
+      .cls-16 {
+        fill: url(#_748);
+      }
+
+      .cls-37 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <linearGradient id="_172" data-name="  172" x1="675.4" y1="279.5" x2="837.8" y2="279.5" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#0f0f0f"/>
+      <stop offset=".3" stop-color="#141414"/>
+      <stop offset=".3" stop-color="#232323"/>
+      <stop offset=".4" stop-color="#2a2a2a"/>
+      <stop offset=".5" stop-color="#3d3d3d"/>
+      <stop offset=".5" stop-color="#3e3e3e"/>
+      <stop offset=".6" stop-color="#383838"/>
+      <stop offset=".7" stop-color="#292929"/>
+      <stop offset=".8" stop-color="#111"/>
+      <stop offset=".8" stop-color="#0f0f0f"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="_172-2" data-name="  172" x1="19.9" y1="279.1" x2="182.4" y2="279.1" xlink:href="#_172"/>
+    <clipPath id="clippath">
+      <path class="cls-5" d="M635.1,468.9c-68.4,0-136.5-13-204.9-13s-138.3,13-207.4,13c-37.8,0-77.4-38.4-82.6-76.5-6.1-47.2-6.5-95-1.2-142.4,4.6-38.5,43.7-69.2,81.8-69.2h416.1c38.1,0,77.3,30.7,81.8,69.2,5.3,47.4,4.9,95.2-1.2,142.4-5.2,38.1-44.6,76.5-82.4,76.5Z"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <path class="cls-5" d="M623.4,474.6c-78.3,0-111.6-15.4-193.4-15.4s-142.5,15.4-193,15.4c-35.4,0-85.4-38.1-90.9-75.3-6.4-46.2-7.3-93.2-2.6-140,4.1-38.1,42.5-68.6,80.1-68.6h410.4c37.6,0,75.9,30.5,80.1,68.6,4.7,46.8,3.9,93.8-2.6,140-5.5,37.2-52.8,75.3-88.3,75.3Z"/>
+    </clipPath>
+    <linearGradient id="_173" data-name="  173" x1="19.9" y1="330.6" x2="141.2" y2="330.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3e3e3e"/>
+      <stop offset=".1" stop-color="#3b3b3b"/>
+      <stop offset=".3" stop-color="#1a1a1a"/>
+      <stop offset=".4" stop-color="#0f0f0f"/>
+      <stop offset=".4" stop-color="#111"/>
+      <stop offset=".5" stop-color="#292929"/>
+      <stop offset=".6" stop-color="#383838"/>
+      <stop offset=".7" stop-color="#3e3e3e"/>
+      <stop offset=".7" stop-color="#393939"/>
+      <stop offset=".8" stop-color="#2a2a2a"/>
+      <stop offset=".9" stop-color="#232323"/>
+      <stop offset="1" stop-color="#2d2d2d"/>
+      <stop offset="1" stop-color="#202020"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="_119" data-name="  119" x1="716.6" y1="330.5" x2="837.8" y2="330.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset="0" stop-color="#202020"/>
+      <stop offset="0" stop-color="#2d2d2d"/>
+      <stop offset=".1" stop-color="#232323"/>
+      <stop offset=".2" stop-color="#2a2a2a"/>
+      <stop offset=".3" stop-color="#393939"/>
+      <stop offset=".3" stop-color="#3e3e3e"/>
+      <stop offset=".4" stop-color="#383838"/>
+      <stop offset=".5" stop-color="#292929"/>
+      <stop offset=".6" stop-color="#111"/>
+      <stop offset=".6" stop-color="#0f0f0f"/>
+      <stop offset=".7" stop-color="#1a1a1a"/>
+      <stop offset=".9" stop-color="#3b3b3b"/>
+      <stop offset="1" stop-color="#3e3e3e"/>
+    </linearGradient>
+    <linearGradient id="_30" data-name="  30" x1="703" y1="343.2" x2="724.8" y2="343.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset=".7" stop-color="#0d0d0d"/>
+      <stop offset=".8" stop-color="#3b3b3b"/>
+      <stop offset=".9" stop-color="#3e3e3e"/>
+      <stop offset=".9" stop-color="#373737"/>
+      <stop offset="1" stop-color="#252525"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="_31" data-name="  31" x1="133" y1="343.2" x2="154.8" y2="343.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1a1a"/>
+      <stop offset="0" stop-color="#252525"/>
+      <stop offset="0" stop-color="#373737"/>
+      <stop offset="0" stop-color="#3e3e3e"/>
+      <stop offset=".2" stop-color="#3b3b3b"/>
+      <stop offset=".3" stop-color="#0d0d0d"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="_56" data-name="  56" x1="144.5" y1="340.8" x2="713.3" y2="340.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset=".1" stop-color="#181818"/>
+      <stop offset=".1" stop-color="#292929"/>
+      <stop offset=".1" stop-color="#353535"/>
+      <stop offset=".1" stop-color="#3c3c3c"/>
+      <stop offset=".2" stop-color="#3e3e3e"/>
+      <stop offset=".4" stop-color="#0f0f0f"/>
+      <stop offset=".7" stop-color="#1a1a1a"/>
+      <stop offset=".9" stop-color="#3e3e3e"/>
+      <stop offset=".9" stop-color="#2b2b2b"/>
+      <stop offset=".9" stop-color="#222"/>
+      <stop offset="1" stop-color="#141414"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="_713" data-name="  713" x1="351.5" y1="426.4" x2="506.8" y2="426.4" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#141414"/>
+      <stop offset=".1" stop-color="#1a1a1a"/>
+      <stop offset=".3" stop-color="#212121"/>
+      <stop offset=".5" stop-color="#0f0f0f"/>
+      <stop offset=".5" stop-color="#111"/>
+      <stop offset=".5" stop-color="#292929"/>
+      <stop offset=".6" stop-color="#383838"/>
+      <stop offset=".7" stop-color="#3e3e3e"/>
+      <stop offset=".7" stop-color="#393939"/>
+      <stop offset=".8" stop-color="#2a2a2a"/>
+      <stop offset=".9" stop-color="#232323"/>
+      <stop offset="1" stop-color="#2d2d2d"/>
+      <stop offset="1" stop-color="#202020"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <clipPath id="clippath-2">
+      <path class="cls-5" d="M614.3,206.4H243.5c-52.8,0-95.6,42.8-95.6,95.6v65.2c0,62.3,50.5,112.8,112.8,112.8h82.8c12.8,0,20-15.7,16.2-31.1-2.5-10.1-9.1-17-17.5-17h-43.6c-49.3,0-90.3-40.4-89.9-89.7.4-48.6,32.8-87.8,81.5-87.8h273.7c49.3,0,85.9,40.4,85.4,89.7-.4,48.6-32.8,87.8-81.5,87.8h-52c-8.4,0-18.8,6.8-21.2,16.8-3.8,15.5,7.7,31.3,20.6,31.3h82.1c62.3,0,112.8-50.5,112.8-112.8v-65.2c0-52.8-42.8-95.6-95.6-95.6Z"/>
+    </clipPath>
+    <radialGradient id="_728" data-name="  728" cx="313.8" cy="343.2" fx="313.8" fy="343.2" r="81.4" gradientUnits="userSpaceOnUse">
+      <stop offset=".9" stop-color="#000"/>
+      <stop offset="1" stop-color="#333"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+      <stop offset="1" stop-color="#000"/>
+    </radialGradient>
+    <linearGradient id="_729" data-name="  729" x1="247.6" y1="313.7" x2="380.1" y2="372.7" gradientTransform="translate(602.3 -21.6) rotate(80.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset=".1" stop-color="#202020"/>
+      <stop offset=".2" stop-color="#3e3e3e"/>
+      <stop offset=".3" stop-color="#3c3c3c"/>
+      <stop offset=".4" stop-color="#353535"/>
+      <stop offset=".4" stop-color="#292929"/>
+      <stop offset=".4" stop-color="#181818"/>
+      <stop offset=".4" stop-color="#0f0f0f"/>
+      <stop offset=".7" stop-color="#1a1a1a"/>
+      <stop offset=".8" stop-color="#3b3b3b"/>
+      <stop offset=".9" stop-color="#3e3e3e"/>
+      <stop offset=".9" stop-color="#252525"/>
+      <stop offset="1" stop-color="#141414"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <radialGradient id="_748" data-name="  748" cx="313.8" cy="343.2" fx="313.8" fy="343.2" r="72.5" gradientTransform="translate(602.3 -21.6) rotate(80.8)" gradientUnits="userSpaceOnUse">
+      <stop offset=".8" stop-color="#969696"/>
+      <stop offset=".8" stop-color="#fff"/>
+      <stop offset=".8" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f6f6f6"/>
+      <stop offset="1" stop-color="#cfcfcf"/>
+      <stop offset="1" stop-color="#aeaeae"/>
+      <stop offset="1" stop-color="#949494"/>
+      <stop offset="1" stop-color="#828282"/>
+      <stop offset="1" stop-color="#777"/>
+      <stop offset="1" stop-color="#747474"/>
+    </radialGradient>
+    <radialGradient id="_757" data-name="  757" cx="313.8" cy="343.2" fx="313.8" fy="343.2" r="55.8" gradientTransform="translate(334.6 -121.4) rotate(45)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset=".5" stop-color="#020202"/>
+      <stop offset=".8" stop-color="#0b0b0b"/>
+      <stop offset="1" stop-color="#191919"/>
+      <stop offset="1" stop-color="#1a1a1a"/>
+    </radialGradient>
+    <mask id="mask" x="263.7" y="293.1" width="69.1" height="59.2" maskUnits="userSpaceOnUse">
+      <image width="289" height="247" transform="translate(263.5 293.1) scale(.2)" xlink:href="VR-glasses-5.png"/>
+    </mask>
+    <mask id="mask-1" x="290.7" y="326.1" width="71.7" height="68.8" maskUnits="userSpaceOnUse">
+      <image width="299" height="288" transform="translate(290.7 326) scale(.2)" xlink:href="VR-glasses-7.png"/>
+    </mask>
+    <mask id="mask-2" x="265.2" y="297.6" width="57.7" height="78.4" maskUnits="userSpaceOnUse">
+      <image width="239" height="320" transform="translate(265 297.9) scale(.2)" xlink:href="VR-glasses-8.png"/>
+    </mask>
+    <mask id="mask-3" x="311" y="308.4" width="53.7" height="84.5" maskUnits="userSpaceOnUse">
+      <image width="225" height="353" transform="translate(310.8 308.2) scale(.2)" xlink:href="VR-glasses-10.png"/>
+    </mask>
+    <radialGradient id="_728-2" data-name="  728" cx="543.9" fx="543.9" r="81.4" xlink:href="#_728"/>
+    <linearGradient id="_729-2" data-name="  729" x1="477.7" x2="610.2" gradientTransform="translate(795.6 -248.7) rotate(80.8)" xlink:href="#_729"/>
+    <radialGradient id="_748-2" data-name="  748" cx="543.9" fx="543.9" gradientTransform="translate(795.6 -248.7) rotate(80.8)" xlink:href="#_748"/>
+    <radialGradient id="_757-2" data-name="  757" cx="543.9" fx="543.9" r="55.8" gradientTransform="translate(753 -265) rotate(76.7)" xlink:href="#_757"/>
+    <mask id="mask-4" x="493.5" y="293.1" width="69.1" height="59.2" maskUnits="userSpaceOnUse">
+      <image width="289" height="247" transform="translate(493.2 293.1) scale(.2)" xlink:href="VR-glasses-12.png"/>
+    </mask>
+    <mask id="mask-5" x="520.4" y="326.1" width="71.7" height="68.8" maskUnits="userSpaceOnUse">
+      <image width="300" height="288" transform="translate(520.3 326) scale(.2)" xlink:href="VR-glasses-14.png"/>
+    </mask>
+    <mask id="mask-6" x="494.9" y="297.6" width="57.7" height="78.4" maskUnits="userSpaceOnUse">
+      <image width="238" height="320" transform="translate(494.9 297.9) scale(.2)" xlink:href="VR-glasses-15.png"/>
+    </mask>
+    <mask id="mask-7" x="540.7" y="308.4" width="53.7" height="84.5" maskUnits="userSpaceOnUse">
+      <image width="224" height="353" transform="translate(540.7 308.2) scale(.2)" xlink:href="VR-glasses-17.png"/>
+    </mask>
+    <linearGradient id="_94" data-name="  94" x1="365.4" y1="186.2" x2="492.3" y2="186.2" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f0f0f"/>
+      <stop offset=".1" stop-color="#202020"/>
+      <stop offset=".2" stop-color="#3e3e3e"/>
+      <stop offset=".4" stop-color="#0f0f0f"/>
+      <stop offset=".7" stop-color="#1a1a1a"/>
+      <stop offset=".8" stop-color="#3b3b3b"/>
+      <stop offset=".9" stop-color="#3e3e3e"/>
+      <stop offset=".9" stop-color="#252525"/>
+      <stop offset="1" stop-color="#141414"/>
+      <stop offset="1" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="_119-2" data-name="  119" x1="428.9" y1="186.2" x2="428.9" y2="25" xlink:href="#_119"/>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.5, SVG Export Plug-In . SVG Version: 1.2.0 Build 176)  -->
+  <g class="cls-19">
+    <g id="_1">
+      <g>
+        <path class="cls-9" d="M675.4,211.2c0,29.7,0,43.5,0,73.2,55.8-2.2,162.4,31.4,162.4,63.3,0-22.8,0-50.2,0-73,0-32.7-95.3-57.1-162.5-63.5Z"/>
+        <path class="cls-23" d="M182.4,211.2c0,29.7,0,43.5,0,73.2-55.8-2.2-162.5,30.5-162.5,62.4,0-22.8,0-49.3,0-72.1,0-32.7,95.3-57.1,162.5-63.5Z"/>
+        <g class="cls-37">
+          <image width="2767" height="1419" transform="translate(96 142.4) scale(.2)" xlink:href="VR-glasses-1.png"/>
+        </g>
+        <g class="cls-33">
+          <image width="2732" height="1184" transform="translate(102.3 190.6) scale(.2)" xlink:href="VR-glasses-2.png"/>
+        </g>
+        <g class="cls-15">
+          <path class="cls-17" d="M146.2,399.3c-4.3-30.7-6.2-61.8-5.7-92.8.4-22-.7-47.8,8.8-68.4,9.9-21.2,29.8-37.6,52.1-44.4,10.5-3.2,21-3.5,31.9-3.5,40.1,0,80.2,0,120.4,0,42.8,0,85.6,0,128.4,0,40.8,0,81.6,0,122.4,0,12.6,0,25.8-.9,38.4.6,15.9,2,31,8.9,43.4,19,16.3,13.4,26.7,32,28.6,53.1,2.8,30.3,3.3,60.8,1.4,91.3-1,15.1-2.5,30.1-4.6,45,4.1-30.3,5.9-60.9,5.2-91.5-.3-14.9-1.2-29.8-2.6-44.7-.9-9-3-17.7-7-25.9-10.1-20.6-30-36.5-51.9-42.9-10.4-3.1-21.1-3.1-31.9-3.1-40,0-79.9,0-119.9,0-42.4,0-84.8,0-127.2,0-40.6,0-81.3,0-121.9,0-12.4,0-25.2-.8-37.6.3-15.7,1.5-31,8.2-43.4,17.8-17,13.3-27.9,32.2-30,53.8-2.9,30.3-3.5,60.8-1.8,91.2.9,15.1,2.3,30.1,4.4,45.1Z"/>
+        </g>
+        <path class="cls-8" d="M141.2,388.1c0-29.7,0-59.4,0-89.1-55.8,2.2-115-1.8-121.2-26.3,0,21.9,0,51.9,0,74.2,0,1.8.5,3.6,1.5,5.1,18.2,27.7,65.5,39.2,119.8,36Z"/>
+        <path class="cls-7" d="M716.6,388.1c0-29.7,0-59.4,0-89.1,55.8,2.2,116.6-2.4,121.2-26.4,0,21.9,0,52,0,74.4,0,1.8-.5,3.6-1.5,5.1-18.2,27.7-65.5,39.2-119.8,36Z"/>
+        <path class="cls-18" d="M835.8,264.4c-14.1-23.2-74.5-42.1-132.9-50.9.7.8,1.3,1.7,2,2.6,57.7,9,115.9,27.9,129,49.5,3.5,5.8,2,13.4-3.5,17.3-18.1,13-66.7,16.4-108.2,15.1,0,.7,0,1.5,0,2.2,5.2.2,10.5.3,15.8.3,37.7,0,77.4-4.1,93.6-15.8,6.4-4.6,8.2-13.5,4.1-20.3Z"/>
+        <path class="cls-18" d="M135.6,298c-40.9,1.2-89.2-2.1-107.7-14.9-6-4.1-7.5-12.1-3.6-18.2,14.2-22,72.1-40,128.7-48.8.6-.9,1.3-1.7,2-2.5-57.8,8.7-117.8,27.3-132.5,50.1-4.6,7.1-2.7,16.5,4.2,21.3,16.6,11.5,56.1,15.6,93.3,15.6s10.5-.1,15.6-.3c0-.7,0-1.5,0-2.2Z"/>
+        <path class="cls-4" d="M715.3,401.6c5.7-2.4,9.5-7.9,9.5-14.2v-88.5c0-6.2-3.8-11.8-9.5-14.2l-12.3-5v126.9l12.3-5Z"/>
+        <path class="cls-3" d="M154.8,406.7v-126.9l-12.3,5c-5.7,2.4-9.5,7.9-9.5,14.2v88.5c0,6.2,3.8,11.8,9.5,14.2l12.3,5Z"/>
+        <path class="cls-2" d="M610.8,201.6H247c-72.2,0-102.5,42.3-102.5,108.3v56.6c0,62.6,53.2,113.4,118.9,113.4l87.2-.2c32.7,0,57.3-13.9,78.3-13.9s46.1,14,78.8,14l86.7.2c65.7,0,118.9-50.8,118.9-113.4v-56.6c0-66-30.3-108.3-102.5-108.3Z"/>
+        <image width="2128" height="1074" transform="translate(173.5 222.3) scale(.2)" xlink:href="VR-glasses-3.png"/>
+        <path class="cls-11" d="M428.9,373c-37.6,0-53.6,106.9-77.4,106.9,32.3,0,56.6-13.7,77.4-13.7s45.6,13.7,77.9,13.7c-23.8,0-40.3-106.9-77.9-106.9Z"/>
+        <g class="cls-34">
+          <image width="2374" height="1173" transform="translate(144 201.2) scale(.2)" xlink:href="VR-glasses-4.png"/>
+        </g>
+        <g>
+          <circle class="cls-13" cx="313.8" cy="343.2" r="81.4"/>
+          <circle class="cls-12" cx="313.8" cy="343.2" r="72.5" transform="translate(-75.2 598) rotate(-80.8)"/>
+          <circle class="cls-16" cx="313.8" cy="343.2" r="72.5" transform="translate(-75.2 598) rotate(-80.8)"/>
+          <circle class="cls-10" cx="313.8" cy="343.2" r="55.8" transform="translate(-150.8 322.4) rotate(-45)"/>
+          <g>
+            <g class="cls-6">
+              <image width="289" height="247" transform="translate(263.5 293.1) scale(.2)" xlink:href="VR-glasses-6.png"/>
+            </g>
+            <g class="cls-31">
+              <path class="cls-32" d="M296.2,387.3c-10.5-12-5.5-33.6,11.3-48.4,16.8-14.8,38.9-17,49.4-5,10.5,12,5.5,33.6-11.3,48.4-16.8,14.8-38.9,17-49.4,5Z"/>
+            </g>
+            <g class="cls-25">
+              <image class="cls-35" width="241" height="328" transform="translate(265.2 297.4) scale(.2)" xlink:href="VR-glasses-9.png"/>
+            </g>
+            <g class="cls-26">
+              <image class="cls-36" width="225" height="353" transform="translate(310.8 308.2) scale(.2)" xlink:href="VR-glasses-11.png"/>
+            </g>
+          </g>
+        </g>
+        <g>
+          <circle class="cls-22" cx="543.9" cy="343.2" r="81.4"/>
+          <circle class="cls-21" cx="543.9" cy="343.2" r="72.5" transform="translate(118 825.2) rotate(-80.8)"/>
+          <circle class="cls-14" cx="543.9" cy="343.2" r="72.5" transform="translate(118 825.2) rotate(-80.8)"/>
+          <circle class="cls-20" cx="543.9" cy="343.2" r="55.8" transform="translate(84.9 793.8) rotate(-76.7)"/>
+          <g>
+            <g class="cls-27">
+              <image width="289" height="247" transform="translate(493.2 293.1) scale(.2)" xlink:href="VR-glasses-13.png"/>
+            </g>
+            <g class="cls-28">
+              <ellipse class="cls-32" cx="556.3" cy="360.6" rx="40.4" ry="28.9" transform="translate(-99.5 457.6) rotate(-41.4)"/>
+            </g>
+            <g class="cls-30">
+              <image class="cls-35" width="240" height="328" transform="translate(495.1 297.4) scale(.2)" xlink:href="VR-glasses-16.png"/>
+            </g>
+            <g class="cls-29">
+              <image class="cls-36" width="224" height="353" transform="translate(540.7 308.2) scale(.2)" xlink:href="VR-glasses-18.png"/>
+            </g>
+          </g>
+        </g>
+        <image class="cls-15" width="876" height="29" transform="translate(322.6 193.7) scale(.2)" xlink:href="VR-glasses-19.png"/>
+        <path class="cls-1" d="M487.3,184.8c-2.4-5.7-7.9-9.5-14.2-9.5h-88.5c-6.2,0-11.8,3.8-14.2,9.5l-5,12.3h126.9l-5-12.3ZM378.7,189.8h0c1-4.4,3.3-7.2,5.9-7.2h88.5c2.6,0,4.9,2.8,5.9,7.2h0s-100.3,0-100.3,0Z"/>
+        <path class="cls-24" d="M472,186.2h-86.2c-.8,0-1.5-.7-1.5-1.5-.4-56,3.7-103.6,10.4-159.8h68.4c6.6,56.1,10.8,103.8,10.4,159.8,0,.8-.7,1.5-1.5,1.5Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

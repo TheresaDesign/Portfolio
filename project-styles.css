@@ -350,6 +350,7 @@ h3{
   .marquee-content img {
     width: 300px; /* Größe der Bilder anpassen */
     height: auto;
+    border-radius: 10px;
   }
   
   @keyframes marquee {
@@ -577,7 +578,6 @@ h3{
     }
 
     .thumbnail-container {
-        flex-direction: column;
         align-items: center;
     }
     
@@ -598,6 +598,25 @@ h3{
 
     .idea-text {
         font-size: 1.1rem;
+    }
+
+    .marquee-content img {
+        width: 200px;
+    }
+
+    .learnings-grid {
+        grid-template-columns: 1fr;
+    }
+    .prototype-container {
+        flex-direction: column;
+    }
+    
+    .learning-big{
+        grid-column: span 1;
+    }
+    /*VR*/
+    .VR-glasses{
+        display: none;
     }
 }
 
@@ -710,4 +729,10 @@ h3{
     width: 100%;
   margin:0 auto;
   max-width: 1200px;
+}
+
+/* VR */
+.VR-glasses{
+    width: 170% !important;
+  position: relative;
 }

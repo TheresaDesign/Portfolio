@@ -257,7 +257,6 @@ to {
   display: flex;
   gap: 5rem;
   animation: marquee 25s linear infinite;
-  
   flex-direction: column;
   width: 45.5%;
   margin: 045%;

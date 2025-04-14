@@ -2,7 +2,8 @@
 - bilder aus WA gruppe einfügen Bloom
 - bei mcmc noch die seite verlinken
  aktuell sind bei den Projekten alle überschriften lila. Soll das so bleiben?
+ - maybe menü in mobile als burger-menu
 
- var
- - ausstellungs konzept wo ist was
+ VR
  - umbruch button bei youtube auf schmallem Display überprüfen
+ - Querschnitt neu

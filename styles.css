@@ -501,6 +501,7 @@ a{
 }
 .halb img{
     width:100%;
+    border-radius: 10px;
 }
 
 .halb video{
@@ -677,7 +678,9 @@ a{
     .main-nav ul {
         gap: 1rem;
     }
-}
+    .primary-btn {
+        padding: 0.5rem 1rem;
+    }
 
 
 /* Project Detail Page */
