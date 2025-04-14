@@ -52,6 +52,12 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.project-hero.hero-vr{
+    background-image: url(img/VR-ex/cover-gross.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Project Sections */
 .project-section {
     padding: 32px 10%;
@@ -563,6 +569,10 @@ h3{
 
     .project-hero.hero-mapping{
         background-image: url(img/Mapping/cover-klein.png);
+    }
+
+    .project-hero.hero-vr{
+        background-image: url(img/VR-ex/cover-klein.png);
     }
 
     .hero-content{

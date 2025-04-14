@@ -177,7 +177,7 @@ a{
 .back-button {
     margin: 0 10%;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
     top: 15px;
     display: flex;
     gap: 0.5rem;
@@ -187,6 +187,7 @@ a{
     background-clip: text;
     color: transparent;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .back-button svg {
@@ -208,6 +209,98 @@ a{
 .image-ganz img{
     width: 100%;
     border-radius: 10px;
+}
+
+
+/* Header */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    justify-content: end;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  /* Burger */
+  .burger {
+    width: 30px;
+    height: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .burger span {
+    display: block;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  /* Burger Animation */
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+  }
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+  }
+  
+  /* Mobile Nav */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.5s ease;
+    z-index: 100;
+    border-radius: 10px 0 0 10px;
+    background: rgba(241, 242, 238, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .mobile-nav.active {
+    
+    right: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.5s ease;
+    transform: translateY(0);
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: var(--grey2);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .mobile-nav a.active {
+    color: transparent;
+    transform: translateY(-2px);
+    background-size: 100%;
+    background-position: 0 0;
+    color: var(--primary-color);
 }
 /* Hero Section */
 .hero {
@@ -689,6 +782,12 @@ a{
     }
     .primary-btn {
         padding: 0.5rem 1rem;
+    }
+    .mobile-header{
+        display: flex;
+    }
+    .main-nav {
+        display: none;
     }
 }
 

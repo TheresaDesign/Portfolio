@@ -1,3 +1,24 @@
+ //header mobile
+ const burger = document.getElementById('burger');
+ const nav = document.getElementById('mobileNav');
+ 
+ burger.addEventListener('click', (e) => {
+   e.stopPropagation(); // verhindert, dass das "document"-Event feuert
+   burger.classList.toggle('active');
+   nav.classList.toggle('active');
+ });
+ 
+ document.addEventListener('click', (e) => {
+   const isClickInsideNav = nav.contains(e.target);
+   const isClickOnBurger = burger.contains(e.target);
+ 
+   if (!isClickInsideNav && !isClickOnBurger) {
+     burger.classList.remove('active');
+     nav.classList.remove('active');
+   }
+ });
+ 
+ 
  // Floating Words Animation
 const designSection = document.querySelector('.design-experience');
 if (designSection) {
