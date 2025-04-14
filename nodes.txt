@@ -1,6 +1,8 @@
 - p evt. nur 1rem
 - bilder aus WA gruppe einfügen Bloom
-- horizontales swipen bei bloom fixen
-- punkte beim Fazit richtig positionieren
 - bei mcmc noch die seite verlinken
  aktuell sind bei den Projekten alle überschriften lila. Soll das so bleiben?
+
+ var
+ - ausstellungs konzept wo ist was
+ - umbruch button bei youtube auf schmallem Display überprüfen

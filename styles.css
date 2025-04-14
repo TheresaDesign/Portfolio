@@ -171,6 +171,9 @@ a{
         transform: translateY(-5px);
     }
 
+.link-container{
+    margin: 1rem 0;
+}
 .back-button {
     margin: 0 10%;
     position: fixed;
@@ -201,6 +204,10 @@ a{
 .image-ganz{
     width: 100%;
     margin: 3rem 0;
+}
+.image-ganz img{
+    width: 100%;
+    border-radius: 10px;
 }
 /* Hero Section */
 .hero {
