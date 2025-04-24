@@ -105,6 +105,7 @@ grid-column: span 2;
 border: var(--primary-color) 2px solid;
 border-radius: 10px;
 overflow: hidden;
+display: flex;
 }
 .word-box {
     position: relative;
@@ -140,7 +141,7 @@ overflow: hidden;
 width: 100vw; 
 white-space: nowrap;
 position: relative;
-margin: 3rem 0;
+margin: auto;
 height:85%;
 }
 
@@ -254,12 +255,12 @@ to {
   }
   
   .tools-content {
-  display: flex;
-  gap: 5rem;
-  animation: marquee 25s linear infinite;
-  flex-direction: column;
-  width: 45.5%;
-  margin: 045%;
+    display: flex;
+    gap: 5rem;
+    animation: tools-banner 25s linear infinite; /* Animation geändert */
+    flex-direction: column;
+    width: 45.5%;
+    margin: 0 45%;
   }
   
   .tools-content img {
@@ -268,11 +269,11 @@ to {
       rotate: -90deg;
   }
   
-  @keyframes marquee {
+  @keyframes tools-banner{
   from {
-      transform: translateX(0);
+      transform: translateY(0);
   }
   to {
-      transform: translateY(-50%);
+      transform: translateY(-100%);
   }
   }
