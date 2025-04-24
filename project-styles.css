@@ -58,6 +58,13 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.project-hero.hero-nr{
+    background-image: url(img/beyond/banner-gros.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Project Sections */
 .project-section {
     padding: 32px 10%;
@@ -387,6 +394,12 @@ h3{
     height: auto;
     border-radius: 10px;
   }
+
+  .marquee-content.NR img {
+    width: 500px; /* Größe der Bilder anpassen */
+    height: auto;
+    border-radius: 10px;
+  }
   
   @keyframes marquee {
     from {
@@ -604,6 +617,11 @@ h3{
         background-image: url(img/VR-ex/cover-klein.png);
     }
 
+    .project-hero.hero-nr{
+        background-image: url(img/beyond/banner-klein.png);
+    }
+
+
     .hero-content{
         max-width: 100%;
     }
@@ -774,4 +792,32 @@ h3{
 .VR-glasses{
     width: 170% !important;
   position: relative;
+}
+
+/*New Realities*/
+.nr-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 0 auto;
+}
+.double-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.double-img img{
+    width: 50%
+}
+.nr-text{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.poetry-text{
+    text-align: center;
+    max-width: 50%;
+    font-style: italic;
+    color: var(--secondary-color);
 }
