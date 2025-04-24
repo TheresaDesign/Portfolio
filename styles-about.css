@@ -170,7 +170,7 @@ to {
 .grid-fhp{
     height:100vh;
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr;
     gap: 2rem;
     padding: 2rem;
 }
@@ -197,7 +197,8 @@ to {
 }
 
 .fhp-spalte{
-    grid-row: span 3;
+    width: 25%;
+    height: 100vh;
     background-color: var(--primary-color);
     border-radius: 10px;
 }
@@ -246,34 +247,35 @@ to {
 
 
 .tools-banner {
-  width: 100vw; 
   white-space: nowrap;
   position: relative;
-  height:100vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
-  }
-  
-  .tools-content {
-    display: flex;
-    gap: 5rem;
-    animation: tools-banner 25s linear infinite; /* Animation geändert */
-    flex-direction: column;
-    width: 45.5%;
-    margin: 0 45%;
-  }
-  
-  .tools-content img {
-      width: 100%;
-      border-radius: 10px;
-      rotate: -90deg;
-  }
-  
-  @keyframes tools-banner{
+}
+
+.tools-content {
+  display: flex;
+  gap: 5rem;
+  animation: tools-banner 35s linear infinite;
+  flex-direction: column;
+  width: 45.5%;
+  margin: 0 45%;
+}
+
+.tools-content img {
+  height: 100px; /* Feste Höhe */
+  aspect-ratio: 1 / 1; /* Seitenverhältnis 1:1 (Quadrat) */
+  border-radius: 10px;
+  rotate: -90deg;
+  object-fit: cover; /* Passt das Bild an, ohne es zu verzerren */
+}
+
+@keyframes tools-banner {
   from {
-      transform: translateY(0);
+    transform: translateY(0);
   }
   to {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
   }
-  }
+}

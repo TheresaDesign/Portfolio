@@ -325,13 +325,15 @@ a{
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 1rem 3rem;
-    position: sticky;
-    top: 48px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 100;
     border: 2px solid var(--primary-color);
     border-radius: 50px;
     width: fit-content;
-    margin: 0 auto;
+    margin-top: 10px;
 }
 
 .main-nav ul {
