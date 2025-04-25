@@ -2,7 +2,7 @@
 - bilder aus WA gruppe einfügen Bloom
 - bei mcmc noch die seite verlinken
  aktuell sind bei den Projekten alle überschriften lila. Soll das so bleiben?
-
+- footer richtig verlinken
 beyond
 - link modelling verknüpfen
 - einheitliche Bildhöhe

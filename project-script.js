@@ -182,3 +182,38 @@ document.addEventListener('keydown', (e) => {
         window.addEventListener("scroll", updateImageVisibility);
         updateImageVisibility(); // Initial aufrufen
     });
+
+// Sound
+const buttons = document.querySelectorAll(".play-button");
+
+buttons.forEach(button => {
+  const iconWrapper = button.querySelector(".icon");
+  const playIcon = iconWrapper.querySelector(".play-icon");
+  const pauseIcon = iconWrapper.querySelector(".pause-icon");
+  const audio = button.parentElement.querySelector(".background-music");
+
+  button.addEventListener("click", () => {
+    if (audio.paused) {
+      // Alle anderen Audios pausieren
+      document.querySelectorAll(".background-music").forEach(otherAudio => {
+        if (otherAudio !== audio) {
+          otherAudio.pause();
+          otherAudio.currentTime = 0;
+          const otherButton = otherAudio.parentElement.querySelector(".play-button");
+          const otherPlayIcon = otherButton.querySelector(".play-icon");
+          const otherPauseIcon = otherButton.querySelector(".pause-icon");
+          otherPlayIcon.style.display = "block";
+          otherPauseIcon.style.display = "none";
+        }
+      });
+
+      audio.play();
+      playIcon.style.display = "none";
+      pauseIcon.style.display = "block";
+    } else {
+      audio.pause();
+      playIcon.style.display = "block";
+      pauseIcon.style.display = "none";
+    }
+  });
+});

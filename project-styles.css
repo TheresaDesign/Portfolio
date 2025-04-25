@@ -553,129 +553,7 @@ h3{
     }
 }
 
-@media (max-width: 1400px){
-    .learning-big{
-        grid-column: span 2;
-    }
-}
-@media (max-width: 768px) {
-    .idea-content {
-        gap: 1.5rem;
-    }
 
-    .main-image {
-        height: 300px;
-    }
-
-    .thumbnail {
-        width: 70px;
-        height: 52px;
-    }
-
-    .nav-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-
-    .hardfacts{
-        width: 100%;
-    }
-
-    .thumbnail-container {
-        gap: 0.5rem;
-    }
-    
-    .thumbnail {
-        flex: 1 1 calc(33.33% - 0.5rem);
-        max-width: calc(33.33% - 0.5rem);
-    }
-
-    .idea-content{
-        flex-direction: column;
-    }
-
-    .row-halbhalb{
-        flex-direction: column;
-    }
-
-    .row-halbhalb.img-first{
-        flex-direction: column-reverse;
-    }
-}
-
-@media (max-width: 576px) {
-    .project-hero.hero-bloom{
-        background-image: url(img/Bloom/cover-Image-small.png);
-    }
-
-    .project-hero.hero-mapping{
-        background-image: url(img/Mapping/cover-klein.png);
-    }
-
-    .project-hero.hero-vr{
-        background-image: url(img/VR-ex/cover-klein.png);
-    }
-
-    .project-hero.hero-nr{
-        background-image: url(img/beyond/banner-klein.png);
-    }
-
-
-    .hero-content{
-        max-width: 100%;
-    }
-
-    .idea-content {
-        gap: 1rem;
-    }
-
-    .main-image {
-        height: 250px;
-    }
-
-    .thumbnail-container {
-        align-items: center;
-    }
-    
-    .thumbnails {
-        gap: 0.5rem;
-        justify-content: center;
-    }
-    
-    .thumbnail {
-        flex: 1 1 calc(50% - 0.5rem);
-        max-width: calc(50% - 0.5rem);
-    }
-    
-    .nav-button {
-        font-size: 1rem;
-        padding: 0.25rem 0.5rem;
-    }
-
-    .idea-text {
-        font-size: 1.1rem;
-    }
-
-    .marquee-content img {
-        width: 200px;
-    }
-
-    .learnings-grid {
-        grid-template-columns: 1fr;
-    }
-    .prototype-container {
-        flex-direction: column;
-    }
-    
-    .learning-big{
-        grid-column: span 1;
-    }
-    /*VR*/
-    .VR-glasses{
-        display: none;
-    }
-}
 
 /* Container */
 .container {
@@ -798,8 +676,8 @@ h3{
 .nr-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin: 0 auto;
+    gap: 4rem;
+    margin: 15% 0;
 }
 .double-img{
     display: flex;
@@ -812,12 +690,187 @@ h3{
 }
 .nr-text{
     display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .poetry-text{
     text-align: center;
-    max-width: 50%;
+    max-width: 650px;
     font-style: italic;
     color: var(--secondary-color);
+}
+
+.button-box{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.play-button {
+    width: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    padding: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 0 0 0;
+  }
+
+  .play-button:hover {
+    background-color: var(--secondary-color);
+  }
+
+  .icon{
+    display: flex;
+  align-content: center;
+  justify-content: center;
+  }
+
+  .icon svg {
+    width: 100%;
+    height: auto;
+  }
+
+@media (max-width: 1400px){
+    .learning-big{
+        grid-column: span 2;
+    }
+}
+@media (max-width: 768px) {
+    .idea-content {
+        gap: 1.5rem;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnail {
+        width: 70px;
+        height: 52px;
+    }
+
+    .nav-button {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .hardfacts{
+        width: 100%;
+    }
+
+    .thumbnail-container {
+        gap: 0.5rem;
+    }
+    
+    .thumbnail {
+        flex: 1 1 calc(33.33% - 0.5rem);
+        max-width: calc(33.33% - 0.5rem);
+    }
+
+    .idea-content{
+        flex-direction: column;
+    }
+
+    .row-halbhalb{
+        flex-direction: column;
+    }
+
+    .row-halbhalb.img-first{
+        flex-direction: column-reverse;
+    }
+
+    .nr-grid{
+        grid-template-columns: 1fr; /* Eine Spalte */
+        gap: 2rem; /* Optional, du kannst den Abstand hier anpassen */
+        margin: 5% 0;
+
+    }
+    .marquee-content.NR img {
+        width: 200px;
+}
+
+@media (max-width: 576px) {
+    .project-hero.hero-bloom{
+        background-image: url(img/Bloom/cover-Image-small.png);
+    }
+
+    .project-hero.hero-mapping{
+        background-image: url(img/Mapping/cover-klein.png);
+    }
+
+    .project-hero.hero-vr{
+        background-image: url(img/VR-ex/cover-klein.png);
+    }
+
+    .project-hero.hero-nr{
+        background-image: url(img/beyond/banner-klein.png);
+    }
+
+
+    .hero-content{
+        max-width: 100%;
+    }
+
+    .idea-content {
+        gap: 1rem;
+    }
+
+    .main-image {
+        height: 250px;
+    }
+
+    .thumbnail-container {
+        align-items: center;
+    }
+    
+    .thumbnails {
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .thumbnail {
+        flex: 1 1 calc(50% - 0.5rem);
+        max-width: calc(50% - 0.5rem);
+    }
+    
+    .nav-button {
+        font-size: 1rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .idea-text {
+        font-size: 1.1rem;
+    }
+
+    .marquee-content img {
+        width: 200px;
+    }
+
+    .learnings-grid {
+        grid-template-columns: 1fr;
+    }
+    .prototype-container {
+        flex-direction: column;
+    }
+    
+    .learning-big{
+        grid-column: span 1;
+    }
+    /*VR*/
+    .VR-glasses{
+        display: none;
+    }
+
+    .play-button {
+        width: 20%;
+        padding: 5%;
+      }
+    
 }
