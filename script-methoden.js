@@ -43,42 +43,63 @@ document.addEventListener('keydown', (e) => {
         nextButton.click();
     }
 });
-const video = document.getElementById("scrollVideo");
-const content = document.querySelector(".eyeTracking-content");
 
-let lastScrollY = window.scrollY;
-let isInView = false;
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById('scrollVideo');
+    const section = document.querySelector('.eyetracking-section');
 
-// Intersection Observer zum Erkennen, ob die Section im Viewport ist
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            isInView = true;
-            content.style.opacity = "0"; // Text ausblenden
-            video.style.opacity = "1"; // Video einblenden
+    // Video unsichtbar machen, bis es scrollt
+    video.style.opacity = "0";
+
+    let lastScrollY = window.scrollY;
+    let isPlaying = false;
+
+    window.addEventListener('scroll', () => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const windowHeight = window.innerHeight;
+
+        // Check if the section is at the top of the viewport
+        if (sectionTop <= 0 && sectionBottom > windowHeight * 0.2) {
+            // Wenn das Video noch nicht sichtbar ist, zeigen wir es an
+            if (video.style.opacity === "0") {
+                video.style.opacity = "1";
+            }
+
+            // Video spielt je nach Scrollrichtung
+            const scrollSpeed = Math.abs(window.scrollY - lastScrollY) / 20;
+            const scrollDirection = window.scrollY > lastScrollY ? "down" : "up";
+            lastScrollY = window.scrollY;
+
+            if (scrollDirection === "down" && video.currentTime < video.duration) {
+                video.currentTime = Math.min(video.duration, video.currentTime + scrollSpeed);
+                if (!isPlaying) {
+                    video.play();
+                    isPlaying = true;
+                }
+            } else if (scrollDirection === "up" && video.currentTime > 0) {
+                video.currentTime = Math.max(0, video.currentTime - scrollSpeed);
+                if (!isPlaying) {
+                    video.play();
+                    isPlaying = true;
+                }
+            }
         } else {
-            isInView = false;
-            content.style.opacity = "1"; // Text wieder einblenden
-            video.style.opacity = "0"; // Video ausblenden
+            // Video stoppen, wenn es nicht sichtbar ist oder wenn 90% der Section durchgescrollt ist
+            video.pause();
+            video.style.opacity = "0";
+            isPlaying = false;
+        }
+
+        // Wenn 90% der Section durchgescrollt ist, Video ausblenden
+        const scrollProgress = 1 - (sectionBottom / windowHeight);
+        if (scrollProgress > 0.4) {
+            video.style.opacity = "0";
+            video.pause();
+            isPlaying = false;
         }
     });
-}, { threshold: 0.5 });
-
-observer.observe(document.querySelector(".eyetracking-section"));
-
-// Scroll-Event, um das Video mit der Scroll-Geschwindigkeit abzuspielen
-window.addEventListener("scroll", () => {
-    if (!isInView) return;
-
-    let scrollSpeed = Math.abs(window.scrollY - lastScrollY) / 20;
-    let scrollDirection = window.scrollY > lastScrollY ? "down" : "up";
-    lastScrollY = window.scrollY;
-
-    if (video.style.opacity === "1") {
-        if (scrollDirection === "down") {
-            video.currentTime = Math.min(video.duration, video.currentTime + scrollSpeed);
-        } else {
-            video.currentTime = Math.max(0, video.currentTime - scrollSpeed);
-        }
-    }
 });
+
+

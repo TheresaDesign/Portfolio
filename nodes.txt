@@ -7,3 +7,41 @@ beyond
 - Gallerie responsive machen  ?kein Plan was ich meinte?
 
 - menü deutsch
+-link bei eyeTracking zum Projekt
+
+
+
+
+Javascript für eyeTracking scrollvideo das automatish abläuft
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById('scrollVideo');
+    const section = document.querySelector('.eyetracking-section');
+
+    // Video am Anfang unsichtbar machen
+    video.style.opacity = "0";
+
+    window.addEventListener('scroll', () => {
+        const rect = section.getBoundingClientRect();
+        const sectionTop = rect.top;
+        const sectionBottom = rect.bottom;
+        const windowHeight = window.innerHeight;
+
+        // Prüfen: Section ganz oben?
+        if (sectionTop <= 0 && sectionBottom > windowHeight * 0.1) {
+            video.style.opacity = "1";
+            if (video.paused) {
+                video.play();
+            }
+        } else {
+            video.pause();
+            video.style.opacity = "0";
+        }
+
+        // Zusätzlich: Verblassen bei 90% durchscrollen
+        const scrollProgress = 1 - (sectionBottom / windowHeight);
+        if (scrollProgress > 0.4) {
+            video.style.opacity = "0";
+        }
+    });
+});
