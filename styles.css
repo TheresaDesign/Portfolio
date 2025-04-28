@@ -336,7 +336,7 @@ a{
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    z-index: 5;
+    z-index: 105;
     pointer-events: none;
     transition: background-color 0.3s ease; /* smoother Übergang */
   }
@@ -389,7 +389,7 @@ a{
     color: var(--accent-color);
     position: absolute;
     top: -65.5%;
-    left: 0;
+    left: -10%;
     font-size: 9.5rem;
     z-index: -1;
     pointer-events: none;
