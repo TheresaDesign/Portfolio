@@ -17,8 +17,31 @@
      nav.classList.remove('active');
    }
  });
- 
- 
+
+ //hero
+ document.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-content');
+    const heroText = document.querySelector('.hero-text');
+    const heroImages = document.querySelector('.hero-images');
+    const scrollContainer = document.querySelector('.scroll-container');
+  
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+  
+      // Wieviel wurde in der scroll-container gescrollt?
+      const containerOffsetTop = scrollContainer.offsetTop;
+      const progress = Math.min(Math.max((scrollTop - containerOffsetTop) / viewportHeight, 0), 1);
+  
+      // Elemente bewegen
+      heroText.style.transform = `translateX(-${progress * 150}%)`;
+      heroImages.style.transform = `translate(-50%, ${progress * 150}%)`;
+  
+      // Hero-Content ausblenden
+      heroContent.style.opacity = 1 - progress;
+    });
+  });
+  
  // Floating Words Animation
 const designSection = document.querySelector('.design-experience');
 if (designSection) {
@@ -60,7 +83,7 @@ if (designSection) {
                 : (index % 2 === 0 ? -30 : 30);  // Kleinere Abstände auf Desktop
             
             // Berechne die Position
-            const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.3, verticalOffset);
+            const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.1, verticalOffset);
             
             // Setze die Position
             word.style.left = `${centerX + pos.x - word.offsetWidth/2}px`;

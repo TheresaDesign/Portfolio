@@ -1,9 +1,9 @@
 - p evt. nur 1rem
 - bilder aus WA gruppe einfügen Bloom
-- bei mcmc noch die seite verlinken
  aktuell sind bei den Projekten alle überschriften lila. Soll das so bleiben?
 - footer richtig verlinken
 beyond
 - link modelling verknüpfen
-- einheitliche Bildhöhe
-- Gallerie responsive machen
+- Gallerie responsive machen  ?kein Plan was ich meinte?
+
+- menü deutsch
