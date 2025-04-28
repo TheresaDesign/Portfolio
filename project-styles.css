@@ -94,7 +94,7 @@ h3{
 
 /* Idea Section */
 .idea-section {
-    background-color: #f8f9fa;
+    background-color: var(--white);
 }
 
 .idea-content {
@@ -201,7 +201,7 @@ h3{
     position: relative;
     font-family: Arial, sans-serif;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
+    background-color: var(--white);
     max-width: 800px;
 }
 
@@ -216,7 +216,7 @@ h3{
    border-right: 2px solid var(--primary-color);
    border-bottom-left-radius: 20px;
    transform: rotate(-229deg);
-   background-color: #f8f9fa;
+   background-color: var(--white);
 }
 
 .img1{
@@ -234,7 +234,7 @@ h3{
     position: relative;
     font-family: Arial, sans-serif;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
+    background-color:var(--white);
     max-width: 800px;
 }
 
@@ -249,7 +249,7 @@ h3{
    border-right: 2px solid var(--primary-color);
    border-bottom-left-radius: 20px;
    transform: rotate(333deg);
-   background-color: #f8f9fa;
+   background-color: var(--white);
 }
 
 
@@ -329,7 +329,7 @@ h3{
 }
 /* Design Section */
 .design-section {
-    background-color: #f8f9fa;
+    background-color: var(--white);
     padding: 32px 10%;
     overflow: hidden;
 }
@@ -498,7 +498,7 @@ h3{
 }
 /* Learnings Section */
 .learnings-section {
-    background-color: #f8f9fa;
+    background-color: var(--white);
 }
 
 .learnings-grid {
@@ -874,3 +874,31 @@ h3{
       }
     
 }
+
+
+
+.link-preview {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    background: var(--white);
+    border: 1px solid var(--grey1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    flex-basis: 50%;
+  }
+  
+  .link-preview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .preview-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
