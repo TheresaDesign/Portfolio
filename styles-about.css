@@ -80,6 +80,7 @@ color: var(--background-color);
 
 .panel-intro-content img{
   width: 100%;
+  border-radius: 10px
   }
 .grid-luettfeld{
 display: grid;
