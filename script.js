@@ -17,8 +17,10 @@
      nav.classList.remove('active');
    }
  });
- 
- 
+
+
+  
+  
  // Floating Words Animation
 const designSection = document.querySelector('.design-experience');
 if (designSection) {
@@ -60,7 +62,7 @@ if (designSection) {
                 : (index % 2 === 0 ? -30 : 30);  // Kleinere Abstände auf Desktop
             
             // Berechne die Position
-            const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.3, verticalOffset);
+            const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.1, verticalOffset);
             
             // Setze die Position
             word.style.left = `${centerX + pos.x - word.offsetWidth/2}px`;

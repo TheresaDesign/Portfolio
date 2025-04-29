@@ -8,15 +8,6 @@
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero" >
-        <div class="hero-content">
-            <h3>Theresa Brand</h3>
-            <h1>UI Designer</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-    </section>
-
     <!-- Sticky Navigation -->
     <nav class="main-nav">
         <ul>
@@ -41,9 +32,44 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
+    <body>
+        <div class="scroll-container">
+            <section class="hero">
+                <div class="hero-content">
+                <div class="hero-text">
+                    <h3>Hallo, ich bin</h3>
+                    <h1>Theresa Brand</h1>
+                    <p>UI Designerin mit Leidenschaft für digitale Erlebnisse.</p>
+                    <span class="background-title">UI Designerin</span>
+                </div>
+        
+                <div class="hero-images">
+                    <img src="img/home/farbspritzer.png" alt="Muster" class="pattern-image">
+                    <img src="img/home/portrait1.png" alt="Portrait Theresa" class="portrait-image">
+                </div>
+                </div>
+            </section>
+
+            <section class="hero-spacer"></section>
+
+            <section class="contents next-section">
+                <div class="row-halbhalb">
+                    <div class="dreiviertel">
+                        <img src="img/home/skizze.jpg" alt="">
+                    </div>
+
+                    <div class="viertel">
+                        <h2>Design, das User bewegt</h2>
+                        <p>Als User Interface-Designerin entwickle ich digitale Erlebnisse, die Nutzer:innen intuitiv führen und nachhaltig überzeugen. Mit einem Fokus auf klare Strukturen, durchdachte Interaktionen und visuelle Präzision entstehen Interfaces, die sowohl funktional als auch ästhetisch ansprechend sind.</p>
+                        <button class="button-font primary-btn" href="projects.html">Arbeitsweise + Methodik</button>
+                    </div>
+                </div>
+            </section>
+        </div>
     <!-- Design Experience Section -->
     <section class="design-experience" id="methodes">
-        <h2>Design experience in <br>various fields</h2>
+        <h2>Designerfahrung in <br>unterschiedlichen Feldern</h2>
         <div class="floating-words">
             <div class="property"><span class="button-font">UX Design</span></div>
             <div class="property"><span class="button-font">UI Design</span></div>
@@ -55,7 +81,7 @@
 
     <!-- Projects Section -->
     <div class="contents">
-        <h2>Favourite projects</h2>
+        <h2>Aktuelle Projekte</h2>
     </div>
     <section class="projects" id="projects">
         
@@ -67,47 +93,53 @@
                 <div class="card-content">
                     <p class="emphazised">Bloom Berlin</p>
                     <p>Eine Anti-Diskrimminierungs-Plattform</p>
-                    <div class="caption">Team: Theresa Brand, Nina Kahmke, Sophie Seifert</div>
+                    <div class="caption">Nina Kahmke, Sophie Seifert, Theresa Brand</div>
                 </div>
             </a>
-            <div class="card">
+            <a class="card" href="project-beyiondframe.html">
                 <div class="card-image">
-                    <img src="img/placeholder.jpg" alt="Projekt 2">
+                    <img src="img/beyond/banner-gros.png" alt="Projekt 2">
                 </div>
                 <div class="card-content">
-                    <p class="emphazised">Projekt 2</p>
-                    <p>Projektbeschreibung 2</p>
-                    <div class="caption">Team: Person 3, Person 4</div>
+                    <p class="emphazised">Beyond the Frame</p>
+                    <p>Erschaffung von Bildwelten</p>
                 </div>
-            </div>
-            <div class="card">
+            </a>
+            <a class="card" href="project-mappingCities.html">
                 <div class="card-image">
-                    <img src="img/placeholder.jpg" alt="Projekt 3">
+                    <img src="img/mapping/cover.png" alt="Projekt 3">
                 </div>
                 <div class="card-content">
-                    <p class="emphazised">Projekt 3</p>
-                    <p>Projektbeschreibung 3</p>
-                    <div class="caption">Team: Person 5, Person 6</div>
-                </div>
-            </div>
-            <div class="card">
+                    <p class="emphazised">Mapping cities making cities</p>
+                    <p>Datenvisualisierung mit Tourismushintergrund</p>
+                    <div class="caption">Team: Pia Schellenbach, Guolang Wang, Theresa Brand</div>
+                </div> 
+            </a>
+            <a class="card" href="project-VR-Exhibition.html">
                 <div class="card-image">
-                    <img src="img/placeholder.jpg" alt="Projekt 4">
+                    <img src="img/VR-ex/cover-gross.png" alt="Projekt 4">
                 </div>
                 <div class="card-content">
-                    <p class="emphazised">Projekt 4</p>
-                    <p>Projektbeschreibung 4</p>
-                    <div class="caption">Team: Person 7, Person 8</div>
+                    <p class="emphazised">Space Exhibition</p>
+                    <p>Eine Ausstellung in VR</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
+    <div class="contents">
+        <button class="button-font primary-btn" href="projects.html">Alle Projekte</button>
+    </div>
 
-    <section class="placeholder">
-        <h2>Placeholder</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <img src="img/placeholder.jpg" alt="Placeholder">
+    <section class="contents">
+        <div class="sb-box" >
+            <p class="schmuckschrift">Klick diesen dezenten Button, um mit mir in Kontakt zu treten!</p>
+            <div class="wrap">
+                <a class="special-btn"  href="mailto:theresa.brand@freenet.de">Kontakt</a>
+              </div>
+        </div>
+        
     </section>
+
 
     <!-- Footer Section -->
     <footer class="footer">
@@ -134,5 +166,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="script-home.js"></script>
 </body>
 </html>
