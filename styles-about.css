@@ -44,7 +44,7 @@ justify-content: center;
 }
 .panel-half{
 flex: 0 0 50%;
-padding: 10rem 2rem;
+padding: 10% 2rem;
 }
 .panel-half img{
 width:100%;
@@ -89,7 +89,7 @@ grid-template-rows: 2fr 1fr ;
 grid-template-columns: 1fr 1fr;
 height: 100vh;
 gap: 1rem;
-padding: 10rem 2rem;
+padding: 10% 2rem;
 }
 
 .luettfeld-klein{
@@ -170,7 +170,7 @@ to {
     display: grid;
     grid-template-columns: 2fr 2fr;
     gap: 5rem;
-    padding: 10rem 2rem;
+    padding: 10% 2rem;
 }
 
 .fhp-spalte h2{
@@ -220,7 +220,7 @@ hidden;
 }
 .privat{
   flex-direction: column;
-  padding: 10rem 2rem;
+  padding: 10% 2rem;
 }
 .privat-content{
   width: 75%;
@@ -261,38 +261,36 @@ hidden;
   z-index: 10;
 }
 
-.tools-banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+.marquee-column {
   overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scroll-up 25s linear infinite;
+}
+
+.img-wrapper {
+  width:60%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 4vh 0;
 }
 
-.tools-content {
-  display: flex;
-  flex-direction: column; /* vertikal nebeneinander */
-  gap: 3rem; /* gleichmäßiger Abstand */
-  animation: tools-banner 35s linear infinite;
+.img-wrapper img {
+  width: 100%;
+  display: block;
 }
 
-.tools-content img {
-  height: 100px;
-  width: auto;
-  transform: rotate(-90deg); /* jedes Bild einzeln drehen */
-  border-radius: 10px;
-  object-fit: contain;
-}
-
-
-
-@keyframes tools-banner {
-  from {
-    transform: translateY(0);
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
   }
-  to {
-    transform: translateY(-100%);
+  100% {
+    transform: translateY(-50%);
   }
 }
