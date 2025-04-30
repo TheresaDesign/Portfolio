@@ -389,9 +389,9 @@ a{
     line-height: 1.75;
     color: var(--accent-color);
     position: absolute;
-    top: -65.5%;
+    top: -32.5%;
     left: -10%;
-    font-size: 9.5rem;
+    font-size: 7.5rem;
     z-index: -1;
     pointer-events: none;
     transform: rotate(-5deg);
@@ -497,7 +497,7 @@ a{
     opacity: 0;
     transition: transform 1s ease, opacity 1s ease;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .images.visible .fanned-image:nth-child(1) {
@@ -995,12 +995,21 @@ a{
         max-width: 100%;
     }
 
+    .design-experience{
+        padding: 0;
+    }
+
     .project-cards {
         flex-direction: column;
     }
 
+    .projects{
+        padding: 2rem 0;
+    }
+
     .card {
         flex: 0 0 auto;
+        margin: 0;
     }
     
     .main-nav {
@@ -1015,19 +1024,39 @@ a{
         font-size: 1rem;
     }
     
+    .design-experience h2 {
+        font-size: 2rem;
+    }
+
     .fanned-section{
-        flex-direction: column;
-        padding: 0 5vw;
+        padding:0 5vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .images{
-        height: auto;
+        height: 544.5px;
         width: 100%;
+        margin-bottom: 3rem;
     }
+
+    .images.visible .fanned-image:nth-child(1) {
+        transform: translate(-5%, -44%) rotate(8deg);
+        }
+
     .projects-grid {
         grid-template-columns: 1fr;
         padding: 0 10%;
     }
+
+    .sb-box .schmuckschrift {
+        width: 75.5%;
+        }
+
+    .wrap {
+        scale: 1.8;
+        }
 }
 
 @media (max-width: 480px) {
@@ -1108,8 +1137,35 @@ a{
     .row-halbhalb {
         flex-direction: column;
     }
-}
 
+    .design-experience h2 {
+        font-size: 1.5rem;
+    }
+
+  .design-experience h2 {
+    font-size: 1.5;
+  }
+
+    .wrap {
+      scale: 1;
+    }
+    .sb-box .schmuckschrift {
+      width: 100%;
+    }
+  
+  
+  .sb-box .schmuckschrift {
+    font-size: 1.5rem;
+  }
+  
+  .wrap {
+    margin: 32px;
+  }
+  
+  .sb-box {
+    height: 66.5vh;
+  }
+}
 
 /* Project Detail Page */
     .project-header {

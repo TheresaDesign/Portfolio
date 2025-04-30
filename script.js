@@ -42,7 +42,7 @@ if (designSection) {
 
     // Funktion zum Berechnen der Position
     function calculatePosition(index, total, radius, offsetY = 0) {
-        const angle = (index / total) * Math.PI * 2;
+        const angle = (index / total) * Math.PI * 4;
         return {
             x: Math.cos(angle) * radius,
             y: Math.sin(angle) * radius + offsetY
@@ -53,7 +53,7 @@ if (designSection) {
     function calculateSafeRadius(sectionWidth) {
         // Auf mobilen Geräten kleinerer Radius
         if (window.innerWidth < 768) {
-            return sectionWidth * 0.1; // Reduzierter Radius für mobile Geräte
+            return sectionWidth * 0.3; // Reduzierter Radius für mobile Geräte
         }
         // Auf Desktop-Geräten größerer Radius
         return sectionWidth * 0.15; // Reduzierter Radius für Desktop
@@ -69,8 +69,8 @@ if (designSection) {
         floatingWords.forEach((word, index) => {
             // Berechne den vertikalen Offset basierend auf der Bildschirmbreite
             const verticalOffset = window.innerWidth < 768 
-                ? (index % 2 === 0 ? -20 : 20)  // Noch kleinere Abstände auf mobil
-                : (index % 2 === 0 ? -30 : 30);  // Kleinere Abstände auf Desktop
+                ? (index % 2 === 0 ? -35 : 35)  // Noch kleinere Abstände auf mobil
+                : (index % 3 === 0 ? -40 : 40);  // Kleinere Abstände auf Desktop
             
             // Berechne die Position
             const pos = calculatePosition(index, floatingWords.length, safeRadius * 0.1, verticalOffset);
