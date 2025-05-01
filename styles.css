@@ -709,12 +709,13 @@ a{
 }
 
 .intro {
-    padding: 4rem 10%;
+    padding:10%;
     text-align: center;
     height: 40vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: content-box;
 }
 
 .intro-content{

@@ -33,7 +33,7 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="intro" style="height: 400vh;">
+    <section class="intro">
         <div class="intro-content">
             <h1>Methodiken und Arbeitsweisen</h1>
             <p>Hier finden Sie eine Übersicht meiner Projekte.</p>
@@ -95,9 +95,80 @@
         </div>
     </section>
       
+    <section class="gallery-section">
+        <h2 class="gallery-title">Meine Galerie</h2>
+        <div class="gallery-wrapper" style="position: relative;">
+            <div class="gallery-grid">
+                <div class="gallery-item" data-title="Research" data-text="Beschreibung 1" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Research</h3></div>
+                </div>
+                <div class="gallery-item" data-title="Titel 2" data-text="Beschreibung 2" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Mehr erfahren</h3></div>
+                </div>
+                <div class="gallery-item" data-title="Titel 3" data-text="Beschreibung 3" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Mehr erfahren</h3></div>
+                </div>
+                <div class="gallery-item" data-title="Research" data-text="Beschreibung 1" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Research</h3></div>
+                </div>
+                <div class="gallery-item" data-title="Titel 2" data-text="Beschreibung 2" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Mehr erfahren</h3></div>
+                </div>
+                <div class="gallery-item" data-title="Titel 3" data-text="Beschreibung 3" data-img="img/placeholder.jpg">
+                    <img src="img/placeholder.jpg" alt="">
+                    <div class="gallery-overlay"><h3>Mehr erfahren</h3></div>
+                </div>
+            </div>
+        
+            <div class="gallery-detail-view gallery-hidden">
+                <button class="gallery-close-btn">
+                    <svg width="25" height="25" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L14 14" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M1 14L14 1" stroke="var(--primary-color)" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        
+                </button>
+                <div class="gallery-detail-content">
+                <h3 id="gallery-detail-title"></h3>
+                <p id="gallery-detail-text"></p>
+                </div>
+                <div class="gallery-detail-image">
+                <img id="gallery-detail-img" src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  
-   <div class="eyetracking-wrapper">
+    <section class="sticky-section">
+        <div class="sticky-wrapper">
+          <div class="text-col">
+            <div class="step" data-title="Titel 1" data-text="Text 1"></div>
+            <div class="step" data-title="Titel 2" data-text="Text 2"></div>
+            <div class="step" data-title="Titel 3" data-text="Text 3"></div>
+            <div class="step" data-title="Titel 4" data-text="Text 4"></div>
+          </div>
+          <div class="content">
+            <div class="text">
+              <h3 id="dynamic-title">Titel 1</h3>
+              <p id="dynamic-text">Text 1</p>
+            </div>
+            <div class="images">
+              <img src="https://via.placeholder.com/400x300?text=Bild+1" class="image active" />
+              <img src="https://via.placeholder.com/400x300?text=Bild+2" class="image" />
+              <img src="https://via.placeholder.com/400x300?text=Bild+3" class="image" />
+              <img src="https://via.placeholder.com/400x300?text=Bild+4" class="image" />
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+        <div class="eyetracking-wrapper">
         <div class="eyetracking-section">
             <video id="scrollVideo" src="img/methodes/eyetracking/13_B_A1.mp4" muted playsinline></video>
             <div class="eyeTracking-content">

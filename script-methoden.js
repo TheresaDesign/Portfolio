@@ -57,13 +57,49 @@ window.addEventListener('scroll', () => {
   const visibilityPercent = visibleHeight / sectionHeight;
 
   arbeitsweiseBoxen.forEach((box, index) => {
-    const triggerPercents = [0, 0.5, 0.8, 0.9];
+    const triggerPercents = [0, 0.6, 0.8, 0.9];
     if (visibilityPercent >= triggerPercents[index]) {
       box.classList.add('arbeitsweise-visible');
     }
   });
 });
 
+//gallerie
+const items = document.querySelectorAll('.gallery-item');
+  const detailView = document.querySelector('.gallery-detail-view');
+  const detailTitle = document.getElementById('gallery-detail-title');
+  const detailText = document.getElementById('gallery-detail-text');
+  const detailImg = document.getElementById('gallery-detail-img');
+  const closeBtn = document.querySelector('.gallery-close-btn');
+
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      detailTitle.textContent = item.getAttribute('data-title');
+      detailText.textContent = item.getAttribute('data-text');
+      detailImg.src = item.getAttribute('data-img');
+
+      detailView.classList.remove('gallery-hidden');
+      setTimeout(() => detailView.classList.add('gallery-active'), 10);
+    });
+  });
+
+  function closeDetail() {
+    detailView.classList.remove('gallery-active');
+    setTimeout(() => detailView.classList.add('gallery-hidden'), 300);
+  }
+
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeDetail();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!detailView.classList.contains('gallery-hidden') && !detailView.contains(e.target)) {
+      closeDetail();
+    }
+  });
+  
 // Eye Tracking Video Control
 document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById('scrollVideo');
