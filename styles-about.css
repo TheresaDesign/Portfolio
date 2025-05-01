@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 450vw; /* 4 Sektionen à 100vw */
+width: 150vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -107,6 +107,7 @@ border: var(--primary-color) 2px solid;
 border-radius: 10px;
 overflow: hidden;
 display: flex;
+max-height: 300px;
 }
 
 .skills-container {
@@ -116,6 +117,8 @@ display: flex;
   flex-direction: column;
   gap: 30px;
   position: relative;
+  justify-content: space-between;
+  height: 80%;
 }
 
 .skill {
@@ -258,16 +261,16 @@ to {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+  flex-direction: column;
+padding: 10vh 0;
 }
 .grid-fhp {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-flow: column;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: row;
   gap: 5rem;
-  padding: 10% 2rem;
-  width: max-content; /* wichtig: lässt Grid so breit wie nötig werden */
+  flex-basis: 100%;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 .fhp-spalte h2{
@@ -280,11 +283,11 @@ to {
 }
 
 .fhp-lang{
- grid-column: span 2;
+  width: 100%;
 }
 
 .fhp-small{
-    grid-column: span 1;
+    flex-basis: 47%;
 }
 
 .fhp-small .emphazised{
@@ -410,5 +413,23 @@ hidden;
   .privat-content{
     padding-top: 5%;
   }
+
+
+.grid-fhp {
+  gap: 1.5rem;
+}
+
+.panel-fhp {
+  min-width: 200vw;
+}
+
+.fhp-small {
+  flex-basis: 24%;
+}
+
+.horizontal-content {
+  width: 183.5vw;
+}
+
   
 }
