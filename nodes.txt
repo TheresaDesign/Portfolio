@@ -4,7 +4,7 @@
 - footer richtig verlinken
 beyond
 - link modelling verknüpfen
-- Gallerie responsive machen  ?kein Plan was ich meinte?
+-bei den skills wird unten der marquee effekt imer kleiner wenn man den skill ausklappt
 
 - menü deutsch
 -link bei eyeTracking zum Projekt

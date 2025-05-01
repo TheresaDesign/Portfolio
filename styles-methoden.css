@@ -1,10 +1,56 @@
-* {
+.arbeitsweise-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 5vh 10vw;
+    gap: 4vw;
+    background: #f9f9f9;
+  }
+  
+  .arbeitsweise-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .arbeitsweise-schritte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+  }
+  
+  .arbeitsweise-box {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s ease-out;
+  }
+  
+  .arbeitsweise-visible {
+    opacity: 1;
+    transform: translateX(0);
+    display: flex;
+    gap: 2rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 2rem;
+    align-items: center;
+  }
+  
+  .arbeitsweise-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+  
+  .arbeitsweise-box h3 {
+    color: var(--primary-color);
+    flex-basis: 50%;
+  }
+  
+  .arbeitsweise-box p {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
+  }
+  
   .eyetracking-wrapper {
     position: relative;
     height: 300vh; /* Großer Bereich zum Scrollen */

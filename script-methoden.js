@@ -44,6 +44,27 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+//arbeitsweise
+const arbeitsweiseBoxen = document.querySelectorAll('.arbeitsweise-box');
+const arbeitsweiseSection = document.querySelector('.arbeitsweise-section');
+
+window.addEventListener('scroll', () => {
+  const rect = arbeitsweiseSection.getBoundingClientRect();
+  const sectionHeight = arbeitsweiseSection.offsetHeight;
+
+  // Wie viel % der Section ist im Viewport sichtbar?
+  const visibleHeight = Math.min(window.innerHeight, sectionHeight + rect.top < 0 ? 0 : window.innerHeight - rect.top);
+  const visibilityPercent = visibleHeight / sectionHeight;
+
+  arbeitsweiseBoxen.forEach((box, index) => {
+    const triggerPercents = [0, 0.5, 0.8, 0.9];
+    if (visibilityPercent >= triggerPercents[index]) {
+      box.classList.add('arbeitsweise-visible');
+    }
+  });
+});
+
+// Eye Tracking Video Control
 document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById('scrollVideo');
     const section = document.querySelector('.eyetracking-section');

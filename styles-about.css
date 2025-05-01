@@ -85,8 +85,7 @@ color: var(--background-color);
   }
 .grid-luettfeld{
 display: grid;
-grid-template-rows: 2fr 1fr ;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 2fr 1fr ;
 height: 100vh;
 gap: 1rem;
 padding: 10% 2rem;
@@ -110,30 +109,118 @@ overflow: hidden;
 display: flex;
 }
 
-.word-box {
+.skills-container {
+  width: 100%;
+  margin: 5% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   position: relative;
-  width: 300px;
-  height: 300px;
-  border: 1px solid #ccc;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
   overflow: hidden;
 }
 
-.word {
-  position: absolute;
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-  transform: rotate(-20deg);
-  top: 50px;
-  left: 50px;
+.icon {
+  font-size: 32px;
 }
-.word:nth-child(2) { top: 80px; left: 120px; transform: rotate(10deg); }
-.word:nth-child(3) { top: 150px; left: 40px; transform: rotate(-15deg); }
-.word:nth-child(4) { top: 200px; left: 100px; transform: rotate(25deg); }
-.word:nth-child(5) { top: 120px; left: 200px; transform: rotate(-5deg); }
-.word:nth-child(6) { top: 20px; left: 180px; transform: rotate(12deg); }
-.word:nth-child(7) { top: 240px; left: 60px; transform: rotate(-30deg); }
 
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  justify-content: space-between;
+  }
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.progress-box {
+  flex-basis: 75%;
+  flex-direction: column;
+  display: flex;
+}
+.progress-bar {
+  position: relative;
+  height: 18px;
+  border-radius: 9px;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.progress-bar .fill {
+  height: 100%;
+  border-radius: 9px;
+  position: relative;
+}
+
+.fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.3), transparent 70%);
+  mix-blend-mode: screen;
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 12px;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.arrow {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.arrow svg{
+  margin: auto 0;
+}
+.skill.active .arrow {
+  transform: rotate(180deg);
+  align-content: end;
+}
+
+.skill.active .arrow svg {
+  margin:0;
+}
+
+.skill.active .description {
+  max-height: 300px; /* genug Platz für den Inhalt */
+  opacity: 1;
+  overflow: auto;
+}
+
+.skill.hidden {
+  display: none;
+}
+
+/* Farben */
+.fill.film { background: var(--primary-color); }
+.bg.film { background: #E7D8FD; }
+
+.fill.grafik { background: var(--secondary-color) }
+.bg.grafik { background: #ead5df; }
+
+.fill.fotografie { background: var(--accent-color); }
+.bg.fotografie { background: #e3ffc6; }
 
 .marquee {
 width: 100vw; 
@@ -165,12 +252,22 @@ to {
 }
 }
 
-.grid-fhp{
-    height:100vh;
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    gap: 5rem;
-    padding: 10% 2rem;
+.panel-fhp{
+  height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.grid-fhp {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: column;
+  grid-template-rows: auto auto;
+  gap: 5rem;
+  padding: 10% 2rem;
+  width: max-content; /* wichtig: lässt Grid so breit wie nötig werden */
 }
 
 .fhp-spalte h2{
@@ -220,7 +317,8 @@ hidden;
 }
 .privat{
   flex-direction: column;
-  padding: 10% 2rem;
+  padding-top: 10%;
+
 }
 .privat-content{
   width: 75%;
