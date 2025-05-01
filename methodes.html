@@ -144,28 +144,35 @@
         </div>
     </section>
 
-    <section class="sticky-section">
-        <div class="sticky-wrapper">
-          <div class="text-col">
-            <div class="step" data-title="Titel 1" data-text="Text 1"></div>
-            <div class="step" data-title="Titel 2" data-text="Text 2"></div>
-            <div class="step" data-title="Titel 3" data-text="Text 3"></div>
-            <div class="step" data-title="Titel 4" data-text="Text 4"></div>
+    <section class="scroll-section">
+        <div class="scroll-content">
+          <div class="text-container">
+            <div class="text-slide" data-index="0">
+              <h3>Schritt 1</h3>
+              <p>Dies ist die erste Beschreibung.</p>
+            </div>
+            <div class="text-slide" data-index="1">
+              <h3>Schritt 2</h3>
+              <p>Dies ist die zweite Beschreibung.</p>
+            </div>
+            <div class="text-slide" data-index="2">
+              <h3>Schritt 3</h3>
+              <p>Hier steht der dritte Text.</p>
+            </div>
+            <div class="text-slide" data-index="3">
+              <h3>Schritt 4</h3>
+              <p>Und hier der vierte Inhalt.</p>
+            </div>
           </div>
-          <div class="content">
-            <div class="text">
-              <h3 id="dynamic-title">Titel 1</h3>
-              <p id="dynamic-text">Text 1</p>
-            </div>
-            <div class="images">
-              <img src="https://via.placeholder.com/400x300?text=Bild+1" class="image active" />
-              <img src="https://via.placeholder.com/400x300?text=Bild+2" class="image" />
-              <img src="https://via.placeholder.com/400x300?text=Bild+3" class="image" />
-              <img src="https://via.placeholder.com/400x300?text=Bild+4" class="image" />
-            </div>
+          <div class="image-stack">
+            <img class="image-layer" data-index="0" src="img/placeholder.jpg" alt="Bild 1" style="--rotation: -2deg;">
+            <img class="image-layer" data-index="1" src="img/beyond/AR2.png" alt="Bild 2" style="--rotation: 1deg;">
+            <img class="image-layer" data-index="2" src="img/placeholder.jpg" alt="Bild 3" style="--rotation: -3deg;">
+            <img class="image-layer" data-index="3" src="img/beyond/AR2.png" alt="Bild 4" style="--rotation: 2deg;">
+            
           </div>
         </div>
-    </section>
+      </section>
 
 
         <div class="eyetracking-wrapper">

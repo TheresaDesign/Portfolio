@@ -99,7 +99,29 @@ const items = document.querySelectorAll('.gallery-item');
       closeDetail();
     }
   });
-  
+
+
+  //stapel
+  const slides = document.querySelectorAll('.text-slide');
+  const images = document.querySelectorAll('.image-layer');
+  const section = document.querySelector('.scroll-section');
+
+  window.addEventListener('scroll', () => {
+    const rect = section.getBoundingClientRect();
+    const totalSteps = 4;
+    const stepHeight = window.innerHeight;
+    const scrollPosition = Math.min(Math.max(-rect.top, 0), stepHeight * (totalSteps - 1));
+    const currentStep = Math.floor(scrollPosition / stepHeight);
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentStep);
+    });
+    images.forEach((img, index) => {
+      img.classList.toggle('active', index <= currentStep);
+    });
+  });
+
+
 // Eye Tracking Video Control
 document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById('scrollVideo');

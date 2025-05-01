@@ -52,7 +52,7 @@
   }
   
   .gallery-section {
-    padding: 0 10%;
+    padding: 4rem 10%;
     font-family: sans-serif;
   }
 
@@ -161,7 +161,64 @@
     display: none;
   }
 
-  
+  .scroll-section {
+    position: relative;
+    height: 400vh; /* 4 Steps */
+  }
+
+  .scroll-content {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 10%;
+    background: var(--background-color);
+    overflow: hidden;
+  }
+
+  .text-container {
+    width: 40%;
+    position: relative;
+  }
+
+  .text-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .text-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .image-stack {
+    width: 50%;
+    position: relative;
+    height: 80vh;
+    display: flex;
+  align-items: center;
+  }
+
+  .image-layer {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100px) rotate(0deg);
+    transition: all 0.8s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+  }
+
+  .image-layer.active {
+    opacity: 1;
+    transform: translateY(0) rotate(var(--rotation));
+  }
 
   .eyetracking-wrapper {
     position: relative;
