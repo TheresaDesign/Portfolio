@@ -352,3 +352,71 @@
     background: var(--secondary-color);
     transform: scale(1.1);
 }
+
+
+@media (max-width: 480px) {
+
+.arbeitsweise-section {
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  height: auto;
+  gap: 2rem;
+}
+
+.arbeitsweise-icon {
+  display: none;
+}
+
+.arbeitsweise-visible {
+  gap: 0.5rem;
+  border-radius: 27px;
+  align-items: baseline;
+  flex-direction: column;
+}
+.arbeitsweise-text {
+  justify-content: flex-start;
+  height: auto;
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery-section {
+  padding: 4rem 5%;
+}
+
+.arbeitsweise-section {
+  padding: 2vh 5vw;
+}
+
+.gallery-close-btn {
+  scale: 0.7;
+  top: 2rem;
+  right: 2rem;
+}
+
+.gallery-detail-view {
+  gap: 1rem;
+  padding: 1.5rem;
+  flex-direction: column-reverse;
+}
+
+.gallery-detail-content {
+  justify-content: flex-start;
+}
+
+.scroll-content {
+  padding: 4rem 5%;
+  flex-direction: column;
+}
+
+.text-container {
+  width: 100%;
+}
+
+.image-stack {
+  width: 100%;
+}
+
+}
