@@ -433,3 +433,168 @@ hidden;
 
   
 }
+
+
+@media (max-width: 480px) {
+  .horizontal-content {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .horizontal-wrapper {
+    /* height: 100vh; */
+    height: auto;
+  }
+  
+  .panel-intro {
+    height: auto;
+    align-items: baseline;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  
+  .welcome {
+    flex-basis: 25%;
+    height: auto;
+  }
+  
+  .welcome h2 {
+    margin: 10%;
+  }
+.panel {
+  height: auto;
+}
+
+.grid-luettfeld {
+  grid-template-columns: 1fr;
+  height: auto;
+  padding: 5% 2rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.marquee {
+  width: 85vw;
+}
+
+
+.skills-container {
+  height: auto;
+  margin:20px 0 0 0;
+  gap: 20px;
+}
+
+
+.luettfeld-klein.box {
+  padding: 1rem;
+}
+
+.skill {
+  align-items: baseline;
+  gap: 15.5px;
+}
+
+
+.luettfeld-gros {
+  flex-basis: 100%;
+}
+
+.panel {
+  flex-direction: column;
+  }
+
+  .panel-half {
+  padding: 50% 2rem;
+  padding: 2rem;
+  }
+
+  .panel-fhp {
+   min-width: 100vw;
+  }
+  .grid-fhp {
+    padding: 0;
+  }
+  .fhp-small {
+    /* flex-basis: 24%; */
+    flex-basis: 100%;
+  }
+
+.panel-fhp {
+  height: auto;
+  padding: 10vh 2rem;
+}
+
+.fhp-spalte {
+  height: 20vh;
+  overflow: hidden;
+}
+
+.marquee-track {
+  flex-direction: row;
+}
+
+.fhp-spalte {
+  height: 20vh;
+  overflow: hidden;
+}
+
+.marquee-track {
+  flex-direction: row;
+  animation: marquee 5s linear infinite;
+  gap: 15px;
+}
+
+.img-wrapper {
+  width: auto;
+  margin: auto 0;
+  height: 20vh;
+}
+
+.img-wrapper img {
+  width:auto;
+  height: 50%;
+}
+
+.marquee-column {
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.privat-content {
+  width: 100%;
+}
+
+  .privat-content {
+    padding: 5% 2rem;
+  }
+
+
+.image-fan {
+  position: static;
+  width: 100%;
+  margin-left: 44px;
+  height: 17.5rem;
+}
+
+.fan-img {
+  width: 57%;
+}
+
+.fan-img:active {
+  z-index: 10;
+}
+
+}
+
+

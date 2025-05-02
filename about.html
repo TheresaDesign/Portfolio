@@ -292,19 +292,22 @@
 
     <script src="script.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        if (window.innerWidth > 480) {
+          gsap.registerPlugin(ScrollTrigger);
       
-        gsap.to(".horizontal-content", {
-          xPercent: -300, // 4 Panels = -100 * (Anzahl - 1)
-          ease: "none",
-          scrollTrigger: {
-            trigger: ".horizontal-wrapper",
-            pin: true,
-            scrub: true,
-            end: () => "+=" + document.querySelector(".horizontal-content").offsetWidth
-          }
-        });
-    </script>
+          gsap.to(".horizontal-content", {
+            xPercent: -300, // 4 Panels = -100 * (Anzahl - 1)
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".horizontal-wrapper",
+              pin: true,
+              scrub: true,
+              end: () => "+=" + document.querySelector(".horizontal-content").offsetWidth
+            }
+          });
+        }
+      </script>
+      
     <script src="about-script.js"></script>
 </body>
 </html> 
