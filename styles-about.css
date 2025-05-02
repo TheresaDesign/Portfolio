@@ -1,4 +1,4 @@
-p{
+div p{
   max-width: 800px;
 }
 /*About page*/
@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 150vw; /* 4 Sektionen à 100vw */
+width: 139.5vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -435,7 +435,7 @@ hidden;
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 810px) {
   .horizontal-content {
     width: 100vw;
     height: auto;
@@ -515,6 +515,7 @@ hidden;
   }
   .grid-fhp {
     padding: 0;
+    gap: 2.5rem;
   }
   .fhp-small {
     /* flex-basis: 24%; */
