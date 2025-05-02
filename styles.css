@@ -2,7 +2,8 @@
     --primary-color: #600DB4;
     --secondary-color: #B128C3;
     --accent-color: #C8FF00;
-    --primary-gradient: linear-gradient(to right, #600DB4, #B128C3);
+    --primary-gradient: linear-gradient(to right, rgb(96, 13, 180), rgb(177, 40, 195));
+    --main-gradient: linear-gradient(90deg, rgba(96, 13, 180, 0.8), rgba(177, 40, 195, 0.8));
     --grey1: #B5B5B5;
     --grey2: #535353;
     --background-color: #F1F2EE;

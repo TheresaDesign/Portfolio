@@ -68,10 +68,12 @@
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
+    aspect-ratio: 1/1;
   }
 
   .gallery-item img {
-    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     filter: grayscale(100%);
     transition: transform 0.3s ease;
@@ -84,18 +86,19 @@
   .gallery-overlay {
     position: absolute;
     inset: 0;
-    background-color: #600DB490;
+    background: var(--main-gradient);
+    opacity: 0;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
   }
 
   .gallery-overlay h3 {
     color: var(--background-color);
+    text-align: center;
   }
 
   .gallery-item:hover .gallery-overlay {
@@ -137,6 +140,7 @@
 
   .gallery-detail-image {
     flex: 1;
+    align-content: center;
   }
 
   .gallery-detail-image img {
