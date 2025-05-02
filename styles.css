@@ -759,6 +759,7 @@ a{
 .viertel{
     flex-basis: 25%;
     margin: auto 0;
+    flex-shrink: 0;
 }
 .wrap {
     margin: 100px;
