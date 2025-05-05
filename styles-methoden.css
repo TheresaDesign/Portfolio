@@ -230,21 +230,21 @@
 }
 
 .eyetracking-section {
-    position: sticky;
     top: 0;
     height: fit-content;
     overflow: hidden;
     background-color: var(--text-color);
 }
-#scrollVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.video-container{
+    position: relative;
     width: 100%;
-    object-fit: cover;
-    opacity: 0;  /* Standardmäßig unsichtbar */
-    transition: opacity 0.2s ease-in-out;
-    z-index: 5; /* Anfangs hinter dem Text */
+    padding: 4rem 10%;
+    overflow: hidden;
+}
+#scrollVideo {
+    border-radius: 10px;
+    width: 100%;
 }
 
 .eyetracking-section.video-active #scrollVideo {
