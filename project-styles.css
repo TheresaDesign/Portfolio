@@ -66,6 +66,13 @@ h3{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.project-hero.hero-eye{
+    background-image: url(img/eyetracking/cover.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Project Sections */
 .project-section {
     padding: 32px 10%;
@@ -737,6 +744,33 @@ h3{
     height: auto;
   }
 
+
+/* Eye Tracking */
+.studie-overview{
+flex-basis: 25%;
+}
+
+.auswertung-eye{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.auswertung-eye .halb .emphazised {
+    color: var(--primary-color);
+}
+.img-gross{
+flex-basis: 50%;
+}
+
+.img-gross img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center 0;
+}
+
+
 @media (max-width: 1400px){
     .learning-big{
         grid-column: span 2;
@@ -812,6 +846,10 @@ h3{
 
     .project-hero.hero-nr{
         background-image: url(img/beyond/banner-klein.png);
+    }
+
+    .project-hero.hero-eye{
+        background-image: url(img/eyetracking/cover-klein.png);
     }
 
 

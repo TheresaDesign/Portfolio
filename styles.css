@@ -80,7 +80,7 @@ h3 {
     line-height: 1.5;
     color: var(--text-color);
 }
-p {
+p,li::marker{
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
     font-weight: 400;
