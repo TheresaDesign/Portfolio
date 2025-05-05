@@ -902,6 +902,10 @@ flex-basis: 50%;
     .learning-big{
         grid-column: span 1;
     }
+
+    .row-halbhalb{
+        gap:2rem
+    }
     /*VR*/
     .VR-glasses{
         display: none;
@@ -911,6 +915,14 @@ flex-basis: 50%;
         width: 20%;
         padding: 5%;
       }
+    
+      .auswertung-eye {
+        flex-direction: column;
+    }
+
+    .auswertung-eye.img-first{
+        flex-direction: column-reverse;
+    }
     
 }
 
