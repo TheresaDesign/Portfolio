@@ -514,7 +514,26 @@ a{
     opacity: 1;
   }
   
-  
+/*img spalte*/
+.img-section{
+    width: 100%;
+    height: 40vh;
+    padding: 0 10%;
+}
+
+.spalte-box{
+    width:50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50%;
+    justify-content: center;
+}
+.spalte-intro1{
+    background-image: url('img/home/spalte.png');
+    background-position: center;
+    background-size: cover;
+}
 
 /* Design Experience Section */
 .design-experience {
