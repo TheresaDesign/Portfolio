@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor:none !important;
 }
 
 body {
@@ -126,6 +127,35 @@ a{
 }
 
 /*gernerals*/
+
+/*cursor*/
+.cursor {
+    display: none; /* Set to display in our JS */
+    pointer-events: none; /* Needed to prevent our cursor from becoming the unintended target of our mouse events */
+    position: fixed; /* Required for setting inset values */
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    background-color: light-dark(black, white);
+    transform: translate(-50%, -50%); /* Centers circle to cursor location */
+    transform-origin: top left;
+    z-index:1001
+  }
+  
+  .click {
+    scale: 0.8;
+  }
+  
+  .pressable {
+    scale: 1.3;
+  }
+  
+  /* Only display a message if the user can't hover (which would indicate they're using an input that doesn't have a cursor) */
+  @media (hover: hover) {
+    .no-cursor {
+      display: none;
+    }
+  }
     /* Filter Buttons */
     .filter-buttons {
         display: flex;
