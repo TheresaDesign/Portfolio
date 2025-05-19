@@ -1,3 +1,9 @@
+.intro{
+  background-image: url('img/home/farbspritzer.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .arbeitsweise-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
