@@ -40,14 +40,27 @@
         </div>
     </section>
 
-    <div class="menu-container">
-        <div class="chapter" data-chapter="Arbeitsweise"></div>
-        <div class="chapter" data-chapter="Hardskills"></div>
-        <div class="chapter" data-chapter="Softskills"></div>
-        <div class="chapter" data-chapter="Techniken"></div>
-      </div>
+    <div class="menu-container" >
+        <div class="chapter" data-target="arbeitsweise" data-chapter="Arbeitsweise" data-color="var(--primary-color)">
+          <div class="circle"></div>
+          <span class="chapter-name">Arbeitsweise</span>
+        </div>
+        <div class="chapter" data-target="hardskills" data-chapter="Hardskills" data-color="var(--accent-color)">
+          <div class="circle"></div>
+          <span class="chapter-name">Hardskills</span>
+        </div>
+        <div class="chapter" data-target="softskills" data-chapter="Softskills" data-color="var(--secondary-color)">
+          <div class="circle"></div>
+          <span class="chapter-name">Softskills</span>
+        </div>
+        <div class="chapter" data-target="techniken" data-chapter="Techniken" data-color="var(--grey2)">
+          <div class="circle"></div>
+          <span class="chapter-name">Techniken</span>
+        </div>
+    </div>
+    
 
-    <section class="arbeitsweise-section" id="Arbeitsweise">
+    <section class="arbeitsweise-section" id="arbeitsweise">
         <div class="arbeitsweise-text">
           <h2>Wie ich arbeite</h2>
           <p>Mein Designprozess ist nutzerzentriert, iterativ und datenbasiert. Jede Entscheidung basiert auf Research, meiner Erfahrung und einem klaren Ziel.</p>
@@ -161,7 +174,7 @@
               <p>Für mich beginnt jedes Designprojekt mit dem Wireframing – der Moment, in dem Ideen erste Formen annehmen. Meist auf PApier skizziere ich grob ganze Screens oder fokussiere mich auf einzelne Funktionen, je nachdem, was gerade wichtiger ist. Es geht mir darum, die Grundidee klar herauszuarbeiten und die Funktionen sinnvoll zu sortieren. Die ersten Skizzensind meist so grob, dass nur ich damit etwas anfangen kann, mit der Zeit wird es dann konkreter. Am Ende des Prozesses, will ich einen Überblick über die Struktur haben, um dann mit dem nächsten SChritt weitermachen zu können.</p>
             </div>
             <div class="text-slide" data-index="1">
-              <h3>Erste Umsetzng in Figma</h3>
+              <h3>Erste Umsetzung in Figma</h3>
               <p>Als Nächstes übertrage ich die Skizzen nach Figma. Anfangs halte ich das Design bewusst schlicht, nutze nur Graustufen und Platzhalter für Texte und Bilder, um nicht von der Funktionalität abzulenken. Es entstehen statische Screens, die die wichtigsten Elemente festhalten. Diese Phase nutze ich auch, um erste Usertests durchzuführen und ein Gefühl dafür zu bekommen, ob die Anordnung und der Flow verständlich sind.</p>
             </div>
             <div class="text-slide" data-index="2">
@@ -185,7 +198,7 @@
 
 
         <div class="eyetracking-wrapper">
-        <div class="eyetracking-section" id="Hardskills">
+        <div class="eyetracking-section" id="hardskills">
             
             <div class="eyeTracking-content">
                 <h2>EyeTracking</h2>
@@ -249,7 +262,7 @@
     
     
     
-    <section class="projects-grid" id="modelling">
+    <section class="projects-grid" id="softskills" >
         <a href="project-BloomBerlin.html" class="card">
             <div class="card-image">
                 <img src="img/Bloom/cover-Image-card.png" alt="Projekt 1">
@@ -348,7 +361,7 @@
        
     </div>
     
-    
+    <section id="techniken"></section>
 
     <!-- Footer Section -->
     <footer class="footer">

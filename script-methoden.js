@@ -1,32 +1,81 @@
-//Menü animation
 const chapters = document.querySelectorAll('.chapter');
 const menuContainer = document.querySelector('.menu-container');
 const sections = document.querySelectorAll('section');
 
+// Offset für die Transformation
+const transformationOffset = 850;
+
 window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY;
-  
-  // Trigger transformation when scrolled down
-  if (scrollPos > 50) {
+
+  if (scrollPos > transformationOffset) {
     menuContainer.classList.add('fixed');
+
     chapters.forEach((chapter, index) => {
-      chapter.classList.add('balken');
-      chapter.style.height = `${100 + index * 50}px`; // Balkenlänge variieren
+      setTimeout(() => {
+        const targetId = chapter.getAttribute('data-target');
+        const targetSection = document.getElementById(targetId);
+        const color = chapter.getAttribute('data-color'); // Farbe holen
+
+        if (!targetSection) {
+          console.warn(`Kein Abschnitt gefunden mit der ID: ${targetId}`);
+          return;
+        }
+
+        const sectionHeight = targetSection.scrollHeight;
+
+        // Verwandlung in Balken
+        chapter.classList.add('balken');
+        chapter.style.height = `${sectionHeight / 10}px`;
+        chapter.style.opacity = '1';
+        chapter.style.backgroundColor = color;
+
+        const circle = chapter.querySelector('.circle');
+        circle.style.display = 'none';
+
+        const chapterName = chapter.querySelector('.chapter-name');
+        chapterName.style.opacity = '0';
+
+      }, index * 150);
     });
+
   } else {
     menuContainer.classList.remove('fixed');
-    chapters.forEach(chapter => {
-      chapter.classList.remove('balken');
-      chapter.style.height = '20px';
+
+    chapters.forEach((chapter, index) => {
+      setTimeout(() => {
+        // Rückverwandlung in Kreise
+        chapter.classList.remove('balken');
+        chapter.style.height = '20px';
+        chapter.style.opacity = '1';
+
+        const color = chapter.getAttribute('data-color'); // Farbe holen
+        chapter.style.backgroundColor = 'transparent';
+
+        const circle = chapter.querySelector('.circle');
+        circle.style.display = 'block';
+        circle.style.backgroundColor = color;
+
+        const chapterName = chapter.querySelector('.chapter-name');
+        chapterName.style.opacity = '1';
+      }, index * 150);
     });
   }
 
-  // Aktivieren des aktuellen Kapitels
-  sections.forEach((section, index) => {
+  
+
+  // Aktives Kapitel hervorheben
+  sections.forEach(section => {
     const rect = section.getBoundingClientRect();
-    if (rect.top <= 50 && rect.bottom > 50) {
+    const sectionId = section.id;
+
+    if (rect.top <= 100 && rect.bottom >= 100) {
       chapters.forEach(chap => chap.classList.remove('active'));
-      chapters[index].classList.add('active');
+      const activeChapter = Array.from(chapters).find(chap => chap.getAttribute('data-target') === sectionId);
+
+      if (activeChapter) {
+        activeChapter.classList.add('active');
+      }
     }
   });
 });

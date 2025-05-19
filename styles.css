@@ -54,8 +54,8 @@ body {
 } 
 @font-face {
     font-family: 'Nothing';
-    src: url('schmuckschrift/NothingYouCouldDo-Regular.ttf') format('truetype');
-    font-weight: 500;
+    src: url('schmuckschrift/Playfair-VariableFont.ttf') format('truetype');
+    font-weight: 900;
     font-style: normal;
 } 
 
@@ -66,12 +66,12 @@ h1 {
     line-height: 1.25;
 }
 h2 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nothing', sans-serif;
     font-size: 3rem;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 1.5;
     margin: 2rem 0;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 h3 {
     font-family: 'Poppins', sans-serif;
@@ -678,7 +678,7 @@ a{
 /*grid*/
 .current-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
 }
 
