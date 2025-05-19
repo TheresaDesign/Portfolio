@@ -1,3 +1,37 @@
+//Menü animation
+const chapters = document.querySelectorAll('.chapter');
+const menuContainer = document.querySelector('.menu-container');
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  
+  // Trigger transformation when scrolled down
+  if (scrollPos > 50) {
+    menuContainer.classList.add('fixed');
+    chapters.forEach((chapter, index) => {
+      chapter.classList.add('balken');
+      chapter.style.height = `${100 + index * 50}px`; // Balkenlänge variieren
+    });
+  } else {
+    menuContainer.classList.remove('fixed');
+    chapters.forEach(chapter => {
+      chapter.classList.remove('balken');
+      chapter.style.height = '20px';
+    });
+  }
+
+  // Aktivieren des aktuellen Kapitels
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 50 && rect.bottom > 50) {
+      chapters.forEach(chap => chap.classList.remove('active'));
+      chapters[index].classList.add('active');
+    }
+  });
+});
+
+
 // Image Gallery Navigation
 const mainImage = document.getElementById('mainImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
