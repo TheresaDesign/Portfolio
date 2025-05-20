@@ -18,6 +18,45 @@
    }
  });
 
+
+ //skills
+ document.addEventListener('DOMContentLoaded', () => {
+    const works = document.querySelectorAll('.work');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const work = entry.target;
+          const fill = work.querySelector('.work-bar-fill');
+          const percentSpan = work.querySelector('.percent');
+          const targetPercent = parseInt(work.getAttribute('data-percent'));
+
+          // Nur animieren, wenn noch nicht animiert
+          if (!fill.classList.contains('animated')) {
+            fill.classList.add('animated');
+            fill.style.width = targetPercent + '%';
+
+            let current = 0;
+            const duration = 2000;
+            const stepTime = Math.max(Math.floor(duration / targetPercent), 10);
+
+            const counter = setInterval(() => {
+              current++;
+              percentSpan.textContent = current + '%';
+              if (current >= targetPercent) clearInterval(counter);
+            }, stepTime);
+          }
+
+          observer.unobserve(work);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    works.forEach(work => observer.observe(work));
+  });
+
 //fächer
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

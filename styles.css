@@ -193,7 +193,7 @@ a{
     }
 
 .link-container{
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 .back-button {
     margin: 0 10%;
@@ -498,6 +498,57 @@ a{
     object-position: center;
     border-radius: 10px;
 }
+
+
+.work-container {
+    width:100%;
+    margin: 100px auto;
+  }
+
+  .work {
+    margin-bottom: 40px;
+  }
+
+  .work-name {
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .work-bar-bg {
+    background-color: var(--grey1);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 30px;
+  }
+
+  .work-bar-fill {
+    height: 100%;
+    width: 0;
+    color: var(--white);
+    font-weight: bold;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+    transition: width 2s ease-out;
+  }
+
+  .percent {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: var(--white);
+  }
+
+  /* Beispiel-Farben */
+  .html { background-color: var(--primary-color); }
+  .css { background-color: var(--accent-color); }
+  .js { background-color: var(--secondary-color); }
+  .react { background-color: var(--text-color); }
+
 
 .fanned-section {
     display: flex;
@@ -1214,6 +1265,9 @@ a{
 
     .filter-buttons {
         gap: 0.5rem;
+    }
+    .link-container{
+        margin: 1rem 0;
     }
 
     .filter-btn{
