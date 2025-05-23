@@ -1,49 +1,48 @@
  //cursor
- const cursor = document.querySelector(".cursor");
-
-const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
-const prefersReducedMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
-).matches;
-
-if (!isTouchDevice && !prefersReducedMotion && cursor) {
-  // Show our custom cursor
-  cursor.style.display = "block";
-
-  // Inject CSS to hide the default cursor
-  const style = document.createElement("style");
-  style.textContent = `
-    * {
-      cursor: none;
-    }
-  `;
-  document.head.appendChild(style);
-
-  // Position cursor div to cursor position
-  document.addEventListener("mousemove", (e) => {
-    let x = e.clientX;
-    let y = e.clientY;
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
-  });
-
-  // Add 'click' class to cursor on mousedown and remove on mouseup
-  document.addEventListener("mousedown", (e) => cursor.classList.add("click"));
-  document.addEventListener("mouseup", (e) => cursor.classList.remove("click"));
-
-  // Add 'pressable' class to cursor when hovering certain elements
-  const items = document.querySelectorAll("a, button");
-  items.forEach((item) => {
-    item.addEventListener("mouseover", () => {
-      cursor.classList.add("pressable");
-    });
-
-    item.addEventListener("mouseleave", () => {
-      cursor.classList.remove("pressable");
-    });
-  });
-}
-
+ const cursor = document.querySelector('.cursor');
+ let mouseX = 0;
+ let mouseY = 0;
+ let currentX = 0;
+ let currentY = 0;
+ const speed = 0.1; // Je kleiner der Wert, desto langsamer die Bewegung
+ 
+ // Aktualisiere die Zielposition bei Mausbewegung
+ document.addEventListener('mousemove', (e) => {
+   mouseX = e.clientX;
+   mouseY = e.clientY;
+ });
+ 
+ // Animationsschleife für sanfte Bewegung
+ function animate() {
+   currentX += (mouseX - currentX) * speed;
+   currentY += (mouseY - currentY) * speed;
+   cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+   requestAnimationFrame(animate);
+ }
+ animate();
+ 
+ // Klick-Effekt
+ document.addEventListener('mousedown', () => {
+   cursor.classList.add('click');
+ });
+ 
+ document.addEventListener('mouseup', () => {
+   cursor.classList.remove('click');
+ });
+ 
+ // Hover-Effekt bei interaktiven Elementen
+ const hoverElements = document.querySelectorAll('a, button, .hoverable');
+ 
+ hoverElements.forEach((el) => {
+   el.addEventListener('mouseenter', () => {
+     cursor.classList.add('hover');
+   });
+ 
+   el.addEventListener('mouseleave', () => {
+     cursor.classList.remove('hover');
+   });
+ });
+ 
 //fächer
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
