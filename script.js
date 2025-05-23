@@ -1,22 +1,68 @@
- //header mobile
- const burger = document.getElementById('burger');
- const nav = document.getElementById('mobileNav');
+  //header mobile
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('mobileNav');
+  
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation(); // verhindert, dass das "document"-Event feuert
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+  
+  document.addEventListener('click', (e) => {
+    const isClickInsideNav = nav.contains(e.target);
+    const isClickOnBurger = burger.contains(e.target);
+  
+    if (!isClickInsideNav && !isClickOnBurger) {
+      burger.classList.remove('active');
+      nav.classList.remove('active');
+    }
+  });
  
- burger.addEventListener('click', (e) => {
-   e.stopPropagation(); // verhindert, dass das "document"-Event feuert
-   burger.classList.toggle('active');
-   nav.classList.toggle('active');
+ //cursor
+ const cursor = document.querySelector('.cursor');
+ let mouseX = 0;
+ let mouseY = 0;
+ let currentX = 0;
+ let currentY = 0;
+ const speed = 0.1; // Je kleiner der Wert, desto langsamer die Bewegung
+ 
+ // Aktualisiere die Zielposition bei Mausbewegung
+ document.addEventListener('mousemove', (e) => {
+   mouseX = e.clientX;
+   mouseY = e.clientY;
  });
  
- document.addEventListener('click', (e) => {
-   const isClickInsideNav = nav.contains(e.target);
-   const isClickOnBurger = burger.contains(e.target);
+ // Animationsschleife für sanfte Bewegung
+ function animate() {
+   currentX += (mouseX - currentX) * speed;
+   currentY += (mouseY - currentY) * speed;
+   cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+   requestAnimationFrame(animate);
+ }
+ animate();
  
-   if (!isClickInsideNav && !isClickOnBurger) {
-     burger.classList.remove('active');
-     nav.classList.remove('active');
-   }
+ // Klick-Effekt
+ document.addEventListener('mousedown', () => {
+   cursor.classList.add('click');
  });
+ 
+ document.addEventListener('mouseup', () => {
+   cursor.classList.remove('click');
+ });
+ 
+ // Hover-Effekt bei interaktiven Elementen
+ const hoverElements = document.querySelectorAll('a, button, .hoverable');
+ 
+ hoverElements.forEach((el) => {
+   el.addEventListener('mouseenter', () => {
+     cursor.classList.add('hover');
+   });
+ 
+   el.addEventListener('mouseleave', () => {
+     cursor.classList.remove('hover');
+   });
+ });
+ 
 
 
  //skills

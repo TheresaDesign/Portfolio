@@ -8,13 +8,14 @@
     --grey2: #535353;
     --background-color: #F1F2EE;
     --text-color: #333;
-    --white: #f8f9fa;
+    --white: rgb(248, 249, 250);
 }
 /* Globale Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor:none !important;
 }
 
 body {
@@ -126,6 +127,37 @@ a{
 }
 
 /*gernerals*/
+
+/*cursor*/
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(248,249,250, 0.8);
+    pointer-events: none;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+  }
+  
+  .cursor.click {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  .cursor.hover {
+    width: 100px;
+    height: 100px;
+  }
+  /* Only display a message if the user can't hover (which would indicate they're using an input that doesn't have a cursor) */
+  @media (hover: hover) {
+    .no-cursor {
+      display: none;
+    }
+  }
     /* Filter Buttons */
     .filter-buttons {
         display: flex;
