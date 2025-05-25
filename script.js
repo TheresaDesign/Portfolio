@@ -24,7 +24,7 @@
  let mouseY = 0;
  let currentX = 0;
  let currentY = 0;
- const speed = 0.1; // Je kleiner der Wert, desto langsamer die Bewegung
+ const speed = 0.2; // Je kleiner der Wert, desto langsamer die Bewegung
  
  // Aktualisiere die Zielposition bei Mausbewegung
  document.addEventListener('mousemove', (e) => {

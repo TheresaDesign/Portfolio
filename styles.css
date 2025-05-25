@@ -76,7 +76,7 @@ h2 {
 }
 h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.875rem;
+    font-size: 1.75rem;
     font-weight: 500;
     line-height: 1.5;
     color: var(--text-color);
@@ -508,8 +508,8 @@ a{
 }
 
 .profession-item{
-    padding:2rem;
-    border-left: 2px solid var(--grey1)
+    padding:1.5rem;
+    border-left: 2px solid var(--primary-color)
 }
 
 .img-box {
@@ -534,7 +534,6 @@ a{
 
 .work-container {
     width:100%;
-    margin: 100px auto;
   }
 
   .work {
@@ -626,6 +625,11 @@ a{
     opacity: 1;
   }
   
+  .fanned-image:hover{
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+    z-index: 10;
+  }
+
 /*img spalte*/
 .img-section{
     width: 100%;
@@ -687,6 +691,7 @@ a{
     padding: 1rem 2rem; 
     border-radius: 50px;
     color: var(--text-color);
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .floating-words span {
@@ -1103,7 +1108,14 @@ a{
     background-color: var(--grey1);
     color: var(--text-color);
 }
-
+@media (max-width: 1000px) {
+    .profession {
+        grid-template-columns: 1fr 1fr;
+    }
+    .profession-item {
+        border: none;
+    }
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
@@ -1174,6 +1186,17 @@ a{
         max-width: 100%;
     }
 
+    .early-break{
+        flex-direction: column ;
+    }
+
+    .img-section{
+        height:75vh;
+    }
+
+    .fanned-section{
+        margin: 10% 0;
+    }
     .design-experience{
         padding: 0;
     }
@@ -1214,6 +1237,12 @@ a{
         grid-template-columns: 1fr;
     }
 
+    .fanned-image:active{
+        transform: translate(-50%, -50%) rotate(0deg) scale(1.05);
+        z-index: 10;
+    }
+
+
     .images{
         height: 544.5px;
         width: 100%;
@@ -1227,6 +1256,10 @@ a{
     .projects-grid {
         grid-template-columns: 1fr;
         padding: 0 10%;
+    }
+
+    .current-grid{
+        grid-template-columns: 1fr 1fr;
     }
 
     .sb-box .schmuckschrift {
@@ -1298,6 +1331,65 @@ a{
     padding: 20% 10%;
   }
   
+  .profession{
+        grid-template-columns: 1fr;
+    }
+
+    .profession-item{
+        padding: 2rem 0;
+        border-left: none;
+        border-bottom: 2px solid var(--grey1);
+    }
+
+    .row-halbhalb{
+        margin: 2rem 0;
+    }
+
+    .img-section {
+    height: 100vh;
+    margin: 2rem 0;
+    }
+    .spalte-box {
+        width:100%;
+        margin-left: 0;
+    }
+
+    .spalte-intro1 {
+    background-image: url('img/Bloom/cover-Image-small.png');
+    }
+
+    .images{
+        height:300px;
+    }
+
+.current-grid {
+  grid-template-columns: 1fr ;
+  gap: 0;
+  border: 2px solid var(--primary-color);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.grid-ganz {
+  grid-row: span 2;
+  padding: 0;
+  border: none;
+}
+
+.grid-drittel {
+  padding: 1rem 0;
+  border: none;
+}
+
+.grid-zweidrittel {
+  padding: 1rem 0;
+  border: none;
+}
+
+.img-grid {
+  padding: 1rem 0 !important;
+}
+
 
     .main-nav ul {
         gap: 1rem;
@@ -1328,12 +1420,9 @@ a{
     }
 
     .design-experience h2 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
+        line-height: 1.8rem;
     }
-
-  .design-experience h2 {
-    font-size: 1.5;
-  }
 
     .wrap {
       scale: 1;
