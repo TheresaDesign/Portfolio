@@ -1,7 +1,7 @@
  //hero
  document.addEventListener('DOMContentLoaded', () => {
     const hero = document.querySelector('.hero');
-    const heroContent = document.querySelector('.hero-content');
+    const heroContent = document.querySelector('.hero-inhalt');
     const heroText = document.querySelector('.hero-text');
     const heroImages = document.querySelector('.hero-images');
     const scrollContainer = document.querySelector('.scroll-container');
