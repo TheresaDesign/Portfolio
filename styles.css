@@ -217,15 +217,33 @@ a{
         cursor: pointer;
         transition: all 0.3s ease;
         border: none;
-        margin:1rem 0
+        margin:1rem 0;
+        z-index: 1000;
     }
     .primary-btn:hover{
         background-color: var(--secondary-color);
         transform: translateY(-5px);
     }
 
+    .secondary-btn{
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        padding: 1rem 2rem; 
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: none;
+        margin:1rem 0
+    }
+    .secondary-btn:hover{
+        background-color: var(--secondary-color);
+        transform: translateY(-5px);
+    }
+
 .link-container{
-    margin: 2rem 0;
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
 }
 .back-button {
     margin: 0 10%;
@@ -359,7 +377,7 @@ a{
 /* Basis-Layout */
 
 .hero {
-    position: fixed; /* Wichtig: fixed, nicht sticky */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
@@ -398,6 +416,10 @@ a{
 .hero-text h3{
     color: var(--primary-color);
 }
+
+.hero-first{
+    padding-bottom: 35vh;
+}
 .hero-images {
   position: absolute;
   bottom: 0;
@@ -429,6 +451,22 @@ a{
     pointer-events: none;
     transform: rotate(-5deg);
   }
+
+.contacts{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20% 0;
+}
+
+.contact{
+    display: flex;
+  gap: 5%;
+  align-items: center;
+}
+.contact img{
+    width: 50px;
+    height:50px;
+}
 
 .portrait-image {
   width: 70%;
@@ -1182,6 +1220,9 @@ a{
     .primary-btn{
         padding: 0.75rem 1.5rem; 
     }
+    .secondary-btn{
+        padding: 0.75rem 1.5rem; 
+    }
     .intro-content{
         max-width: 100%;
     }
@@ -1409,6 +1450,11 @@ a{
     .primary-btn {
         padding: 0.5rem 1rem;
     }
+
+    .secondary-btn {
+        padding: 0.5rem 1rem;
+    }
+
     .mobile-header{
         display: flex;
     }
