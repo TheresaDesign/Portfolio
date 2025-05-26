@@ -38,7 +38,7 @@
         <div class="scroll-container">
             <section class="hero">
                 <div class="hero-content">
-                <div class="hero-text">
+                <div class="hero-text" style="pointer-events: auto !important;">
                     <div class="hero-first">
                         <h3>Hallo, ich bin</h3>
                         <h1>Theresa Brand</h1>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     
-                    <div class="contacts">
+                    <div class="contacts" style="pointer-events: auto !important;">
                         <div class="contact">
                             <img src="Assets/mail.png" alt="">
                             <a class="link" href="mailto:theresa.brand@freenet.de">theresa.brand@freenet.de</a>
@@ -84,23 +84,23 @@
                     <div class="profession-item" style="border-left:none">
                         <h3>📱 UI Design</h3>
                         
-                        <p>Ich gestalte Interfaces, die nicht nur gut aussehen, sondern auch logisch aufgebaut sind. Von der ersten Layout-Skizze bis zum finalen Design sorge ich dafür, dass jedes Element funktional, zugänglich und markenkonform ist.</p>
+                        <p>Ich gestalte intuitive Interfaces, die Ästhetik mit Funktion verbinden.</p>
                     </div>
                     <div class="profession-item">
                         <h3>📈 UX Konzeption</h3>
-                        <p>Gutes Design beginnt vor der ersten Linie. Ich entwickle klare Informationsarchitektur, durchdachte User Flows und interaktive Prototypen – basierend auf Nutzerbedürfnissen und Zielen. So entsteht ein digitales Erlebnis, das wirklich funktioniert.</p>
+                        <p>Ich entwickle nutzerzentrierte Konzepte mit klarer Struktur und Logik.</p>
                     </div>
                     <div class="profession-item">
                         <h3>🎲 Design Systeme</h3>
-                        <p>Ich baue Designsysteme, die wiederverwendbar, skalierbar und teamfreundlich sind. Ob als Figma-Library oder in enger Zusammenarbeit mit Entwickler:innen – Struktur spart Zeit und schafft klare Standards für zukünftige Projekte.</p>
+                        <p>ch erstelle skalierbare Designsysteme für effiziente, konsistente Projekte.</p>
                     </div>
                     <div class="profession-item">
                         <h3>🎨 &#040;Visuelles&#041; Branding</h3>
-                        <p>Mein Background im klassischen Grafikdesign ergänzt meine UI-Arbeit ideal. Ich entwickle Logos, Farbpaletten, Typografiekonzepte und Moodboards, die deine digitale Präsenz stärken – ganzheitlich und charakterstark.</p>
+                        <p>Ich kreiere starke visuelle Identitäten mit Charakter und Wiedererkennungswert.</p>
                     </div>
                 </div>
                 <div class="img-box">
-                    <img class="img-full" src="img/home/duo2.png" alt="">
+                    <img class="img-full" src="img/home/long-setup.png" alt="">
                 </div>
 
                 <div class="row-halbhalb early-break">
@@ -163,19 +163,30 @@
             
         </div>
 
-        <section class="fanned-section">
-            <div class="text">
-              <p>Ich arbeite an der Schnittstelle von <span class="emphazised" style="color: var(--primary-color);">User Interface Design, User Experience Design</span> und <span class="emphazised" style="color: var(--primary-color);">immersiven Technologien.</span> Mein Fokus liegt dabei auf der Gestaltung digitaler Oberflächen sowie dem 3D-Modelling für Anwendungen in Virtual und Augmented Reality</p>
+        <section >
+            <div class="fanned-section">
+                <div class="text">
+                    <p>Ich arbeite an der Schnittstelle von <span class="emphazised" style="color: var(--primary-color);">User Interface Design, User Experience Design</span> und <span class="emphazised" style="color: var(--primary-color);">immersiven Technologien.</span> Mein Fokus liegt dabei auf der Gestaltung digitaler Oberflächen sowie dem 3D-Modelling für Anwendungen in Virtual und Augmented Reality</p>
+                </div>
+                <div class="images" id="imageContainer">
+                    <img src="img/home/duo2.png" class="fanned-image" />
+                    <img src="img/home/mockup-mapping.png" class="fanned-image" />
+                    <img src="img/home/faecher1.png" class="fanned-image" />
+                </div>
             </div>
-            <div class="images" id="imageContainer">
-              <img src="img/home/duo2.png" class="fanned-image" />
-              <img src="img/home/mockup-mapping.png" class="fanned-image" />
-              <img src="img/home/faecher1.png" class="fanned-image" />
+            
+            <div class="wave-divider">
+                <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="var(--white)" d="M0,96 C360,192 1080,0 1440,96 L1440,0 L0,0 Z"></path>
+                </svg>
             </div>
           </section>
           
+          
+          
     <!-- Design Experience Section -->
     <section class="design-experience" id="methodes">
+        
         <h2>Designerfahrung in <br>unterschiedlichen Feldern</h2>
         <div class="floating-words">
             <div class="property"><span class="button-font">UX Design</span></div>
@@ -187,10 +198,10 @@
     </section>
 
     <!-- Projects Section -->
-    <div class="contents">
+    <div class="contents" style="background-color: var(--white);">
         <h2>Aktuelle Projekte</h2>
     </div>
-    <section class="projects" id="projects">
+    <section class="projects" id="projects" style="padding-bottom: 0;">
         
         <div class="project-cards">
             <a class="card" href="project-BloomBerlin.html">
@@ -231,6 +242,11 @@
                     <p>Eine Ausstellung in VR</p>
                 </div>
             </a>
+        </div>
+        <div class="wave-divider">
+            <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+              <path fill="var(--background-color)" d="M0,96 C360,192 1080,0 1440,96 L1440,0 L0,0 Z"></path>
+            </svg>
         </div>
     </section>
 

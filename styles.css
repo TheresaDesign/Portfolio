@@ -8,7 +8,7 @@
     --grey2: #535353;
     --background-color: #F1F2EE;
     --text-color: #333;
-    --white: rgb(248, 249, 250);
+    --white: #f8f9fa;
 }
 /* Globale Styles */
 * {
@@ -218,7 +218,6 @@ a{
         transition: all 0.3s ease;
         border: none;
         margin:1rem 0;
-        z-index: 1000;
     }
     .primary-btn:hover{
         background-color: var(--secondary-color);
@@ -238,6 +237,7 @@ a{
     .secondary-btn:hover{
         background-color: var(--secondary-color);
         transform: translateY(-5px);
+        color: var(--background-color)
     }
 
 .link-container{
@@ -373,6 +373,16 @@ a{
     background-position: 0 0;
     color: var(--primary-color);
 }
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
 /* Hero Section */
 /* Basis-Layout */
 
@@ -393,7 +403,7 @@ a{
   }
   
   .hero-spacer {
-    height: 100vh; /* Gleiche Höhe wie Hero, damit genug Platz gescrollt wird */
+    height: 80vh;
   }
   
 
@@ -698,7 +708,7 @@ a{
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(circle at center, #6b46c1 0%, var(--background-color) 50%);
+    background: radial-gradient(circle at center, #6b46c1 0%, var(--white) 50%);
     padding: 2rem;
 }
 
@@ -709,7 +719,7 @@ a{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--background-color);
+    color: var(--white);
     z-index: 2;
 }
 
@@ -750,6 +760,7 @@ a{
     overflow: hidden;
     width: 100%;
     position: relative;
+    background-color: var(--white);
 }
 
 .project-cards {
