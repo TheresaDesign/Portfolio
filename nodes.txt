@@ -8,6 +8,7 @@ beyond
 
 - menü deutsch
 -link bei eyeTracking zum Projekt
+- bei methodes die kacheln lösst der hover cursor effekt nicht aus
 
 
 
