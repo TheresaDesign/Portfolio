@@ -6,14 +6,8 @@ beyond
 - link modelling verknüpfen
 -bei den skills wird unten der marquee effekt imer kleiner wenn man den skill ausklappt
 
-- menü deutsch
--link bei eyeTracking zum Projekt
-- bei methodes die kacheln lösst der hover cursor effekt nicht aus
-
 methodes:
-- Ganzen balken sichtbar
 - mobile version von kapitel
-- kapitel klickbar machen
 
 
 

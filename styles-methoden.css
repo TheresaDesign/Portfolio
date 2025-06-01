@@ -11,7 +11,8 @@
   display: flex;
   gap: 20px;
   transition: transform 0.5s ease;
-  padding: 0 10%
+  padding: 0 10%;
+  flex-wrap: wrap;
 }
 
 .chapter {
