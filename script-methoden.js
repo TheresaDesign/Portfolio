@@ -3,7 +3,13 @@ const menuContainer = document.querySelector('.menu-container');
 const sections = document.querySelectorAll('section');
 
 // Offset für die Transformation
-const transformationOffset = 850;
+let transformationOffset;
+
+if (window.innerWidth <= 480) {
+  transformationOffset = 400; // für Mobilgeräte früher transformieren
+} else {
+  transformationOffset = 850; // Desktop wie gehabt
+}
 
 window.addEventListener('scroll', () => {
   const scrollPos = window.scrollY;
@@ -79,7 +85,6 @@ window.addEventListener('scroll', () => {
     }
   });
 });
-
 
 // Image Gallery Navigation
 const mainImage = document.getElementById('mainImage');

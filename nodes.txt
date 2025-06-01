@@ -1,4 +1,4 @@
-- p evt. nur 1rem
+
 - bilder aus WA gruppe einfügen Bloom
  aktuell sind bei den Projekten alle überschriften lila. Soll das so bleiben?
 - footer richtig verlinken
@@ -6,8 +6,7 @@ beyond
 - link modelling verknüpfen
 -bei den skills wird unten der marquee effekt imer kleiner wenn man den skill ausklappt
 
-methodes:
-- mobile version von kapitel
+-h3 maybe kleiner
 
 
 
