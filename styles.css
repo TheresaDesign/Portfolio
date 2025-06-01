@@ -682,7 +682,7 @@ a{
 /*img spalte*/
 .img-section{
     width: 100%;
-    height: 40vh;
+    height: fit-content;
     min-height: 400px;
     padding: 0 10%;
 }

@@ -10,6 +10,10 @@ beyond
 -link bei eyeTracking zum Projekt
 - bei methodes die kacheln lösst der hover cursor effekt nicht aus
 
+methodes:
+- Ganzen balken sichtbar
+- mobile version von kapitel
+- kapitel klickbar machen
 
 
 
