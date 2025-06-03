@@ -169,6 +169,7 @@
   .gallery-section {
     padding: 4rem 10%;
     font-family: sans-serif;
+    background-color: var(--white);
   }
 
   .gallery-grid {
@@ -342,7 +343,6 @@
 
   .eyetracking-wrapper {
     position: relative;
-    height: 300vh; /* Großer Bereich zum Scrollen */
 }
 
 .eyetracking-section {
@@ -473,6 +473,9 @@
     transform: scale(1.1);
 }
 
+.tags-methodes{
+  margin: 10px 0;;
+}
 
 @media (max-width: 480px) {
   .free{
