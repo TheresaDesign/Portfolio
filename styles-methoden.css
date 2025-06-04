@@ -474,7 +474,12 @@
 }
 
 .tags-methodes{
-  margin: 10px 0;;
+  margin: 10px 0;
+}
+
+.softskills1{
+  background-image: url('img/methodes/IMG_3586.png');
+    background-size: cover;
 }
 
 @media (max-width: 480px) {
