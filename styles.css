@@ -54,11 +54,26 @@ body {
     font-style: normal;
 } 
 @font-face {
-    font-family: 'Nothing';
+    font-family: 'Playfair';
     src: url('schmuckschrift/Playfair-VariableFont.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 } 
+
+@font-face {
+    font-family: 'Nothing';
+    src: url('schmuckschrift/NothingYouCouldDo-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'Marker';
+    src: url('schmuckschrift//PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+} 
+
 
 h1 {
     font-family: 'Poppins', sans-serif;
@@ -67,7 +82,7 @@ h1 {
     line-height: 1.25;
 }
 h2 {
-    font-family: 'Nothing', sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-size: 3rem;
     font-weight: 900;
     line-height: 1.5;
@@ -119,7 +134,7 @@ a{
     color: var(--text-color);
 }
 .schmuckschrift{
-    font-family: 'Nothing', sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.5;
@@ -450,7 +465,7 @@ a{
 }
 
 .background-title {
-    font-family: 'Nothing', sans-serif;
+    font-family: 'Playfair', sans-serif;
     font-weight: 400;
     line-height: 1.75;
     color: var(--accent-color);
@@ -945,9 +960,13 @@ a{
   display: flex;
 }
 
+
 .social-links a:hover {
-    color: var(--accent-color);
+    color: var(--text-color);
     transform: translateY(-2px);
+    background-color: var(--accent-color);
+    border-radius: 2px solid var(--text-color);
+    border-radius: 50%;
 }
 
 .social-links svg {
@@ -1516,6 +1535,30 @@ a{
   .sb-box {
     height: 66.5vh;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    gap: 7%;
+  }
+  
+  .footer-box {
+    text-align: center;
+  }
+  
+  .footer-center {
+    text-align: center;
+  }
+  
+  .social-links a {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .footer {
+    z-index: 1000;
+    position: relative;
+  }
 }
 
 /* Project Detail Page */
@@ -1548,6 +1591,14 @@ a{
         border-radius: 1rem;
         transition: transform 0.3s ease;
     }
+
+
+/* styles-methoden.css | http://127.0.0.1:5501/styles-methoden.css */
+
+
+  
+  
+  
 
     /* Responsive Design für Project Detail */
     @media (max-width: 768px) {
