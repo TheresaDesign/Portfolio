@@ -28,22 +28,22 @@
 }
 
 .chapter:nth-child(1) {
-  height: 35%;
+  height: 30%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(2) {
-  height: 20%;
+  height: 15%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(3) {
-  height: 25%;
+  height: 20%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(4) {
-  height: 20%;
+  height: 15%;
   background-color: attr(data-chapter);
 }
 
@@ -77,9 +77,7 @@
   gap: 15px;
   z-index:99;
   width: 30px;
-  top: 15%;
   margin: auto 0;
-  top: 15%;
 }
 .balken {
   width: 10px;
@@ -717,6 +715,24 @@
   padding: 4rem 5%;
 }
 
+.banner {
+  display: flex;
+  padding: 5% 10%;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.banner img {
+  flex-basis: 50%;
+}
+
+.emphazised {
+  flex-basis: 46%;
+  flex-shrink: 0;
+}
+
+
 .arbeitsweise-section {
   padding: 2vh 5vw;
 }
@@ -749,5 +765,61 @@
 .image-stack {
   width: 100%;
 }
+
+.img-first{
+  flex-direction: column-reverse;
+}
+
+
+.skill1 {
+  top: 48%;
+  left: 3%;
+  transform: rotate(0deg);
+}
+
+.methode-word {
+  font-size: 3rem;
+}
+
+.skill2 {
+  top: 42%;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.skill3 {
+  top: 44%;
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.top {
+  grid-template-columns: 1fr;
+}
+
+.bg-word {
+  display: none;
+}
+
+.bg-word-outline {
+  top: 11%;
+}
+
+.bottom {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid {
+  gap: 1rem;
+}
+.text-block {
+    order: 2;
+  }
+
+  .image-block {
+    order: 1;
+  }
+
 
 }
