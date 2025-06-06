@@ -530,6 +530,93 @@
   transform: rotate(10deg);
 }
 
+
+/*Software*/
+.software-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20vh;
+  margin: 0 0 20% 0;
+}
+ .grid {
+      display: grid;
+      grid-template-rows: 2fr 1fr;
+      height: 100vh;
+      gap: 2rem;
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+      gap: 2rem;
+    }
+
+    .bg-word {
+      font-family: 'Nothing';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20vw;
+      font-weight: bold;
+      z-index: 1;
+      pointer-events: none;
+      color: var(--primary-color);
+      white-space: nowrap;
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      justify-content: end;
+    }
+
+    .image-block {
+      position: relative;
+      z-index: 2;
+    }
+
+    .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Effekt: Text über Bild wird Outline */
+    .bg-word-outline {
+      font-family: 'Nothing';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 20vw;
+      font-weight: bold;
+      color: transparent;
+      -webkit-text-stroke: 2px #600DB4;
+      z-index: 3;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .bottom img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 10px;
+    }
+
 @media (max-width: 480px) {
   .free{
     padding: 0 5%;
