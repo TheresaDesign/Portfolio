@@ -32,7 +32,10 @@ window.addEventListener('scroll', () => {
 
         // Verwandlung in Balken
         chapter.classList.add('balken');
-        chapter.style.height = `${sectionHeight / 10}px`;
+        let height = sectionHeight / 10;
+        if (height > 250) height = 250; // Maximal 80px Höhe
+
+        chapter.style.height = `${height}px`;
         chapter.style.opacity = '1';
         chapter.style.backgroundColor = color;
 

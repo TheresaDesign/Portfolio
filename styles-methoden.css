@@ -28,22 +28,18 @@
 }
 
 .chapter:nth-child(1) {
-  height: 30%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(2) {
-  height: 15%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(3) {
-  height: 20%;
   background-color: attr(data-chapter);
 }
 
 .chapter:nth-child(4) {
-  height: 15%;
   background-color: attr(data-chapter);
 }
 
@@ -71,7 +67,7 @@
 
 .fixed {
   position: fixed;
-  top: 20px;
+  top: 100px;
   right: -10px;
   flex-direction: column;
   gap: 15px;
@@ -560,11 +556,34 @@
       font-size: 20vw;
       font-weight: bold;
       z-index: 1;
-      pointer-events: none;
-      color: var(--primary-color);
+      pointer-events: none; 
       white-space: nowrap;
     }
 
+    .bg-word.figma{
+      color: var(--primary-color);
+    }
+    .bg-word-outline.figma{
+      -webkit-text-stroke: 3px #600DB4;
+    }
+    .bg-word.adobe{
+      color: var(--secondary-color);
+    }
+    .bg-word-outline.adobe{
+      -webkit-text-stroke: 3px var(--secondary-color);
+    }
+    .bg-word.unity{
+      color: var(--accent-color);
+    }
+    .bg-word-outline.unity{
+      -webkit-text-stroke: 3px var(--accent-color);
+    }
+    .bg-word.blender{
+      color: var(--primary-color);
+    }
+    .bg-word-outline.blender{
+      -webkit-text-stroke: 3px #600DB4;
+    }
     .text-block {
       display: flex;
       flex-direction: column;
@@ -595,7 +614,6 @@
       font-size: 20vw;
       font-weight: bold;
       color: transparent;
-      -webkit-text-stroke: 2px #600DB4;
       z-index: 3;
       pointer-events: none;
       white-space: nowrap;
@@ -613,6 +631,7 @@
       object-fit: cover;
       display: block;
       border-radius: 10px;
+      aspect-ratio: 1/1;
     }
 
 @media (max-width: 480px) {
@@ -789,7 +808,7 @@
 }
 
 .skill3 {
-  top: 44%;
+  top: 50%;
   left: 0;
   transform: rotate(0deg);
 }
