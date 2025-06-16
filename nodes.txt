@@ -10,7 +10,7 @@ beyond
 
 -einleitung in hardskills bri methoden
 
-- Softskills und Tool mobile variante
+
 - grafik im Hintergrund bei Hero noch anders farbig
 - länge des Menüs anpassen
 
