@@ -1192,6 +1192,111 @@ a{
     background-color: var(--grey1);
     color: var(--text-color);
 }
+
+
+
+/*about neu*/
+
+.hgb-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: -50px;
+      grid-auto-rows: calc(100vw/ 3); /* Höhe der Zeilen basierend auf der Breite */
+    }
+
+    .hgb-item {
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+      margin:50px
+    }
+
+    .hgb-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* füllt den Container, beschneidet falls nötig */
+        display: block;
+    }
+
+    /* Beispielhafte Größenanpassung */
+    .span-2-cols {
+      grid-column: span 2;
+    }
+
+    .span-2-rows {
+      grid-row: span 2;
+    }
+
+    .fhp-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: -50px;
+    }
+    .fhp-item {
+      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      border-radius: 10px;
+      overflow: hidden;
+      margin:50px
+    }
+    .fhp-item img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* füllt den Container, beschneidet falls nötig */
+        display: block;
+    }
+
+    .fhp-item .emphazised{
+        color: var(--primary-color);
+    }
+    .privat{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .privat-content{
+    width: 50%;
+    }
+
+    .image-fan {
+    position: relative;
+    width: 50%;
+    padding:2rem;
+    height:50vh;
+    margin-left: 50%
+    }
+
+    .fan-img {
+    position: absolute;
+    width: 75%;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .img1 {
+    z-index: 1;
+    transform: rotate(-10deg) translateX(-35%);
+    }
+
+    .img2 {
+    z-index: 2;
+    transform: rotate(0deg);
+    }
+
+    .img3 {
+    z-index: 3;
+    transform: rotate(5deg) translateX(35%);
+    }
+
+    .fan-img:hover {
+    z-index: 10;
+    }
+
 @media (max-width: 1000px) {
     .profession {
         grid-template-columns: 1fr 1fr;
