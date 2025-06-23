@@ -983,6 +983,12 @@ a{
     justify-content: center;
     box-sizing: content-box;
 }
+.intro.about{
+  background-image: url('img/home/farbspritzer-about.png') !important;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .intro-content{
     max-width: 50%;
@@ -1201,7 +1207,7 @@ a{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       margin: -50px;
-      grid-auto-rows: calc(100vw/ 3); /* Höhe der Zeilen basierend auf der Breite */
+      grid-auto-rows: calc(100vw/ 2.5); /* Höhe der Zeilen basierend auf der Breite */
     }
 
     .hgb-item {
@@ -1229,6 +1235,9 @@ a{
     .span-2-rows {
       grid-row: span 2;
     }
+    /*.vertical{
+        aspect-ratio: 1/1.4;
+    }*/
 
     .fhp-grid {
         display: grid;
