@@ -974,6 +974,25 @@ flex-basis: 50%;
     .auswertung-eye.img-first{
         flex-direction: column-reverse;
     }
+
+    .archetyp{
+        grid-template-columns: 1fr;
+    }
+
+    .img1 {
+        width: 100%;
+        margin: 0;
+        scale: 0.7;
+    }
+
+    .blase-rechts{
+        width: 100%;
+    }
+
+    .blase-links{
+        width: 100%;
+        margin:0;
+    }
     
 }
 
