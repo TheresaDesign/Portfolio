@@ -135,7 +135,19 @@
             <div class="halb">
                 <p class="emphazised">Schritt 2</p>
                 <h3>Planung der technischen Komponenten</h3>
-                <p></p>
+                <p>
+                    Eines unserer zentralen Features ist die Vibration. Deshalb war es uns wichtig, gründlich in die technischen Komponenten zu recherchieren. Wir haben verschiedene Vibrationsmotoren verglichen, um das passende Modell für unser Konzept zu finden. Dabei spielten drei Aspekte eine entscheidende Rolle:
+                    <br>
+                    1. Der Motor sollte eine große Bandbreite an Frequenzen wiedergeben können, damit die Töne wirklich spürbar werden.
+                    <br>
+                    2. Aufgrund der begrenzten Zeit war eine schnelle Programmierbarkeit wichtig – im besten Fall mit vorhandener Bibliothek.
+                    <br>
+                    3. Der Motor durfte nicht zu groß sein, um sich später problemlos in unser Produkt integrieren zu lassen.
+                    <br>
+                    <br>
+                </p>
+                <p>Am Ende haben wir uns für den Adafruit DRV2605L Haptic Motor Controller entschieden. Dieser bringt eine rießige Bibliothek mit und braucht zusätzlich kleine Vibrationsmodule, die dann die eigentliche Vibrationausführen. Diese sind sehr klein und konnten dadurch flexibel im ganzen späteren Gehäuse verteilt werden.</p>
+
             </div>
             
         </div>
@@ -143,8 +155,10 @@
         <div class="row-halbhalb">
             <div class="halb">
                 <p class="emphazised">Schritt 3</p>
-                <h3>Planung der technischen Komponenten</h3>
-                <p>Wir werteten die Online-Umfrage aus, nutzten Miro-Methodiken wie die Mehrwert-Aufwand-Matrix, führten Feedbackrunden im Kurs durch und erstellten Archetypen. Unser Ziel war es dabei eine realistisch umsetzbare Projektidee zu entwickeln, die Betroffenen echten Mehrwert bietet.</p>
+                <h3>Planung des Designs</h3>
+                <p>Im Bezug auf das Design mussten wir in zwei Richtungen arbeiten. Zunächst gab es da das Gerät ansich. Dieses sollte in der Hand liegen und dadurch eine gewisse egonomie mitbringen. Gleichzeitig sollte es aber clean und schick aussehen. 
+                    <br><br>
+                Für das Screendesign wollten wir in eine 8bit Pixel Richtung gehen. Der Gedanke war, das Gerät und somit die Musik als etwas spielehaftes zuvermakten und damit die einstiegshürde gering zuhalten. Diesen Ansatz haben wir im Prozess wieder verworfen. Dazu gleich mehr... </p>
             </div>
             <div class="halb IVcollage">
                 <img src="img/Bloom/ideenfindung miro/idee1.png" alt="Mindmap der recherche">
@@ -270,48 +284,48 @@
                 <div class="headline full-width"><p class="emphazised">Schriften</p></div>
 
                 <div class="block-wide-center">
-                    <img src="img/Bloom/projekt/kumbh.png" alt="">
-                    <p class="emphazised"> Font-Family: Kumbh Sans</p>
+                    <img src="img/audiointerface/IBM-Plex.png" alt="">
+                    <p class="emphazised"> Font-Family: IBM Plex Sans</p>
                 </div>
                 <div class="block-wide">
-                    <p>Die Kumbh Sans ist eine moderne, geometrische Sans-Serif-Schrift, die sich durch ihre klaren Linien und ausgewogene Proportionen auszeichnet. Sie hat eine hohe Lesbarkeit und lässt sich durch ihre schlichte Ästhetikgut mit unserer Schmuckschrift kombinieren. Mit dieser Font haben wir eine professionelle und zugleich aber auch eine einladende Font gefunden. </p>
+                    <p>Ein Klassiker unter den Screen Fonts. Wir haben viele Schriften durchgetestet, vorallem auch in kleinen Größen, da unser Screen einfach sehr klein ist. Daher braucten wir eine so klare Schrift wie die IBM Plex.</p>
                 </div>
 
                 <div class="block-wide">
-                    <p>Unsere Schmuckschrift ist die Fredoka One. Sie wid für das Logo und die wichtigsten Überschriften verwendet. Sie ist eine Mischung aus sehr geometrischen Elementen, jedoch durch die abgerundeten Ecken freundich und etwas verspielt. </p>
+                    <p>Unsere Logoschrift ist die Bagel Fat One. Im Screendesign wird sie gar nicht verwendet, ausschließlich für die Logovarianten. Sie ist noch ein Überbleibsel aus der 8-Bit Designidee, funktioniert aber dennoch im neuen und jetzigen Design, da sie die sonst sehr kleren Linien aufbricht.</p>
                 </div>
                 <div class="block-wide-center">
-                    <img src="img/Bloom/projekt/fredoka.png" alt="">
-                    <p class="emphazised"> Font-Family: Fredoka One</p>
+                    <img src="img/audiointerface/bagel-fat.png" alt="">
+                    <p class="emphazised"> Font-Family: Bagel Fat One</p>
                 </div>
 
                 
                 <div class="headline full-width"><p class="emphazised">Farben</p></div>
                 
-                <div class="color-block primary-bloom">
-                    <p class="emphazised primary-bloom">primary color</p>
-                    <p class="primary-bloom">#3600C0</p>
+                <div class="color-block primary-vibra">
+                    <p class="emphazised ">primary color + kick</p>
+                    <p>#FF3172</p>
                 </div>
-                <div class="color-block secondary-bloom1">
-                    <p class="emphazised">secondary color</p>
-                    <p>#d924ac</p>
+                <div class="color-block snare">
+                    <p class="emphazised">snare</p>
+                    <p>#6EEBCB</p>
                 </div>
-                <div class="color-block secondary-bloom2">
-                    <p class="emphazised">secondary color</p>
-                    <p>#f9811f</p>
+                <div class="color-block hat">
+                    <p class="emphazised">hat</p>
+                    <p>#5583E7</p>
                 </div>
-                <div class="color-block secondary-bloom3">
-                    <p class="emphazised">secondary color</p>
-                    <p>#1cb2d4</p>
+                <div class="color-block tom">
+                    <p class="emphazised">tom</p>
+                    <p>#FAC2FF</p>
+                </div>
+                <div class="color-block clap">
+                    <p class="emphazised">clap</p>
+                    <p>#FF955C</p>
                 </div>
                 
-                <div class="block-wide color-block white-bloom">
-                    <p class="emphazised">background color</p>
-                    <p>#ecebe9</p>
-                </div>
-                <div class="block-wide color-block black-bloom">
-                    <p class="emphazised black-bloom">of-set black</p>
-                    <p class="black-bloom">#333639</p>
+                <div class="block-wide color-block background-vibra">
+                    <p class="emphazised" style="color: var(--white);">Background color</p>
+                    <p style="color: var(--white);">#1D0739</p>
                 </div>
                 
                 <div class="headline full-width"><p class="emphazised">Bildsprache</p></div>
@@ -413,16 +427,27 @@
     
 
     <!-- Prototyp -->
-    <section class="project-section prototype-section">
+     <section class="project-section prototype-section">
         <div class="container">
-            <h2>Prototype</h2>
+            <h2>Produktvideo</h2>
             <div class="prototype-container">
                 <div class="prototype-description">
-                    <p>Schau doch gerne in unseren Figma-Prototypen! Da es sich hier um ein Uniprojekt handelt und wir uns mehr auf die Recherche konzentriert haben, sind nicht alle Funktionen ausgearbeitet.</p>
+                    <p>Für Vibra haben wir auch ein kurzes Produkt- und Erklärvideo gemacht. Schau doch gerne mal rein!</p>
+                    <br>
+                    <a class="button-font primary-btn" href="https://youtu.be/v3y6JOAda0c">Auf Youtube ansehen</a>
                 </div>
                 <div class="figma-embed">
-                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/cprNbSJDdqaNv7I53E3Bb7/User-Ex-perimental?page-id=611%3A1237&node-id=914-3611&p=f&viewport=515%2C608%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=914%3A3611&show-proto-sidebar=1&embed-host=share" allowfullscreen allow-same-origin allow-scripts></iframe>
+                    <iframe 
+                        style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+                        width="800" 
+                        height="450" 
+                        src="https://www.youtube.com/embed/v3y6JOAda0c" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
                 </div>
+                
             </div>
         </div>
     </section>

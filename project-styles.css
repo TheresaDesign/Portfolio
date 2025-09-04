@@ -776,6 +776,32 @@ flex-basis: 50%;
     object-position: center 0;
 }
 
+/*audiointerface*/
+
+.primary-vibra{
+    background-color: #FF3172;
+    color: var(--background-color) !important;
+}
+.snare{
+    background-color: #6EEBCB;
+    color: var(--background-color);
+}
+.hat{
+    background-color: #5583E7;
+    color: var(--background-color);
+}
+.tom{
+    background-color: #FAC2FF;
+    color: var(--background-color);
+}
+.clap{
+    background-color: #FF955C;
+    color: var(--background-color);
+}
+.background-vibra{
+    background-color: #1D0739;
+    color: var(--background-color);
+}
 
 @media (max-width: 1400px){
     .learning-big{
