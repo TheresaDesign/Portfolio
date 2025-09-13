@@ -502,5 +502,54 @@
 
     <script src="../script.js"></script>
     <script src="project-script.js"></script>
+    <script>
+
+// Image Gallery Navigation
+const galleryMainImage = document.getElementById('mainImage');
+const galleryThumbnails = document.querySelectorAll('.thumbnail');
+const galleryPrevButton = document.querySelector('.nav-button.prev');
+const galleryNextButton = document.querySelector('.nav-button.next');
+let galleryCurrentIndex = 0;
+
+function updateMainImage(index) {
+    const thumbnail = galleryThumbnails[index];
+    galleryMainImage.src = thumbnail.dataset.full;
+    galleryMainImage.alt = thumbnail.alt;
+    
+    // Update active state
+    galleryThumbnails.forEach(thumb => thumb.classList.remove('active'));
+    thumbnail.classList.add('active');
+    
+    galleryCurrentIndex = index;
+}
+
+// Thumbnail click handler
+galleryThumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        updateMainImage(index);
+    });
+});
+
+// Navigation buttons
+galleryPrevButton.addEventListener('click', () => {
+    const newIndex = (galleryCurrentIndex - 1 + galleryThumbnails.length) % galleryThumbnails.length;
+    updateMainImage(newIndex);
+});
+
+galleryNextButton.addEventListener('click', () => {
+    const newIndex = (galleryCurrentIndex + 1) % galleryThumbnails.length;
+    updateMainImage(newIndex);
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') {
+        galleryPrevButton.click();
+    } else if (e.key === 'ArrowRight') {
+        galleryNextButton.click();
+    }
+});
+
+    </script>
 </body>
 </html> 

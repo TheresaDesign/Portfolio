@@ -73,51 +73,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Image Gallery Navigation
-const mainImage = document.getElementById('mainImage');
-const thumbnails = document.querySelectorAll('.thumbnail');
-const prevButton = document.querySelector('.nav-button.prev');
-const nextButton = document.querySelector('.nav-button.next');
-let currentIndex = 0;
 
-function updateMainImage(index) {
-    const thumbnail = thumbnails[index];
-    mainImage.src = thumbnail.dataset.full;
-    mainImage.alt = thumbnail.alt;
-    
-    // Update active state
-    thumbnails.forEach(thumb => thumb.classList.remove('active'));
-    thumbnail.classList.add('active');
-    
-    currentIndex = index;
-}
 
-// Thumbnail click handler
-thumbnails.forEach((thumbnail, index) => {
-    thumbnail.addEventListener('click', () => {
-        updateMainImage(index);
-    });
-});
 
-// Navigation buttons
-prevButton.addEventListener('click', () => {
-    const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
-    updateMainImage(newIndex);
-});
-
-nextButton.addEventListener('click', () => {
-    const newIndex = (currentIndex + 1) % thumbnails.length;
-    updateMainImage(newIndex);
-});
-
-// Keyboard navigation
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-        prevButton.click();
-    } else if (e.key === 'ArrowRight') {
-        nextButton.click();
-    }
-});
 
 // Lightbox functionality
 const lightbox = document.querySelector('.lightbox');
@@ -238,3 +196,89 @@ const openBtn = document.getElementById("openPdf");
         overlay.style.display = "none";
       }
     });
+
+// SofaSoGood
+(function(){
+  // script startet erst nach DOMContentLoaded, um race-conditions zu vermeiden
+  document.addEventListener('DOMContentLoaded', function pd_init() {
+    // eindeutig benannte Variablen, um Konflikte mit deiner Seite zu vermeiden
+    const pd_slideEls = Array.from(document.querySelectorAll('.pd-right .pd-slide'));
+    const pd_prevBtn   = document.querySelector('.pd-right .pd-prev');
+    const pd_nextBtn   = document.querySelector('.pd-right .pd-next');
+    const pd_counterEl = document.querySelector('.pd-right .pd-counter');
+    const pd_wrapper   = document.querySelector('.pd-right');
+
+    // safety checks
+    if (!pd_wrapper || !pd_prevBtn || !pd_nextBtn) {
+      console.warn('Pitchdeck: wichtige Elemente fehlen (pd-right, prev, next).');
+      return;
+    }
+    if (pd_slideEls.length === 0) {
+      // wenn keine Slides vorhanden sind, Hinweis im DOM + Konsole
+      const pd_placeholder = document.createElement('div');
+      pd_placeholder.textContent = 'Keine Slides gefunden. Bitte leg Dateien wie slide-1.png in denselben Ordner.';
+      pd_placeholder.style.padding = '24px';
+      pd_placeholder.style.background = '#fff';
+      pd_placeholder.style.borderRadius = '10px';
+      pd_placeholder.style.boxShadow = '0 6px 18px rgba(0,0,0,0.06)';
+      pd_wrapper.appendChild(pd_placeholder);
+      console.warn('Pitchdeck: keine .pd-slide Elemente gefunden.');
+      return;
+    }
+
+    let pd_currentIndex = 0;
+
+    function pd_show(index) {
+      // wrap-around
+      if (index < 0) index = pd_slideEls.length - 1;
+      index = index % pd_slideEls.length;
+      pd_slideEls.forEach(el => el.classList.remove('pd-active'));
+      const elToShow = pd_slideEls[index];
+      if (elToShow) elToShow.classList.add('pd-active');
+      pd_currentIndex = index;
+      if (pd_counterEl) pd_counterEl.textContent = (pd_currentIndex + 1) + ' / ' + pd_slideEls.length;
+    }
+
+    // events
+    pd_prevBtn.addEventListener('click', function pd_prevHandler(e){
+      e.preventDefault();
+      pd_show(pd_currentIndex - 1);
+    });
+    pd_nextBtn.addEventListener('click', function pd_nextHandler(e){
+      e.preventDefault();
+      pd_show(pd_currentIndex + 1);
+    });
+
+    // Pfeiltasten-Navigation (nur wenn nicht in einem input/textarea)
+    document.addEventListener('keydown', function pd_keyHandler(e){
+      const tag = (document.activeElement && document.activeElement.tagName) || '';
+      if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+      if (e.key === 'ArrowLeft') pd_show(pd_currentIndex - 1);
+      else if (e.key === 'ArrowRight') pd_show(pd_currentIndex + 1);
+    });
+
+    // Touch/Swipe (einfacher Threshold)
+    let pd_touchStartX = null;
+    pd_wrapper.addEventListener('touchstart', function pd_touchStart(e){
+      pd_touchStartX = e.changedTouches[0].clientX;
+    }, {passive:true});
+    pd_wrapper.addEventListener('touchend', function pd_touchEnd(e){
+      if (pd_touchStartX === null) return;
+      const pd_touchEndX = e.changedTouches[0].clientX;
+      const pd_dx = pd_touchEndX - pd_touchStartX;
+      const pd_threshold = 40; // min px to register swipe
+      if (pd_dx > pd_threshold) pd_show(pd_currentIndex - 1);
+      else if (pd_dx < -pd_threshold) pd_show(pd_currentIndex + 1);
+      pd_touchStartX = null;
+    }, {passive:true});
+
+    // optional: klick auf aktuelle Folie -> nächste Folie
+    pd_slideEls.forEach(slide => {
+      slide.style.cursor = 'pointer';
+      slide.addEventListener('click', () => pd_show(pd_currentIndex + 1));
+    });
+
+    // initial render
+    pd_show(0);
+  }); // DOMContentLoaded
+})(); // IIFE

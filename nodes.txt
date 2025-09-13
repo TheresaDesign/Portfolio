@@ -122,3 +122,6 @@ passendes css zum script dadrüber:
     transition: opacity 0.2s ease-in-out;
     z-index: 5; /* Anfangs hinter dem Text */
 }
+
+
+
