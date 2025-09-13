@@ -795,7 +795,7 @@ a{
 .card {
     flex: 0 0 calc(25vw - 1.5rem);
     min-width: calc(25vw - 1.5rem);
-    background: var(--background-color);
+    background: var(--white);
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease;

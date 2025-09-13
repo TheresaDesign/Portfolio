@@ -218,3 +218,23 @@ buttons.forEach(button => {
   });
 });
 
+
+//pdf view
+const openBtn = document.getElementById("openPdf");
+    const overlay = document.getElementById("pdfOverlay");
+    const closeBtn = document.getElementById("closeOverlay");
+
+    openBtn.addEventListener("click", () => {
+      overlay.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      overlay.style.display = "none";
+    });
+
+    // Overlay schließen, wenn man ins Schwarze klickt
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) {
+        overlay.style.display = "none";
+      }
+    });
