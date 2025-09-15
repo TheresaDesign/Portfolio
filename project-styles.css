@@ -455,7 +455,7 @@ h3{
     color: var(--primary-color);
 }
 .block-wide-center {
-    grid-column: span 2 !important;
+    grid-column: span 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,7 +466,7 @@ h3{
     margin-bottom: 2rem;
 }
 .block-wide {
-    grid-column: span 2 !important;
+    grid-column: span 2;
     align-content: center;
 }
 
@@ -479,7 +479,6 @@ h3{
     align-content: end;
     padding: 1rem;
     border-radius: 10px;
-    grid-column: span 1;
     height:150px;
 }
 
@@ -1095,6 +1094,32 @@ flex-basis: 50%;
     .row-halbhalb{
         gap:2rem
     }
+
+    .block-wide-center {
+        grid-column: span 4;
+    }
+
+    .block-wide-center img{
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+    .block-wide {
+        grid-column: span 4;
+    }
+
+    .block-wide img{
+        width: 70%;
+        float:right
+    }
+
+    .color-block{
+        align-content: end;
+        padding: 1rem;
+        border-radius: 10px;
+        grid-column: span 4;
+        height:150px;
+    }
+
     /*VR*/
     .VR-glasses{
         display: none;
