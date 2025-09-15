@@ -506,7 +506,6 @@ a{
 .next-section {
   background: var(--background-color);
   padding: 5%;
-  min-height: 100vh;
   position: relative;
   z-index: 1;
 }
@@ -707,7 +706,7 @@ a{
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 50%;
+    margin: 0 10% 0 50%;
     justify-content: center;
 }
 .spalte-intro1{
@@ -724,7 +723,7 @@ a{
     align-items: center;
     justify-content: center;
     position: relative;
-    background: radial-gradient(circle at center, #6b46c1 0%, var(--white) 50%);
+    background: radial-gradient(circle at center, #6b46c1 0%, var(--background-color) 50%);
     padding: 2rem;
 }
 
