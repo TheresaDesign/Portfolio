@@ -1,109 +1,172 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Scrollama: Progress Example</title>
-    <meta name="description" content="Scrollama: Progress Example" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      #scrolly {
-        position: relative;
-      }
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Diagonal Column Reveal — Prototype</title>
+<style>
+:root{
+  --rotate: 50deg; /* Winkel des gesamten Rasters */
+  --column-gap: 16px;
+  --headline-color: #fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family: Inter, system-ui, Arial, sans-serif;background:#0f0f12;color:#fff;height:200vh}
 
-      article {
-        position: relative;
-        padding: 0 1rem;
-        margin: 0 auto;
-        width: 33%;
-      }
+/* STAGE */
+.stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
 
-      .step {
-        margin: 2rem auto 4rem auto;
-        padding: 1rem;
-        border: 2px solid #f3f3f3;
-      }
 
-      .step p {
-        text-align: center;
-        margin: 0.5rem auto;
-        font-size: 1.5rem;
-      }
-    </style>
-  </head>
+/* Wrapper damit die Rotation nicht den Dokument-Flow kaputt macht */
+.rot-wrapper{
+  position:relative;
+  width:160%;
+  height:140vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  pointer-events:none; /* verhindert, dass Rotation Maus-interaktionen blockiert */
+}
 
-  <body>
-    
-    <main>
-      <nav>
-        <a href="https://github.com/russellgoldenberg/scrollama">scrollama.js</a>
-        <div class="nav__examples">
-          <p>Examples:</p>
-          <a href="basic.html">Basic</a>
-          <a href="progress.html">Progress</a>
-          <a href="sticky-side.html">Sticky Side</a>
-          <a href="sticky-overlay.html">Sticky Overlay</a>
-        </div>
-      </nav>
-      <section id="intro">
-        <h1 class="intro__hed">Progress Example</h1>
-        <p class="intro__dek">
-          Start scrolling to see how it works.
-        </p>
-      </section>
-      <section id="scrolly">
-        <article>
-          <div class="step" data-step="218,165,32">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p class="progress">0%</p>
-          </div>
-          <div class="step" data-step="0,128,128">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p class="progress">0%</p>
-          </div>
-        </article>
-      </section>
-      <section id="outro"></section>
-    </main>
+/* Das gedrehte Raster */
+.rotated{
+  width:1100px; /* kann auf responsive Werte angepasst werden */
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--column-gap);
+  transform: rotate(var(--rotate));
+  transform-origin: center;
+  will-change: transform;
+}
 
-    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-    <script src="https://unpkg.com/scrollama"></script>
-    <script>
-      // using d3 for convenience
-      var scrolly = document.querySelector("#scrolly");
-      var article = scrolly.querySelector("article");
-      var step = article.querySelectorAll(".step");
+/* Jede Spalte enthält mehrere Bilder (vertikal gestapelt) */
+.col{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:stretch;
+  pointer-events:auto; /* erlaubt Hover/Clicks falls gewünscht */
+  will-change: transform;
+}
 
-      // initialize the scrollama
-      var scroller = scrollama();
+.card{
+  width:100%;
+  overflow:hidden;
+  border-radius:8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  background:#222;
+}
 
-      function handleStepProgress(response) {
-        var el = response.element;
+/* Bild-Container — optional gegen-rotieren, siehe Kommentar weiter unten */
+.img-wrap{display:block;}
+.img-wrap img{display:block;width:100%;height:auto;vertical-align:middle}
 
-        var val = el.getAttribute("data-step");
-        el.querySelector(".progress").innerText = response.progress;
-      }
+/* Wenn du willst, dass die Bilder optisch UPRIGHT bleiben (nicht mitrotieren),
+   dann entferne das Kommentarzeichen von der nächsten Regel.
+   Das rotiert den inneren Bild-Wrapper um den negativen Wert der --rotate-Variable.
+*/
+/* .img-wrap { transform: rotate(calc(var(--rotate) * -1)); transform-origin: center; } */
 
-      function init() {
-        // 1. setup the scroller with the bare-bones settings
-        // this will also initialize trigger observations
-        // 3. bind scrollama event handlers (this can be chained like below)
-        scroller
-          .setup({
-            step: "#scrolly article .step",
-            progress: true,
-            debug: true
-          })
-          .onStepProgress(handleStepProgress);
+/* HEADLINE (zentral) */
+.headline{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:50;
+  font-size:clamp(36px,6vw,72px); letter-spacing:-1px; opacity:0; transition:opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
+  text-align:center; padding:0 1rem; color:var(--headline-color);
+}
+.headline.visible{ opacity:1; transform:translate(-50%,-45%); }
 
-        // setup resize event
-        // resize();
-        window.addEventListener("resize", scroller.resize);
-      }
+/* Kleines Info-Overlay */
+.info{position:fixed; left:16px; top:16px; font-size:14px; color:#ddd; z-index:100}
+.scroll-space {
+  height: 300vh; /* genug Scrollfläche, damit der Effekt Zeit hat */
+}
+</style>
+</head>
+<body>
 
-      // kick things off
-      init();
-    </script>
-  </body>
+<div class="info">Scroll runter — Spalten bewegen sich entlang ihres lokalen Y (sichtbar diagonal durch Rotation). Drücke 1/2/3 um Richtungen zu toggeln.</div>
+<div class="scroll-space">
+<section class="stage" id="stage">
+  <div class="rot-wrapper" aria-hidden="true">
+    <div class="rotated" id="rotated">
+      <div class="col" data-direction="-1" id="col-left">
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a1/600/900" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a2/600/700" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a3/600/1000" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a4/600/600" alt=""></div></div>
+      </div>
+
+      <div class="col" data-direction="1" id="col-middle">
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b1/600/800" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b2/600/1200" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b3/600/650" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b4/600/900" alt=""></div></div>
+      </div>
+
+      <div class="col" data-direction="-1" id="col-right">
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c1/600/700" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c2/600/1000" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c3/600/850" alt=""></div></div>
+        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c4/600/600" alt=""></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <h1 class="headline" id="headline">MEINE ÜBERSCHRIFT</h1>
+</section>
+</div>
+<script>
+(function(){
+  const stage = document.getElementById('stage');
+  const cols = Array.from(document.querySelectorAll('.col'));
+  const headline = document.getElementById('headline');
+  const scrollSpace = document.querySelector('.scroll-space');
+
+  const maxOffsetPxRatio = 0.8;
+  function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+  function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+  function applyProgress(p){
+    const eased = easeOutCubic(p);
+    const maxOff = window.innerHeight * maxOffsetPxRatio;
+    cols.forEach(col => {
+      const dir = Number(col.dataset.direction) || -1;
+      const offset = eased * maxOff * dir;
+      col.style.transform = `translateY(${offset}px)`;
+    });
+    if (p > 0.12) headline.classList.add('visible'); else headline.classList.remove('visible');
+  }
+
+  function update(){
+  const rect = scrollSpace.getBoundingClientRect();
+  const vh = window.innerHeight;
+
+  // Fortschritt basierend auf wie weit wir durch die Scroll-Space durch sind
+  const start = vh;                // wenn Oberkante scroll-space den Viewport betritt
+  const end   = rect.height;       // ganze Höhe des scroll-space
+  const distance = end - start;
+
+  // Fortschritt 0 → 1
+  const scrolled = clamp((vh - rect.top - start) / distance, 0, 1);
+
+  applyProgress(scrolled);
+  requestAnimationFrame(update);
+}
+
+
+  requestAnimationFrame(update);
+})();
+
+</script>
+
+</body>
 </html>
