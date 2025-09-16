@@ -37,12 +37,13 @@ h3{
 /* Wrapper damit die Rotation nicht den Dokument-Flow kaputt macht */
 .rot-wrapper{
   position:relative;
-  width:160%;
+  width:100%;
   height:140vh;
   display:flex;
   align-items:center;
   justify-content:center;
   pointer-events:none; /* verhindert, dass Rotation Maus-interaktionen blockiert */
+  overflow: visible;
 }
 
 /* Das gedrehte Raster */
@@ -54,8 +55,8 @@ h3{
   transform: rotate(var(--rotate));
   transform-origin: center;
   will-change: transform;
-  height: 179vh;
-  position: absolute;
+  height: auto;
+  position: relative;
   scale: 110%;
 }
 
@@ -67,6 +68,7 @@ h3{
   align-items:stretch;
   pointer-events:auto; /* erlaubt Hover/Clicks falls gewünscht */
   will-change: transform;
+  transform: translate3d(0,0,0);
 }
 
 .card-scroll{
@@ -79,7 +81,7 @@ h3{
 
 /* Bild-Container — optional gegen-rotieren, siehe Kommentar weiter unten */
 .img-wrap{display:block;}
-.img-wrap img{display:block;width:100%;height:auto;vertical-align:middle}
+.img-wrap img{display:block;width:100%;height:auto;}
 
 /* Wenn du willst, dass die Bilder optisch UPRIGHT bleiben (nicht mitrotieren),
    dann entferne das Kommentarzeichen von der nächsten Regel.
@@ -1045,6 +1047,8 @@ flex-basis: 50%;
     }
 }
 @media (max-width: 768px) {
+   
+
     .idea-content {
         gap: 1.5rem;
     }
