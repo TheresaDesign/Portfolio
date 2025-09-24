@@ -3,169 +3,232 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Diagonal Column Reveal — Prototype</title>
+<title>Diagonal Column — Desktop & Mobile Implementations</title>
 <style>
-:root{
-  --rotate: 50deg; /* Winkel des gesamten Rasters */
-  --column-gap: 16px;
-  --headline-color: #fff;
-}
+:root{ --rotate: 50deg; --column-gap: 16px; --headline-color: #fff }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family: Inter, system-ui, Arial, sans-serif;background:#0f0f12;color:#fff;height:200vh}
+html,body{height:100%;width:100%;overflow-x:hidden;font-family:Inter,system-ui,Arial,sans-serif;background:#07070a;color:#fff}
 
-/* STAGE */
-.stage {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
+/* -----------------------------
+   GLOBAL HELPERS
+   -----------------------------*/
+.wrapper{width:100%;}
+.hidden{display:none!important}
+
+/* -----------------------------
+   DESKTOP IMPLEMENTATION
+   -----------------------------*/
+.scroll-space-desktop{height:300vh; overflow:visible}
+.stage-desktop{position:sticky;top:0;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.rot-wrapper-desktop{position:relative;width:100%;height:100vh;display:flex;align-items:center;justify-content:center;overflow:visible}
+.rotated-desktop{position:relative;width:min(1100px,95vw);display:grid;grid-template-columns:repeat(3,1fr);gap:var(--column-gap);transform:rotate(var(--rotate));transform-origin:center}
+.col-desktop{display:flex;flex-direction:column;gap:12px;align-items:stretch;will-change:transform;transform:translate3d(0,0,0)}
+.card-desktop{width:100%;overflow:hidden;border-radius:8px;background:#222;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.img-wrap img{display:block;width:100%;height:auto}
+.headline-desktop{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:40;opacity:0;pointer-events:none;transition:opacity .45s ease,transform .45s cubic-bezier(.2,.9,.2,1);font-size:clamp(36px,6vw,72px)}
+.headline-desktop.visible{opacity:1;transform:translate(-50%,-45%)}
+
+/* -----------------------------
+   MOBILE IMPLEMENTATION
+   -----------------------------*/
+#mobile-wrapper{display:none}
+.stage-mobile{position:relative;min-height:160vh;display:flex;align-items:center;justify-content:center;padding-top:15vh;padding-bottom:15vh}
+.rotated-mobile{width:94vw;display:grid;grid-template-columns:repeat(3,1fr);gap:var(--column-gap);transform:none}
+.col-mobile{display:flex;flex-direction:column;gap:12px;align-items:stretch;will-change:transform;transform:translate3d(0,0,0)}
+.card-mobile{width:100%;overflow:hidden;border-radius:10px;background:#222;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.headline-mobile{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:60;pointer-events:none;opacity:0;transition:opacity .35s ease;font-size:clamp(28px,7vw,48px)}
+.headline-mobile.visible{opacity:1}
+
+/* small tweak: keep burger etc visible */
+.nav-fix{position:fixed;top:12px;right:12px;z-index:120}
+
+/* -----------------------------
+   RESPONSIVE SWITCH
+   -----------------------------*/
+@media (max-width:900px){
+  /* show mobile, hide desktop */
+  .scroll-space-desktop{display:none}
+  #desktop-wrapper{display:none}
+  #mobile-wrapper{display:block}
+  :root{--rotate:40deg}
 }
 
-
-/* Wrapper damit die Rotation nicht den Dokument-Flow kaputt macht */
-.rot-wrapper{
-  position:relative;
-  width:160%;
-  height:140vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  pointer-events:none; /* verhindert, dass Rotation Maus-interaktionen blockiert */
-}
-
-/* Das gedrehte Raster */
-.rotated{
-  width:1100px; /* kann auf responsive Werte angepasst werden */
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--column-gap);
-  transform: rotate(var(--rotate));
-  transform-origin: center;
-  will-change: transform;
-}
-
-/* Jede Spalte enthält mehrere Bilder (vertikal gestapelt) */
-.col{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  align-items:stretch;
-  pointer-events:auto; /* erlaubt Hover/Clicks falls gewünscht */
-  will-change: transform;
-}
-
-.card{
-  width:100%;
-  overflow:hidden;
-  border-radius:8px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-  background:#222;
-}
-
-/* Bild-Container — optional gegen-rotieren, siehe Kommentar weiter unten */
-.img-wrap{display:block;}
-.img-wrap img{display:block;width:100%;height:auto;vertical-align:middle}
-
-/* Wenn du willst, dass die Bilder optisch UPRIGHT bleiben (nicht mitrotieren),
-   dann entferne das Kommentarzeichen von der nächsten Regel.
-   Das rotiert den inneren Bild-Wrapper um den negativen Wert der --rotate-Variable.
-*/
-/* .img-wrap { transform: rotate(calc(var(--rotate) * -1)); transform-origin: center; } */
-
-/* HEADLINE (zentral) */
-.headline{
-  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:50;
-  font-size:clamp(36px,6vw,72px); letter-spacing:-1px; opacity:0; transition:opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
-  text-align:center; padding:0 1rem; color:var(--headline-color);
-}
-.headline.visible{ opacity:1; transform:translate(-50%,-45%); }
-
-/* Kleines Info-Overlay */
-.info{position:fixed; left:16px; top:16px; font-size:14px; color:#ddd; z-index:100}
-.scroll-space {
-  height: 300vh; /* genug Scrollfläche, damit der Effekt Zeit hat */
-}
 </style>
 </head>
 <body>
 
-<div class="info">Scroll runter — Spalten bewegen sich entlang ihres lokalen Y (sichtbar diagonal durch Rotation). Drücke 1/2/3 um Richtungen zu toggeln.</div>
-<div class="scroll-space">
-<section class="stage" id="stage">
-  <div class="rot-wrapper" aria-hidden="true">
-    <div class="rotated" id="rotated">
-      <div class="col" data-direction="-1" id="col-left">
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a1/600/900" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a2/600/700" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a3/600/1000" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/a4/600/600" alt=""></div></div>
+<!-- DESKTOP: sticky + rotated grid (uses scroll-space-desktop) -->
+<div id="desktop-wrapper" class="wrapper">
+  <div class="scroll-space-desktop">
+    <section class="stage-desktop" id="stage-desktop">
+      <div class="rot-wrapper-desktop">
+        <div class="rotated-desktop" id="rotated-desktop">
+
+          <div class="col-desktop" data-direction="-1" id="col-left-d">
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/d1/600/900" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/d2/600/700" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/d3/600/1000" alt=""></div></div>
+          </div>
+
+          <div class="col-desktop" data-direction="1" id="col-mid-d">
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/e1/600/800" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/e2/600/1200" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/e3/600/650" alt=""></div></div>
+          </div>
+
+          <div class="col-desktop" data-direction="-1" id="col-right-d">
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/f1/600/700" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/f2/600/1000" alt=""></div></div>
+            <div class="card-desktop"><div class="img-wrap"><img src="https://picsum.photos/seed/f3/600/850" alt=""></div></div>
+          </div>
+
+        </div>
       </div>
 
-      <div class="col" data-direction="1" id="col-middle">
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b1/600/800" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b2/600/1200" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b3/600/650" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/b4/600/900" alt=""></div></div>
+      <h1 class="headline-desktop" id="headline-desktop">Projekte</h1>
+    </section>
+  </div>
+</div>
+
+<!-- MOBILE: simpler grid + parallax-ish animation (no sticky required) -->
+<div id="mobile-wrapper" class="wrapper">
+  <section class="stage-mobile" id="stage-mobile">
+    <div class="rotated-mobile" id="rotated-mobile">
+
+      <div class="col-mobile" data-direction="-1" id="col-left-m">
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/g1/400/600" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/g2/400/500" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/g3/400/700" alt=""></div></div>
       </div>
 
-      <div class="col" data-direction="-1" id="col-right">
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c1/600/700" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c2/600/1000" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c3/600/850" alt=""></div></div>
-        <div class="card"><div class="img-wrap"><img src="https://picsum.photos/seed/c4/600/600" alt=""></div></div>
+      <div class="col-mobile" data-direction="1" id="col-mid-m">
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/h1/400/600" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/h2/400/700" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/h3/400/500" alt=""></div></div>
+      </div>
+
+      <div class="col-mobile" data-direction="-1" id="col-right-m">
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/i1/400/600" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/i2/400/700" alt=""></div></div>
+        <div class="card-mobile"><div class="img-wrap"><img src="https://picsum.photos/seed/i3/400/500" alt=""></div></div>
       </div>
 
     </div>
-  </div>
 
-  <h1 class="headline" id="headline">MEINE ÜBERSCHRIFT</h1>
-</section>
+    <h1 class="headline-mobile" id="headline-mobile">Projekte</h1>
+  </section>
+  <div style="height:60vh"></div>
 </div>
-<script>
-(function(){
-  const stage = document.getElementById('stage');
-  const cols = Array.from(document.querySelectorAll('.col'));
-  const headline = document.getElementById('headline');
-  const scrollSpace = document.querySelector('.scroll-space');
 
-  const maxOffsetPxRatio = 0.8;
+<!-- small floating burger placeholder to test overlay behavior -->
+<div class="nav-fix">☰</div>
+
+<script>
+/*
+  This file contains two independent implementations:
+  - Desktop: uses a sticky stage with a rotated grid. The animation is driven by window.scrollY
+    relative to the .scroll-space-desktop element.
+  - Mobile: uses a separate stage (no sticky) with a simpler parallax tied to the stage's
+    bounding rect. The two implementations live side-by-side and are enabled via media queries.
+
+  Both scripts avoid modifying global classes used elsewhere by scoping class names.
+*/
+(function(){
+  // small helpers
   function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
   function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
 
-  function applyProgress(p){
-    const eased = easeOutCubic(p);
-    const maxOff = window.innerHeight * maxOffsetPxRatio;
-    cols.forEach(col => {
-      const dir = Number(col.dataset.direction) || -1;
-      const offset = eased * maxOff * dir;
-      col.style.transform = `translateY(${offset}px)`;
-    });
-    if (p > 0.12) headline.classList.add('visible'); else headline.classList.remove('visible');
+  const isDesktopBreakpoint = () => window.matchMedia('(min-width:900px)').matches;
+
+  /* -------------------------
+     DESKTOP INIT
+     -------------------------*/
+  function initDesktop(){
+    const scrollSpace = document.querySelector('.scroll-space-desktop');
+    const cols = Array.from(document.querySelectorAll('.col-desktop'));
+    const headline = document.getElementById('headline-desktop');
+    if(!scrollSpace || cols.length === 0) return;
+
+    const maxOffsetPxRatio = 1.2; // how far columns can move (relative to vh)
+
+    function applyProgress(p){
+      const eased = easeOutCubic(p);
+      const maxOff = window.innerHeight * maxOffsetPxRatio;
+      cols.forEach(col => {
+        const dir = Number(col.dataset.direction) || -1;
+        const offset = eased * maxOff * dir;
+        col.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+      headline.classList.toggle('visible', p > 0.12);
+    }
+
+    function update(){
+      const start = scrollSpace.offsetTop;
+      const end = scrollSpace.offsetTop + scrollSpace.offsetHeight - window.innerHeight;
+      const denom = Math.max(1, end - start);
+      const scrolled = clamp((window.scrollY - start) / denom, 0, 1);
+      applyProgress(scrolled);
+      requestAnimationFrame(update);
+    }
+
+    cols.forEach(c => c.style.transform = 'translate3d(0,0,0)');
+    requestAnimationFrame(update);
   }
 
-  function update(){
-  const rect = scrollSpace.getBoundingClientRect();
-  const vh = window.innerHeight;
+  /* -------------------------
+     MOBILE INIT
+     -------------------------*/
+  function initMobile(){
+    const stage = document.getElementById('stage-mobile');
+    const cols = Array.from(document.querySelectorAll('.col-mobile'));
+    const headline = document.getElementById('headline-mobile');
+    if(!stage || cols.length === 0) return;
 
-  // Fortschritt basierend auf wie weit wir durch die Scroll-Space durch sind
-  const start = vh;                // wenn Oberkante scroll-space den Viewport betritt
-  const end   = rect.height;       // ganze Höhe des scroll-space
-  const distance = end - start;
+    const maxOffsetPxRatio = 0.9;
 
-  // Fortschritt 0 → 1
-  const scrolled = clamp((vh - rect.top - start) / distance, 0, 1);
+    function applyProgress(p){
+      const eased = easeOutCubic(p);
+      const maxOff = window.innerHeight * maxOffsetPxRatio;
+      cols.forEach((col, i) => {
+        const dir = Number(col.dataset.direction) || -1;
+        // slight variation per column for depth
+        const factor = [1, 1.2, 0.9][i%3] || 1;
+        const offset = eased * maxOff * dir * factor;
+        col.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+      headline.classList.toggle('visible', p > 0.08);
+    }
 
-  applyProgress(scrolled);
-  requestAnimationFrame(update);
-}
+    function update(){
+      const rect = stage.getBoundingClientRect();
+      const vh = window.innerHeight;
+      // progress 0..1 while the stage travels through the viewport center area
+      const start = vh * 0.9;                      // when top approaches viewport bottom
+      const end = -rect.height * 0.2;              // when stage passed somewhat above
+      const denom = Math.max(1, start - end);
+      const raw = clamp((start - rect.top) / denom, 0, 1);
+      applyProgress(raw);
+      requestAnimationFrame(update);
+    }
 
+    cols.forEach(c => c.style.transform = 'translate3d(0,0,0)');
+    requestAnimationFrame(update);
+  }
 
-  requestAnimationFrame(update);
+  // Auto-init depending on breakpoint
+  function boot(){
+    if(isDesktopBreakpoint()){
+      initDesktop();
+    } else {
+      initMobile();
+    }
+  }
+
+  boot();
+  // On breakpoint change, reload to keep code simple / avoid duplicate loops in prototype
+  window.matchMedia('(min-width:900px)').addEventListener('change', ()=>{ window.location.reload(); });
+
 })();
-
 </script>
 
 </body>

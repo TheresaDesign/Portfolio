@@ -24,84 +24,88 @@ h3{
 /* Hero Section */
 /* STAGE */
 
-.stage {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-
-/* Wrapper damit die Rotation nicht den Dokument-Flow kaputt macht */
-.rot-wrapper{
-  position:relative;
-  width:100%;
-  height:140vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  pointer-events:none; /* verhindert, dass Rotation Maus-interaktionen blockiert */
-  overflow: visible;
-}
-
-/* Das gedrehte Raster */
-.rotated{
-  width: 136vh;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--column-gap);
-  transform: rotate(var(--rotate));
-  transform-origin: center;
-  will-change: transform;
-  height: auto;
-  position: relative;
-  scale: 110%;
-}
-
-/* Jede Spalte enthält mehrere Bilder (vertikal gestapelt) */
-.col{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  align-items:stretch;
-  pointer-events:auto; /* erlaubt Hover/Clicks falls gewünscht */
-  will-change: transform;
-  transform: translate3d(0,0,0);
-}
-
-.card-scroll{
-  width:100%;
-  overflow:hidden;
-  border-radius:8px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-  background:#222;
-}
-
-/* Bild-Container — optional gegen-rotieren, siehe Kommentar weiter unten */
-.img-wrap{display:block;}
-.img-wrap img{display:block;width:100%;height:auto;}
-
-/* Wenn du willst, dass die Bilder optisch UPRIGHT bleiben (nicht mitrotieren),
-   dann entferne das Kommentarzeichen von der nächsten Regel.
-   Das rotiert den inneren Bild-Wrapper um den negativen Wert der --rotate-Variable.
-*/
-/* .img-wrap { transform: rotate(calc(var(--rotate) * -1)); transform-origin: center; } */
-
-/* HEADLINE (zentral) */
-.headline{
-  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:-1;
-  font-size:clamp(36px,6vw,72px); letter-spacing:-1px; opacity:0; transition:opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
-  text-align:center; padding:0 1rem; color:var(--headline-color);
-}
-.headline.visible{ opacity:1; transform:translate(-50%,-45%); }
-
-/* Kleines Info-Overlay */
-.info{position:fixed; left:16px; top:16px; font-size:14px; color:#ddd; z-index:100}
 .scroll-space {
-  height: 300vh; /* genug Scrollfläche, damit der Effekt Zeit hat */
-}
+      height: 300vh; /* genug Platz zum Scrollen */
+      position: relative;
+    }
+
+    .stage {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rot-wrapper {
+      position: relative;
+      width: 160%;
+      height: 140vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .rotated {
+      width: 120vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--column-gap);
+      transform: rotate(var(--rotate));
+      transform-origin: center;
+      will-change: transform;
+      height: auto;
+      position: absolute;
+      scale: 110%;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+      pointer-events: auto;
+      will-change: transform;
+      transform: translate3d(0,0,0);
+    }
+
+    .card-scroll {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      background: #222;
+    }
+
+    .img-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .headline {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(36px, 6vw, 72px);
+      letter-spacing: -1px;
+      opacity: 0;
+      transition: opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
+      text-align: center;
+      padding: 0 1rem;
+      color: var(--headline-color);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .headline.visible {
+      opacity: 1;
+      transform: translate(-50%, -45%);
+    }
 
 .platzhalter{
     height:65vh
@@ -1048,7 +1052,19 @@ flex-basis: 50%;
 }
 @media (max-width: 768px) {
    
-
+    .rot-wrapper {
+        width: 120%;
+        height: 120vh;
+      }
+      .rotated {
+        width: 100vw;
+        transform: rotate(0deg); /* kein Drehen auf Mobile */
+        scale: 100%;
+      }
+      .headline {
+        font-size: 32px;
+      }
+      
     .idea-content {
         gap: 1.5rem;
     }
@@ -1104,6 +1120,9 @@ flex-basis: 50%;
 }
 
 @media (max-width: 576px) {
+    html{
+        overflow-x: hidden;
+    }
     .project-hero.hero-bloom{
         background-image: url(img/Bloom/cover-Image-small.png);
     }
