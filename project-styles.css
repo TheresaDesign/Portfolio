@@ -58,7 +58,9 @@ h3{
       will-change: transform;
       height: auto;
       position: absolute;
-      scale: 110%;
+      scale: 134%;
+    left: 21%;
+    top: 8%;
     }
 
     .col {
@@ -83,7 +85,6 @@ h3{
       display: block;
       width: 100%;
       height: auto;
-      vertical-align: middle;
     }
 
     .headline {
@@ -97,8 +98,7 @@ h3{
       transition: opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
       text-align: center;
       padding: 0 1rem;
-      color: var(--headline-color);
-      z-index: 5;
+      z-index: -5;
       pointer-events: none;
     }
 
@@ -108,7 +108,7 @@ h3{
     }
 
 .platzhalter{
-    height:65vh
+    height:29vh
 }
 
 .intro{
@@ -1056,15 +1056,26 @@ flex-basis: 50%;
         width: 120%;
         height: 120vh;
       }
-      .rotated {
-        width: 100vw;
-        transform: rotate(0deg); /* kein Drehen auf Mobile */
-        scale: 100%;
+     .rotated {
+        scale: 85%;
+        top: -17%;
+        left:0;
       }
+
       .headline {
-        font-size: 32px;
+        top:56%;
       }
-      
+      .scroll-space {
+      height: 123vh; 
+    }
+    .contents {
+    margin: -35% 0 0 0;
+    }
+
+    .platzhalter{
+        display:none;
+    }
+
     .idea-content {
         gap: 1.5rem;
     }

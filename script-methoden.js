@@ -1,3 +1,41 @@
+
+(function(){
+      const cols = Array.from(document.querySelectorAll('.col'));
+      const headline = document.getElementById('headline');
+      const scrollSpace = document.querySelector('.scroll-space');
+
+      const maxOffsetPxRatio = 1.2;
+
+      function clamp(v,a,b){ return Math.max(a, Math.min(b, v)); }
+      function easeOutCubic(t){ return 1 - Math.pow(1 - t, 3); }
+
+      function applyProgress(p){
+        const eased = easeOutCubic(p);
+        const maxOff = window.innerHeight * maxOffsetPxRatio;
+
+        cols.forEach(col => {
+          const dir = Number(col.dataset.direction) || -1;
+          const offset = eased * maxOff * dir;
+          col.style.transform = `translate3d(0, ${offset}px, 0)`;
+        });
+
+        headline.classList.toggle('visible', p > 0.1);
+      }
+
+      function update(){
+        const start = scrollSpace.offsetTop;
+        const end = scrollSpace.offsetTop + scrollSpace.offsetHeight - window.innerHeight;
+        const denom = Math.max(1, end - start);
+        const scrolled = clamp((window.scrollY - start) / denom, 0, 1);
+
+        applyProgress(scrolled);
+        requestAnimationFrame(update);
+      }
+
+      requestAnimationFrame(update);
+    })();
+    
+
 const chapters = document.querySelectorAll('.chapter');
 const menuContainer = document.querySelector('.menu-container');
 const sections = document.querySelectorAll('section');

@@ -1,3 +1,95 @@
+:root{
+  --rotate: -61deg; /* Winkel des gesamten Rasters */
+  --column-gap: 2%;
+}
+.scroll-space {
+      height: 300vh; /* genug Platz zum Scrollen */
+      position: relative;
+    }
+
+    .stage {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rot-wrapper {
+      position: relative;
+      width: 160%;
+      height: 140vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .rotated {
+      width: 120vh;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--column-gap);
+      transform: rotate(var(--rotate));
+      transform-origin: center;
+      will-change: transform;
+      height: auto;
+      position: absolute;
+      scale: 117%;
+        left: 28%;
+        top: -8%;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: stretch;
+      pointer-events: auto;
+      will-change: transform;
+      transform: translate3d(0,0,0);
+    }
+
+    .card-scroll {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+      background: #222;
+    }
+
+    .img-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .headline {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(36px, 6vw, 72px);
+      letter-spacing: -1px;
+      opacity: 0;
+      transition: opacity .5s ease, transform .6s cubic-bezier(.2,.9,.2,1);
+      text-align: center;
+      padding: 0 1rem;
+      z-index: -5;
+      pointer-events: none;
+    }
+
+    .headline.visible {
+      opacity: 1;
+      transform: translate(-50%, -45%);
+    }
+
+.platzhalter{
+    height:29vh
+}
+
 .intro{
   background-image: url('img/home/farbspritzer.png');
   background-size: contain;
@@ -633,7 +725,31 @@
       border-radius: 10px;
       aspect-ratio: 1/1;
     }
+@media (max-width: 768px) {
+  .rot-wrapper {
+        width: 120%;
+        height: 120vh;
+      }
+     .rotated {
+        scale: 85%;
+        top: -17%;
+        left:0;
+      }
 
+      .headline {
+        top:56%;
+      }
+      .scroll-space {
+      height: 123vh; 
+    }
+    .contents {
+    margin: -35% 0 0 0;
+    }
+
+    .platzhalter{
+        display:none;
+    }
+}
 @media (max-width: 480px) {
   .free{
     padding: 0 5%;
