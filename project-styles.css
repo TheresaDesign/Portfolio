@@ -1037,6 +1037,12 @@ flex-basis: 50%;
     color: #111;
   }
 
+  .audio-banner{
+    width: 100%;
+    height: 25vh;
+    background-image: url('img/audiointerface/prototyp/banner-audio.png');
+  }
+
   /* responsiveness: bei kleinen Bildschirmen spalten untereinander */
   @media (max-width: 860px){
     .pd-container{ flex-direction: column; padding: 16px; gap: 20px; }
@@ -1278,6 +1284,14 @@ flex-basis: 50%;
         width: 100%;
         margin:0;
     }
+
+    .audio-banner{
+    width: 100%;
+    background-size: cover;
+    height: 50vh;
+    background-image: url('img/audiointerface/prototyp/banner-audio-mobile.png');
+  }
+
     
 }
 
