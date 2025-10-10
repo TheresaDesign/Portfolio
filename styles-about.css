@@ -305,10 +305,10 @@ margin-left: 15%;
 
 .ring-praktikum{
   position: absolute;
-  width: 20%;
   top: -20%;
-margin-left:30%;
   z-index: -1;
+  width: 16%;
+margin-left: 14%;
 }
 .panel-fhp{
 flex: 0 0 200vw;
@@ -317,6 +317,16 @@ display: flex;
 padding: 10vh 0;
 flex-direction: row;
 gap: 2rem;
+}
+
+.fhp-headline{
+transform: rotate(-90deg);
+height: fit-content;
+}
+
+.panel-Haelfte.fhp{
+  flex-direction: column-reverse;
+  padding: 0 0 28rem 0;
 }
 
 .fhp-spalte h2{
