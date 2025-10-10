@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 139.5vw; /* 4 Sektionen à 100vw */
+width: 300vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -29,7 +29,6 @@ display: flex;
 
 .unten{
     margin-top: auto;
-    max-width: 800px;
 }
 
 .oben{
@@ -42,6 +41,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
+
+
 .panel-half{
 flex: 0 0 50%;
 padding: 10% 2rem;
@@ -75,18 +77,46 @@ color: var(--background-color);
 }
 
 .panel-intro-content{
-  flex: 0 0 33%;
+  flex: 0 0 66%;
   padding: 2rem;
   }
 
 .panel-intro-content img{
   width: 100%;
   border-radius: 10px
-  }
+}
+
+.name-intro{
+  font-size: 8rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  text-align: right;
+  position: absolute;
+  margin-left: 8%;
+  top:20%
+}
+
+.spacer{
+  flex: 0 0 20vw;
+}
+.luettfeld-headline{
+  width: 33%;
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: url('Assets/ring-grün.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom ;
+}
+
+.roated-headline{
+  transform: rotate(-90deg);
+  padding: 0 9rem;
+}
 .grid-luettfeld{
 display: grid;
-grid-template-columns: 2fr 1fr ;
-height: 100vh;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: auto auto;
 gap: 1rem;
 padding: 10% 2rem;
 }
@@ -95,20 +125,25 @@ padding: 10% 2rem;
 grid-column: span 1;
 }
 
+.luettfeld-breit{
+grid-column: span 2;
+}
+
+.luettfeld-gros{
+grid-column: span 1;
+grid-row: span 2;
+}
+.luettfeld-img{
+  width: 100%;
+}
+
 .luettfeld-klein.box{
 border: var(--primary-color) 2px solid;
 border-radius: 10px;
 padding: 2rem
 }
 
-.luettfeld-gros{
-grid-column: span 2;
-border: var(--primary-color) 2px solid;
-border-radius: 10px;
-overflow: hidden;
-display: flex;
-max-height: 300px;
-}
+
 
 .skills-container {
   width: 100%;
@@ -255,22 +290,33 @@ to {
 }
 }
 
-.panel-fhp{
-  height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  flex-direction: column;
-padding: 10vh 0;
+.color-block{
+width:25vw;
+height:8vh;
+background-color: var(--secondary-color);
+z-index: -1;
+top:0;
+position: absolute;
 }
-.grid-fhp {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  flex-basis: 100%;
-  height: 100%;
-  flex-wrap: wrap;
+
+.headline-praktikum{
+margin-left: 15%;
+}
+
+.ring-praktikum{
+  position: absolute;
+  width: 20%;
+  top: -20%;
+margin-left:30%;
+  z-index: -1;
+}
+.panel-fhp{
+flex: 0 0 200vw;
+height: 100vh;
+display: flex;
+padding: 10vh 0;
+flex-direction: row;
+gap: 2rem;
 }
 
 .fhp-spalte h2{
@@ -288,6 +334,10 @@ padding: 10vh 0;
 
 .fhp-small{
     flex-basis: 47%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 75%;
 }
 
 .fhp-small .emphazised{
@@ -302,7 +352,6 @@ padding: 10vh 0;
 }
 
 .fhp-img{
-  height: 90px;
   width: 100%;
   overflow:
 hidden;
@@ -319,7 +368,14 @@ hidden;
   display: block;
 }
 .privat{
+  flex: 0 0 120vw;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
+  background-image: url('img/about/privat.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
 }
 .privat-content{
@@ -327,6 +383,51 @@ hidden;
   padding-top: 10%;
 }
 
+.text-centered{
+  text-align: center;
+  margin: auto;
+  width: 50vw;
+}
+
+.volti1{
+  width: 30%;
+  position: relative;
+  margin-left: 60vw;
+}
+
+.volti1 img{
+  width: 100%;
+}
+
+.volti2{
+  width: 10%;
+  position: absolute;
+  margin: 2vw 0 0 0;
+}
+
+.volti2 img{
+  width: 100%;
+}
+
+.volti3{
+  width: 8%;
+  position: absolute;
+  margin: 2vw 0 0 85vw;
+}
+
+.volti3 img{
+  width: 100%;
+}
+
+.privat-farbblock{
+  width: 45vw;
+  height: 8vh;
+  background-color: var(--primary-color);
+  z-index: -1;
+  bottom:0;
+  position: absolute;
+  margin:0 25vw;
+}
 .image-fan {
   position: relative;
   width: 50%;

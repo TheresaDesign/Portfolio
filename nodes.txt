@@ -125,3 +125,12 @@ passendes css zum script dadrüber:
 
 
 
+<div class="privat-content">
+                <h2>So ganz privat...</h2>
+                <p>versuche ich nicht ganz so viel vor meinem Computer zu sitzen, sondern das Leben an der frischen Luft zu genießen. Vor allem der Pferdesport hat es mir angetan. Ich war 15 Jahre lang Voltigiererin, 9 Jahre davon war ich passionierte Leistungssportlerin. Im Oktober 2024 musste ich jedoch leider aufhören. Meinen Trainerjob habe ich jedoch behalten und so macht meine kleine Crew und ich seit neustem die Turnierplätze unsicher. Ein bis zweimal die Woche bin ich also im Stall und trainiere 8 Kids im Alter von 6 bis 12 Jahren.</p>
+            </div> 
+            <div class="image-fan">
+                <img src="img/about/volti/volti1.png" alt="Bild 1" class="fan-img img1">
+                <img src="img/about/volti/IMG-20230909-WA0208.jpg" alt="Bild 2" class="fan-img img2">
+                <img src="img/about/volti/IMG-20230507-WA0072.jpg" alt="Bild 3" class="fan-img img3">
+            </div>
