@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 300vw; /* 4 Sektionen à 100vw */
+width: 265vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -94,7 +94,7 @@ color: var(--background-color);
   font-weight: bold;
   text-align: right;
   position: absolute;
-  margin-left: 8%;
+  left: 65vw;
   top:20%
 }
 
@@ -109,11 +109,12 @@ color: var(--background-color);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom ;
+  padding: 12vh;
 }
 
 .roated-headline{
   transform: rotate(-90deg);
-  padding: 0 9rem;
+  white-space: nowrap;
 }
 .grid-luettfeld{
 display: grid;
@@ -130,13 +131,13 @@ flex-basis: 66%;
 .luettfeld-klein1{
 grid-column: 1 / 2; /* Spalte 1 */
   grid-row: 1 / 2;    /* Reihe 1 */
-  background-image: url("img/about/luetti/P2240227.jpg");
+  background-image: url("img/about/luetti/Photoart_P1.jpg");
 }
 
 .luettfeld-klein2{
   grid-column: 2 / 3; /* Spalte 2 */
   grid-row: 1 / 2;    /* Reihe 1 */
-  background-image: url("img/about/luetti/P2240227.jpg");
+  background-image: url("img/about/luetti/MagazinSport_.jpg");
 }
 
 .luettfeld-gros{
@@ -404,7 +405,7 @@ hidden;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
+  background-size: 120%;
 }
 .privat-content{
   width: 75%;
@@ -438,7 +439,7 @@ hidden;
 }
 
 .volti3{
-  width: 8%;
+  width: 12%;
   position: absolute;
   margin: 2vw 0 0 85vw;
 }
