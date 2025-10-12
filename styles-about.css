@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 265vw; /* 4 Sektionen à 100vw */
+width: 250vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -22,7 +22,7 @@ height: 100vh;
 display: flex;
 }
 .panel-Haelfte {
-    flex: 0 0 50vw;
+    flex: 0 0 30vw;
     height: 100vh;
     display: flex;
     }
@@ -95,7 +95,8 @@ color: var(--background-color);
   text-align: right;
   position: absolute;
   left: 65vw;
-  top:20%
+  top:20%;
+  mix-blend-mode: difference;
 }
 
 .spacer{
@@ -341,11 +342,12 @@ gap: 2rem;
 .fhp-headline{
 transform: rotate(-90deg);
 height: fit-content;
+padding-left: 20vh;
 }
 
 .panel-Haelfte.fhp{
   flex-direction: column-reverse;
-  padding: 0 0 28rem 0;
+  padding: 0 0 10vh 0;
 }
 
 .fhp-spalte h2{
