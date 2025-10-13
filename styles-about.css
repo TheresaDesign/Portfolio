@@ -12,7 +12,7 @@ background-color: var(--background-color);
 .horizontal-content {
 display: flex;
 height: 100%;
-width: 139.5vw; /* 4 Sektionen à 100vw */
+width: 250vw; /* 4 Sektionen à 100vw */
 gap:3%
 }
 
@@ -22,14 +22,13 @@ height: 100vh;
 display: flex;
 }
 .panel-Haelfte {
-    flex: 0 0 50vw;
+    flex: 0 0 30vw;
     height: 100vh;
     display: flex;
     }
 
 .unten{
     margin-top: auto;
-    max-width: 800px;
 }
 
 .oben{
@@ -41,7 +40,13 @@ height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
+background-image: url('img/about/first-img.png'); 
+background-size: cover; 
+background-position: center;
 }
+
+
+
 .panel-half{
 flex: 0 0 50%;
 padding: 10% 2rem;
@@ -67,6 +72,8 @@ justify-content: center;
 display: flex;
 flex-grow: 0;
 border-radius: 0 50px 50px 0;
+left: -5px;
+position: relative;
 }
 
 .welcome h2{
@@ -75,24 +82,82 @@ color: var(--background-color);
 }
 
 .panel-intro-content{
-  flex: 0 0 33%;
+  flex: 0 0 66%;
   padding: 2rem;
   }
 
 .panel-intro-content img{
   width: 100%;
   border-radius: 10px
-  }
-.grid-luettfeld{
-display: grid;
-grid-template-columns: 2fr 1fr ;
-height: 100vh;
-gap: 1rem;
-padding: 10% 2rem;
 }
 
-.luettfeld-klein{
-grid-column: span 1;
+.name-intro{
+  font-size: 8rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-align: right;
+  position: absolute;
+  left: 65vw;
+  top:20%;
+  mix-blend-mode: difference;
+}
+
+.spacer{
+  flex: 0 0 15vw;
+}
+.luettfeld-headline{
+  width: 33%;
+  display: flex;
+  flex-direction: column-reverse;
+  background-image: url('Assets/ring-grün.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom ;
+  padding: 12vh;
+}
+
+.roated-headline{
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+.grid-luettfeld{
+display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
+  gap: 10px; /* optionaler Abstand */
+padding: 10vh 2rem;
+flex-basis: 66%;
+}
+.luettfeld-item {
+  background-size: cover;
+  background-position: center;
+}
+
+.luettfeld-klein1{
+grid-column: 1 / 2; /* Spalte 1 */
+  grid-row: 1 / 2;    /* Reihe 1 */
+  background-image: url("img/about/luetti/Photoart_P1.jpg");
+}
+
+.luettfeld-klein2{
+  grid-column: 2 / 3; /* Spalte 2 */
+  grid-row: 1 / 2;    /* Reihe 1 */
+  background-image: url("img/about/luetti/MagazinSport_.jpg");
+}
+
+.luettfeld-gros{
+ grid-column: 3 / 4; /* Spalte 3 */
+  grid-row: 1 / 3;    /* Reihe 1–2 */
+  background-image: url("img/about/luetti/P2240227.jpg");
+}
+
+.luettfeld-breit{
+grid-column: 1 / 3; /* Spalte 1–2 */
+  grid-row: 2 / 3;    /* Reihe 2 */
+  background-image: url("img/about/luetti/Portrait.jpg");
+}
+.luettfeld-img{
+  width: 100%;
+
 }
 
 .luettfeld-klein.box{
@@ -101,14 +166,7 @@ border-radius: 10px;
 padding: 2rem
 }
 
-.luettfeld-gros{
-grid-column: span 2;
-border: var(--primary-color) 2px solid;
-border-radius: 10px;
-overflow: hidden;
-display: flex;
-max-height: 300px;
-}
+
 
 .skills-container {
   width: 100%;
@@ -255,22 +313,51 @@ to {
 }
 }
 
-.panel-fhp{
-  height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  flex-direction: column;
-padding: 10vh 0;
+.color-block{
+width:25vw;
+height:8vh;
+background-color: var(--secondary-color);
+z-index: -1;
+top:0;
+position: absolute;
 }
-.grid-fhp {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  flex-basis: 100%;
-  height: 100%;
-  flex-wrap: wrap;
+
+.headline-praktikum{
+margin-left: 15%;
+}
+
+.ring-praktikum{
+  position: absolute;
+  top: -20%;
+  z-index: -1;
+  width: 16%;
+margin-left: 14%;
+}
+
+.praktika-list{
+  display: flex; 
+  flex-direction: row; 
+  gap:2%; 
+  padding-bottom: 10vh;
+}
+.panel-fhp{
+flex: 0 0 200vw;
+height: 100vh;
+display: flex;
+padding: 10vh 0;
+flex-direction: row;
+gap: 2rem;
+}
+
+.fhp-headline{
+transform: rotate(-90deg);
+height: fit-content;
+padding-left: 20vh;
+}
+
+.panel-Haelfte.fhp{
+  flex-direction: column-reverse;
+  padding: 0 0 10vh 0;
 }
 
 .fhp-spalte h2{
@@ -288,6 +375,10 @@ padding: 10vh 0;
 
 .fhp-small{
     flex-basis: 47%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    height: 75%;
 }
 
 .fhp-small .emphazised{
@@ -302,7 +393,6 @@ padding: 10vh 0;
 }
 
 .fhp-img{
-  height: 90px;
   width: 100%;
   overflow:
 hidden;
@@ -319,14 +409,69 @@ hidden;
   display: block;
 }
 .privat{
+  flex: 0 0 120vw;
+  height: 100vh;
+  display: flex;
   flex-direction: column;
-
+  background-image: url('img/about/privat.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
 .privat-content{
   width: 75%;
   padding-top: 10%;
 }
 
+.text-centered{
+  text-align: center;
+  margin: auto;
+  width: 50vw;
+}
+
+.volti1{
+  width: 30%;
+  position: relative;
+  margin-left: 60vw;
+}
+
+.volti1 img{
+  width: 100%;
+}
+
+.volti2{
+  width: 10%;
+  position: absolute;
+  margin: 2vw 0 0 0;
+}
+
+.volti2 img{
+  width: 100%;
+}
+
+.volti3{
+  width: 12%;
+  position: absolute;
+  margin: 2vw 0 0 85vw;
+}
+
+.volti3 img{
+  width: 100%;
+}
+
+.privat-farbblock{
+  width: 45vw;
+  height: 8vh;
+  background-color: var(--primary-color);
+  z-index: -1;
+  bottom:0;
+  position: absolute;
+  margin:0 25vw;
+}
+
+.private-img{
+display: none;}
 .image-fan {
   position: relative;
   width: 50%;
@@ -419,16 +564,12 @@ hidden;
   gap: 1.5rem;
 }
 
-.panel-fhp {
-  min-width: 200vw;
-}
-
 .fhp-small {
   flex-basis: 24%;
 }
 
 .horizontal-content {
-  width: 183.5vw;
+  width: 100vw;
 }
 
   
@@ -449,10 +590,11 @@ hidden;
   }
   
   .panel-intro {
-    height: auto;
+    flex: 0 0 100vh;
     align-items: baseline;
     justify-content: flex-start;
     flex-direction: column;
+    background-image: url('img/about/first-img-mobile.png'); 
   }
   
   .welcome {
@@ -463,23 +605,118 @@ hidden;
   .welcome h2 {
     margin: 10%;
   }
+
+  .panel-intro-content {
+	flex: 0 0 66%;
+	padding: 0;
+}
+
+  .name-intro {
+  font-size: 6rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    left: auto;
+    top: 79%;
+    mix-blend-mode: normal;
+    line-height: 0.8;
+}
+
 .panel {
   height: auto;
 }
 
-.grid-luettfeld {
-  grid-template-columns: 1fr;
-  height: auto;
-  padding: 5% 2rem;
-  flex-direction: column;
-  display: flex;
+.panel-Haelfte{
+  padding:10%;
 }
+
+.luettfeld-headline {
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	background-image: url('Assets/ring-grün.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 10%;
+  flex-basis: 15%;
+}
+
+.roated-headline {
+	transform: rotate(0deg);
+	white-space: nowrap;
+}
+
+.praktika-list{
+display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10%;}
 
 .marquee {
   width: 85vw;
 }
+.headline-praktikum {
+margin-left: 10%;
+}
 
+.color-block {
+width:62vw;
+height:3vh;
+background-color: var(--secondary-color);
+z-index: -1;
+top:0;
+position: static;
+}
 
+.ring-praktikum {
+	position: relative;
+	top: -26%;
+	z-index: 0;
+	width: 63%;
+	margin-left: 61%;
+	margin-bottom: -62%;
+}
+
+.praktika-list{
+z-index: 1;
+gap:5vh;
+}
+
+.luettfeld-klein1, .luettfeld-klein2{
+flex-basis: 50%;
+}
+.luettfeld-item {
+  background-size: cover;
+  background-position: center;
+  /*! flex-basis: 100%; */
+  height: 100%;
+}
+.luettfeld-breit {
+grid-column: 1 / 3; /* Spalte 1–2 */
+  grid-row: 2 / 3;    /* Reihe 2 */
+  background-image: url("img/about/luetti/Portrait.jpg");
+flex-basis: 100%;
+}
+
+ .luettfeld-gros {
+    flex-basis: 100%;
+  }
+
+  .panel-luet{
+  flex: 0 0 100vh;}
+
+  .grid-luettfeld {
+  /*! grid-template-columns: 1fr; */
+  /*! height: auto; */
+  padding: 5% 2rem;
+  flex-direction: revert;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  flex-basis: 31%;
+}
 .skills-container {
   height: auto;
   margin:20px 0 0 0;
@@ -510,27 +747,29 @@ hidden;
   padding: 2rem;
   }
 
-  .panel-fhp {
-   min-width: 100vw;
-  }
-  .grid-fhp {
-    padding: 0;
-    gap: 2.5rem;
-  }
-  .fhp-small {
-    /* flex-basis: 24%; */
-    flex-basis: 100%;
-  }
+  .panel-Haelfte.fhp {
+	flex-direction: column-reverse;
+	padding: 10%;
+}
+
+.fhp-headline {
+	transform: rotate(0deg);
+	height: auto;
+	padding-left: 0;
+}
+
 
 .panel-fhp {
-  height: auto;
-  padding: 10vh 2rem;
+  width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 0 10% 10%;
+	height: auto;
+
 }
 
-.fhp-spalte {
-  height: 20vh;
-  overflow: hidden;
-}
+.unten{
+flex-direction: row-reverse;}
 
 .marquee-track {
   flex-direction: row;
@@ -539,6 +778,32 @@ hidden;
 .fhp-spalte {
   height: 20vh;
   overflow: hidden;
+}
+
+.privat{
+  display: flex;
+  flex-direction: column;
+  background-image: none;
+  background-size: cover;
+  background-color: var(--white);
+  
+}
+
+.text-centered{
+  width: 100%;
+  margin-bottom: 10%;
+  padding: 0 10% 10%;
+}
+
+.volti3, .volti1, .volti2{
+  width: 100%;
+  position: static;
+  margin: 0;
+}
+
+.private-img{
+display: block;
+width: 100%;
 }
 
 .marquee-track {
