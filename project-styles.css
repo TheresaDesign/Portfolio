@@ -13,7 +13,9 @@
     z-index: 1000;
 }
 
-
+h1{
+    white-space: inherit !important;
+}
 h3{
     color: var(--primary-color);
 }
@@ -129,7 +131,7 @@ h3{
 }
 
 .hero-content {
-    max-width: 50%;
+    max-width: 100%;
     padding: 2rem;
     opacity: 0;
     transform: translateY(20px);
@@ -139,6 +141,11 @@ h3{
 
 .hero-content .tags{
     justify-content: center;
+}
+
+.subtitle{
+width: 50%;
+margin: 0 auto;
 }
 
 .project-hero.hero-bloom{
