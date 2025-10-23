@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Startseite -->
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/index.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <!-- Beispiel-Projektseiten -->
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/about.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/methodes.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/project-BloomBerlin.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/project-mappingCities.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/project-VR-Exhibition.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/project-Audiointerface.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+
+  <url>
+    <loc>https://theresadesign.github.io/Portfolio/project-SofaSoGood.html</loc>
+    <lastmod>2025-10-23</lastmod>
+  </url>
+</urlset>
